@@ -819,7 +819,8 @@ export default function UmeedPage() {
         </div>
       </section>
 
-      {/* Network Section */}
+{/*
+      
       <section className="network-section">
         <div className="container">
           <h2 className="section-title">Our Network of Education Centers</h2>
@@ -827,7 +828,7 @@ export default function UmeedPage() {
             Umeed ab Delhi/NCR ke centers mein faila hua hai. Har center mahilaon ko shiksha aur jagrukta deta hai. Map pe explore karein aur centers ki list dekhein!
           </p>
 
-          {/* <div id="map" className="network-map"></div> */}
+          
 
           <div className="centers-grid">
             <div className="center-card" data-lat="28.5961" data-lng="77.3639" data-title="Noida Sector 52 Center">
@@ -840,10 +841,12 @@ export default function UmeedPage() {
               <a href="https://www.google.com/maps/dir/?api=1&destination=28.5961,77.3639" target="_blank" className="directions-btn">Get Directions →</a>
             </div>
 
-            {/* Baaki centers add kar sakte ho */}
+            
           </div>
         </div>
       </section>
+
+      */}
 
       {/* Curriculum */}
       <section className="curriculum">
