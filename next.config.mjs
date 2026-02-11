@@ -14,13 +14,20 @@
 
 // export default nextConfig;
 
+// /** @type {import('next').NextConfig} */
+// const nextConfig = {
+//   output: 'export',               // Yeh line static HTML generate karegi
+//   images: {
+//     unoptimized: true,            // Images ko optimize mat karo (simple export ke liye)
+//   },
+//   trailingSlash: true,              // URLs mein / end aayega (better static files)
+// };
+
+// export default nextConfig;
+
+
+
 /** @type {import('next').NextConfig} */
-const nextConfig = {
-  output: 'export',               // Yeh line static HTML generate karegi
-  images: {
-    unoptimized: true,            // Images ko optimize mat karo (simple export ke liye)
-  },
-  trailingSlash: true,              // URLs mein / end aayega (better static files)
-};
+const nextConfig = {};
 
 export default nextConfig;
