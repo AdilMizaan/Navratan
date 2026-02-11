@@ -2,12 +2,13 @@
 'use client';
 
 import { useEffect, useRef } from 'react';
+import Link from 'next/link';
 
 export default function GyanpeethPage() {
   const statRefs = useRef([]);
 
   useEffect(() => {
-    // Counter Animation (bilkul original logic)
+    // Counter Animation
     const runCounter = (counter) => {
       const target = +counter.getAttribute('data-target');
       const speed = 200;
@@ -27,11 +28,10 @@ export default function GyanpeethPage() {
           }
         }
       };
-
       updateCount();
     };
 
-    // Intersection Observer for stats visibility & counter trigger
+    // Intersection Observer
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
@@ -49,31 +49,25 @@ export default function GyanpeethPage() {
       { threshold: 0.3 }
     );
 
-    // Observe all stat items
     document.querySelectorAll('.stat-item').forEach((item) => {
       observer.observe(item);
     });
 
-    // Accordion (agar future mein add karo to kaam karega)
-    const acc = document.getElementsByClassName('accordion');
-    for (let i = 0; i < acc.length; i++) {
-      acc[i].addEventListener('click', function () {
-        this.classList.toggle('active');
-        const panel = this.nextElementSibling;
-        if (panel.style.maxHeight) {
-          panel.style.maxHeight = null;
-        } else {
-          panel.style.maxHeight = panel.scrollHeight + 'px';
-        }
-      });
-    }
-
     return () => observer.disconnect();
   }, []);
 
+  // Sirf ek center abhi
+  const featuredCenters = [
+    {
+      name: "Navratan Gyanpeeth",
+      locationTag: "Uttar Pradesh – Noida",
+      address: "Near Factory B-78 B Block Sector 8 Noida Uttar Pradesh India",
+      courses: "Informal Education, Moral Values, Healthy Lifestyle",
+    },
+  ];
+
   return (
     <>
-      {/* Tumhara original <style> bilkul unchanged */}
       <style jsx global>{`
         .hero {
           position: relative;
@@ -201,6 +195,21 @@ export default function GyanpeethPage() {
 
         .section-title {
           font-size: 42px;
+          text-align: center;
+          margin-bottom: 60px;
+          position: relative;
+        }
+
+        .section-title::after {
+          content: '';
+          width: 80px;
+          height: 4px;
+          background: var(--primary);
+          position: absolute;
+          bottom: -15px;
+          left: 50%;
+          transform: translateX(-50%);
+          border-radius: 2px;
         }
 
         .intro-grid {
@@ -293,25 +302,6 @@ export default function GyanpeethPage() {
 
         section {
           padding: 100px 0;
-        }
-
-        .section-title {
-          text-align: center;
-          margin-bottom: 60px;
-          font-size: 42px;
-          position: relative;
-        }
-
-        .section-title::after {
-          content: '';
-          width: 80px;
-          height: 4px;
-          background: var(--primary);
-          position: absolute;
-          bottom: -15px;
-          left: 50%;
-          transform: translateX(-50%);
-          border-radius: 2px;
         }
 
         .stats {
@@ -413,87 +403,116 @@ export default function GyanpeethPage() {
           padding: 100px 0;
         }
 
-        .network-map {
-          height: 500px;
-          border-radius: 25px;
-          box-shadow: 0 15px 40px rgba(233,30,99,0.15);
-          margin-bottom: 60px;
-          overflow: hidden;
+        /* Carousel styles - same as centers/page.js cards */
+        .centers-carousel {
+          display: flex;
+          overflow-x: auto;
+          gap: 30px;
+          padding: 20px 0 40px;
+          scroll-snap-type: x mandatory;
+          scroll-behavior: smooth;
+          -webkit-overflow-scrolling: touch;
         }
 
-        .centers-grid {
-          display: grid;
-          grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
-          gap: 30px;
+        .centers-carousel::-webkit-scrollbar {
+          display: none;
+        }
+
+        .centers-carousel {
+          -ms-overflow-style: none;
+          scrollbar-width: none;
         }
 
         .center-card {
+          flex: 0 0 340px;
           background: white;
           border-radius: 20px;
           padding: 25px;
           box-shadow: 0 10px 25px rgba(0,0,0,0.08);
           transition: all 0.4s ease;
-          cursor: pointer;
-          border: 1px solid #ffffff;
+          border: 1px solid #f0f0f0;
+          scroll-snap-align: start;
         }
 
         .center-card:hover {
           transform: translateY(-10px);
-          box-shadow: 0 20px 50px #5d5c5c;
-          border-color: var(--primary);
+          box-shadow: 0 20px 50px rgba(0,0,0,0.12);
+          border-color: #fbd45a;
         }
 
-        .card-header {
+        .top-row {
           display: flex;
           justify-content: space-between;
-          align-items: center;
-          margin-bottom: 15px;
+          align-items: flex-start;
+          margin-bottom: 12px;
+          gap: 12px;
         }
 
-        .center-card h4 {
-          margin: 0;
-          color: black;
-          font-size: 1.4rem;
+        .center-location-tag {
+          font-size: 0.9rem;
+          font-weight: 600;
+          color:  #00acf0;
+          text-transform: uppercase;
+          letter-spacing: 0.4px;
+          line-height: 1.4;
         }
 
         .center-badge {
-          background: var(--primary);
-          color: black;
           padding: 6px 14px;
           border-radius: 30px;
-          font-size: 0.8rem;
-          font-weight: 600;
+          font-size: 0.82rem;
+          font-weight: 700;
+          white-space: nowrap;
+          background: #fbd45a;
+          color: black;
+        }
+
+        .center-name {
+          margin: 0 0 16px 0;
+          font-size: 1.38rem;
+          font-weight: 700;
+          line-height: 1.35;
+          color: #212529;
         }
 
         .center-card .address,
         .center-card .course {
-          margin: 12px 0;
+          margin: 10px 0;
           color: #555;
-          font-size: 1rem;
+          font-size: 0.98rem;
+          line-height: 1.55;
         }
 
         .center-card i {
-          color: var(--primary);
-          margin-right: 10px;
+          color: #fbd45a;
+          margin-right: 9px;
         }
 
         .directions-btn {
           display: inline-block;
-          margin-top: 15px;
-          padding: 10px 20px;
-          background: var(--primary);
+          margin-top: 14px;
+          padding: 10px 22px;
+          background: #fbd45a;
           color: black;
           text-decoration: none;
           border-radius: 50px;
           font-weight: 600;
+          font-size: 0.96rem;
           transition: all 0.3s;
         }
 
         .directions-btn:hover {
-          background: var(--accent);
-          transform: scale(1.05);
+          background: #00acf0;
+          color: white;
+          transform: translateY(-2px);
         }
 
+        .view-all-wrapper {
+          text-align: center;
+          margin-top: 60px;
+        }
+
+        /* Original remaining styles - unchanged */
         #map {
           height: 500px;
           border-radius: 20px;
@@ -673,9 +692,15 @@ export default function GyanpeethPage() {
         }
 
         @media (max-width: 768px) {
-          .hero h1 { font-size: 3rem; }
-          .hero p { font-size: 1.2rem; }
-          section { padding: 60px 0; }
+          .hero h1 {
+            font-size: 3rem;
+          }
+          .hero p {
+            font-size: 1.2rem;
+          }
+          section {
+            padding: 60px 0;
+          }
         }
       `}</style>
 
@@ -820,28 +845,48 @@ export default function GyanpeethPage() {
         </div>
       </section>
 
-      {/* Network Section */}
+      {/* Updated Network Section - carousel cards now match centers/page.js style */}
       <section className="network-section">
         <div className="container">
           <h2 className="section-title">Our Network of Education Centers</h2>
           <p style={{ textAlign: 'center', maxWidth: '800px', margin: '0 auto 50px', fontSize: '1.2rem', color: '#555' }}>
-            Navratan Gyanpeeth ab Delhi/NCR ke centers mein faila hua hai. Har center underprivileged children ko free education deta hai. Map pe explore karein aur centers ki list dekhein!
+            Navratan Gyanpeeth currently operates from its main center in Noida. We provide free education and holistic development to underprivileged children.
           </p>
 
-          {/* <div id="map" className="network-map"></div> */}
+          <div className="centers-carousel">
+            {featuredCenters.map((center, index) => (
+              <div key={index} className="center-card">
+                <div className="top-row">
+                  <div className="center-location-tag">{center.locationTag}</div>
+                  <span className="center-badge">Main Center</span>
+                </div>
 
-          <div className="centers-grid">
-            <div className="center-card" data-lat="28.5961" data-lng="77.3639" data-title="Noida Sector 52 Center">
-              <div className="card-header">
-                <h4>Noida Sector 52 Center</h4>
+                <h4 className="center-name">{center.name}</h4>
+
+                <p className="address">
+                  <i className="fas fa-map-marker-alt"></i> {center.address}
+                </p>
+
+                <p className="course">
+                  <i className="fas fa-book-open"></i> {center.courses}
+                </p>
+
+                <a
+                  href={`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(center.address)}`}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="directions-btn"
+                >
+                  Get Directions →
+                </a>
               </div>
-              <span className="center-badge">Main Hub</span>
-              <p className="address"><i className="fas fa-map-marker-alt"></i> E-74, Sector 52, Noida, Uttar Pradesh 201307</p>
-              <p className="course"><i className="fas fa-book-open"></i> Major Courses: Basic Education, Moral Values</p>
-              <a href="https://www.google.com/maps/dir/?api=1&destination=28.5961,77.3639" target="_blank" className="directions-btn">Get Directions →</a>
-            </div>
+            ))}
+          </div>
 
-            {/* Baaki centers add kar sakte ho */}
+          <div className="view-all-wrapper">
+            <Link href="/projects/gyanpeeth/centers" className="btn">
+              View All Centers →
+            </Link>
           </div>
         </div>
       </section>
@@ -902,7 +947,6 @@ export default function GyanpeethPage() {
             </div>
           </div>
           <div className="qr-donate-center">
-            {/* <img src="/img/qr.jpg" alt="QR Code" className="qr-image" /> */}
             <a href="YOUR_DONATION_LINK_HERE" className="btn donate-btn">Donate Now</a>
           </div>
         </div>
