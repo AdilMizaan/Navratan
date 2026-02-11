@@ -802,7 +802,7 @@ export default function UmeedPage() {
               </div>
             </div>
             <div className="story-card">
-              <img src="/img/story-umeed1.jpg" alt="Rekha" />
+              <img src="img/our-campaigns-10.jpg" alt="Rekha" />
               <div className="story-content">
                 <h4>Rekha</h4>
                 <p>Gained literacy skills and started teaching her children, breaking the cycle.</p>
