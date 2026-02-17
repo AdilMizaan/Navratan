@@ -639,7 +639,7 @@ export default function JoAayeWoGaye() {
             <i className="fas fa-calendar-alt"></i>
             <div>
               <strong>Date & Time</strong>
-              <p>Sunday 18th Jan, 4:00 PM</p>
+              <p>15th March</p>
             </div>
           </div>
           <div className="info-item">
@@ -798,11 +798,12 @@ export default function JoAayeWoGaye() {
           <div className="yellow-line"></div>
         </div>
         <div className="slider-track">
-          <img src="https://navratanfoundations.com/assets/img/events/event-3.jpg" className="gallery-item" alt="Event" />
-          <img src="https://navratanfoundations.com/assets/img/events/event-3.jpg" className="gallery-item" alt="Event" />
-          <img src="https://navratanfoundations.com/assets/img/events/event-3.jpg" className="gallery-item" alt="Event" />
-          <img src="https://navratanfoundations.com/assets/img/events/event-3.jpg" className="gallery-item" alt="Event" />
-          <img src="https://navratanfoundations.com/assets/img/events/event-3.jpg" className="gallery-item" alt="Event" />
+          <img src="/img/Jo aye wo gaye1.jpg" className="gallery-item" alt="Event" />
+          <img src="/img/Jo aye wo gaye2.jpg" className="gallery-item" alt="Event" />
+          <img src="/img/Jo aye wo gaye3.jpg" className="gallery-item" alt="Event" />
+          <img src="/img/Jo aye wo gaye4.jpg" className="gallery-item" alt="Event" />
+          <img src="/img/Jo aye wo gaye5.jpg" className="gallery-item" alt="Event" />
+          <img src="/img/Jo aye wo gaye6.jpg" className="gallery-item" alt="Event" />
         </div>
       </section>
 
@@ -829,7 +830,7 @@ export default function JoAayeWoGaye() {
           <div className="event-highlight">
             <span>
               <i className="fas fa-calendar-alt"></i>
-              <strong>Date:</strong> Sunday, 18th Jan, 4:00 PM
+              <strong>Date:</strong> 15th March
             </span>
             <span>
               <i className="fas fa-map-marker-alt"></i>

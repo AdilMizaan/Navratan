@@ -251,7 +251,7 @@ export default function AstitvaPage() {
         .highlight-item i { font-size: 1.8rem; color: var(--primary); }
 
         .intro-visual { position: relative; border-radius: 20px; overflow: hidden; box-shadow: 0 20px 50px rgba(0,0,0,0.15); }
-        .intro-img { width: 100%; height: 100%; object-fit: cover; display: block; }
+        .intro-img { width: 700px; height: 450px; object-fit: cover; display: block; }
         .image-overlay {
           position: absolute;
           bottom: 0;
@@ -289,7 +289,7 @@ export default function AstitvaPage() {
 
         .gallery-carousel { display: flex; overflow-x: auto; gap: 20px; padding: 20px 0; scroll-snap-type: x mandatory; }
         .gallery-carousel img, .gallery-carousel video {
-          width: 380px; height: 500px; object-fit: cover; border-radius: 15px;
+          width: 500px; height: 350px; object-fit: cover; border-radius: 15px;
           box-shadow: 0 10px 30px rgba(0,0,0,0.15); flex-shrink: 0; scroll-snap-align: center;
           transition: transform 0.4s;
         }
@@ -549,7 +549,7 @@ export default function AstitvaPage() {
 
             <div className="intro-visual">
               <img
-                src="https://thedesaifoundation.org/wp-content/uploads/unlimited_elements/sewing-1.png"
+                src="/img/astitva15.jpg"
                 alt="Women learning tailoring in Astitva center"
                 className="intro-img"
               />
@@ -610,12 +610,32 @@ export default function AstitvaPage() {
         <div className="container">
           <h2 className="section-title">A Day in Astitva</h2>
           <div className="gallery-carousel">
-            <img src="https://thedesaifoundation.org/wp-content/uploads/unlimited_elements/sewing-1.png" alt="Women in sewing class" />
+            <img src="/img/astitva1.jpg" alt="Women in sewing class" />
             <img src="https://tzuchi-en-backend.storage.googleapis.com/content/images/2024/11/1-800-4.jpg" alt="Group training session" />
-            <img src="https://blog.rotary.org/wp-content/uploads/2025/03/adivasi-widows-hero.jpg" alt="Women learning stitching" />
+            <img src="/img/astitva1.jpg" alt="Women learning stitching" />
             <img src="https://thumbs.dreamstime.com/b/group-woman-tailoring-class-discuissing-teacher-cloth-stitching-training-concept-skill-development-250148147.jpg" alt="Tailoring discussion" />
             <img src="https://tzuchi-en-backend.storage.googleapis.com/content/images/2024/11/2-800-6.jpg" alt="Empowered women sewing" />
             <img src="https://media.holtinternational.org/wp-content/uploads/2023/07/Nisha.jpg" alt="Woman with sewing machine" />
+            <img src="/img/astitva2.jpg" alt="Women learning stitching" />
+            <img src="/img/astitva3.jpg" alt="Women learning stitching" />
+            <img src="/img/astitva4.jpg" alt="Women learning stitching" />
+            <img src="/img/astitva5.jpg" alt="Women learning stitching" />
+            <img src="/img/astitva6.jpg" alt="Women learning stitching" />
+            <img src="/img/astitva7.jpg" alt="Women learning stitching" />
+            <img src="/img/astitva8.jpg" alt="Women learning stitching" />
+            <img src="/img/astitva9.jpg" alt="Women learning stitching" />
+            <img src="/img/astitva10.jpg" alt="Women learning stitching" />
+            <img src="/img/astitva11.jpg" alt="Women learning stitching" />
+            <img src="/img/astitva12.jpg" alt="Women learning stitching" />
+            <img src="/img/astitva13.jpg" alt="Women learning stitching" />
+            <img src="/img/astitva14.jpg" alt="Women learning stitching" />
+            <img src="/img/astitva15.jpg" alt="Women learning stitching" />
+            <img src="/img/astitva16.jpg" alt="Women learning stitching" />
+            <img src="/img/astitva17.jpg" alt="Women learning stitching" />
+            <img src="/img/astitva18.jpg" alt="Women learning stitching" />
+            <img src="/img/astitva19.jpg" alt="Women learning stitching" />
+            <img src="/img/astitva20.jpg" alt="Women learning stitching" />
+            <img src="/img/astitva21.jpg" alt="Women learning stitching" />
           </div>
         </div>
       </section>

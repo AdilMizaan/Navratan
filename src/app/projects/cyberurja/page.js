@@ -407,8 +407,8 @@ export default function CyberurjaPage() {
 
         .gallery-carousel img,
         .gallery-carousel video {
-          width: 380px;
-          height: 500px;
+          width: 500px;
+          height: 350px;
           object-fit: cover;
           border-radius: 15px;
           box-shadow: 0 10px 30px rgba(0,0,0,0.15);
@@ -877,11 +877,21 @@ export default function CyberurjaPage() {
           <h2 className="section-title">A Day in Cyberurja</h2>
           <div className="gallery-carousel">
             <img src="/img/cyberuja.jpg" alt="Students learning computers" />
-            <img src="/img/our-campaigns-7.jpg" alt="Typing practice session" />
-            <img src="/img/our-campaigns-8.jpg" alt="Internet training" />
-            <img src="/img/cyberuja.jpg" alt="Group computer class" />
-            <img src="/img/our-campaigns-7.jpg" alt="Digital safety workshop" />
-            <img src="/img/our-campaigns-8.jpg" alt="Certificate distribution" />
+            <img src="/img/Cyberurja1.jpg" alt="Students learning computers" />
+            <img src="/img/Cyberurja2.jpg" alt="Students learning computers" />
+            <img src="/img/Cyberurja3.jpeg" alt="Students learning computers" />
+            <img src="/img/Cyberurja4.jpg" alt="Students learning computers" />
+            <img src="/img/Cyberurja5.jpg" alt="Students learning computers" />
+            <img src="/img/Cyberurja6.jpg" alt="Students learning computers" />
+            <img src="/img/Cyberurja7.jpg" alt="Students learning computers" />
+            <img src="/img/Cyberurja8.jpg" alt="Students learning computers" />
+            <img src="/img/Cyberurja9.jpg" alt="Students learning computers" />
+            <img src="/img/Cyberurja10.jpg" alt="Students learning computers" />
+            <img src="/img/Cyberurja11.jpg" alt="Students learning computers" />
+            <img src="/img/Cyberurja12.jpeg" alt="Students learning computers" />
+            <img src="/img/Cyberurja13.jpeg" alt="Students learning computers" />
+            <img src="/img/our-campaigns-7.jpg" alt="Typi3g practice session" />
+            
           </div>
         </div>
       </section>
@@ -906,7 +916,7 @@ export default function CyberurjaPage() {
               </div>
             </div>
             <div className="story-card">
-              <img src="https://www.globalgiving.org/pfil/13929/pict_original.jpg" alt="Rohan" />
+              <img src="/img/com1.jpeg" alt="Rohan" />
               <div className="story-content">
                 <h4>Rohan</h4>
                 <p>Gained digital skills and is now pursuing higher education online.</p>

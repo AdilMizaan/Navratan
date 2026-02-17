@@ -355,8 +355,8 @@ export default function UmeedPage() {
 
         .gallery-carousel img,
         .gallery-carousel video {
-          width: 380px;
-          height: 500px;
+          width: 500px;
+          height: 350px;
           object-fit: cover;
           border-radius: 15px;
           box-shadow: 0 10px 30px rgba(0,0,0,0.15);
@@ -780,12 +780,15 @@ export default function UmeedPage() {
         <div className="container">
           <h2 className="section-title">A Day in Umeed</h2>
           <div className="gallery-carousel">
+            <img src="/img/umeed1.png" alt="Women in literacy session" />
+            <img src="/img/umeed2.png" alt="Women in literacy session" />
+            <img src="/img/umeed3.png" alt="Women in literacy session" />
+            <img src="/img/umeed4.png" alt="Women in literacy session" />
+            <img src="/img/umeed5.jpg" alt="Women in literacy session" />
+            <img src="/img/umeed6.jpg" alt="Women in literacy session" />
+            <img src="/img/umeed7.jpg" alt="Women in literacy session" />
             <img src="/img/our-campaigns-9.jpg" alt="Women in literacy session" />
             <img src="/img/our-campaigns-10.jpg" alt="Group discussion" />
-            <img src="/img/our-campaigns-9.jpg" alt="Awareness workshop" />
-            <img src="/img/our-campaigns-10.jpg" alt="Skill development" />
-            <img src="/img/our-campaigns-9.jpg" alt="Empowered women" />
-            <img src="/img/our-campaigns-10.jpg" alt="Community gathering" />
           </div>
         </div>
       </section>
@@ -796,21 +799,21 @@ export default function UmeedPage() {
           <h2 className="section-title">Success Stories</h2>
           <div className="stories-grid">
             <div className="story-card">
-              <img src="/img/our-campaigns-10.jpg" alt="Sunita" />
+              <img src="/img/umeed5.jpg" alt="Sunita" />
               <div className="story-content">
                 <h4>Sunita</h4>
                 <p>Learned to read and write, now managing her household finances confidently.</p>
               </div>
             </div>
             <div className="story-card">
-              <img src="/img/our-campaigns-10.jpg" alt="Rekha" />
+              <img src="/img/umeed7.jpg" alt="Rekha" />
               <div className="story-content">
                 <h4>Rekha</h4>
                 <p>Gained literacy skills and started teaching her children, breaking the cycle.</p>
               </div>
             </div>
             <div className="story-card">
-              <img src="/img/our-campaigns-10.jpg" alt="Meena" />
+              <img src="/img/umeed9.png" alt="Meena" />
               <div className="story-content">
                 <h4>Meena</h4>
                 <p>Participated in awareness programs and became a community leader.</p>

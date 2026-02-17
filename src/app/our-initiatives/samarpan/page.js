@@ -284,7 +284,8 @@ export default function Samarpan() {
 
         .slider-track {
           display: flex;
-          width: calc(300px * 6);
+          width: calc(300px * 12);
+
           animation: scrollLeft 20s linear infinite;
           gap: 25px;
         }
@@ -316,6 +317,7 @@ export default function Samarpan() {
         @keyframes scrollLeft {
           0% { transform: translateX(0); }
           100% { transform: translateX(calc(-305px * 3)); }
+       
         }
 
         .dual-cta {
@@ -480,42 +482,128 @@ export default function Samarpan() {
           <div className="slider-track">
             <div className="awardee-card">
               <img
-                src="https://navratanfoundations.com/assets/img/events/event-5.jpg"
+                src="/img/samarpan1.jpg"
                 alt="Education Reformers"
               />
               <h4>Education Reformers</h4>
             </div>
             <div className="awardee-card">
               <img
-                src="https://navratanfoundations.com/assets/img/events/event-5.jpg"
+                src="/img/samarpan2.jpg"
                 alt="Social Impact Leaders"
               />
               <h4>Social Impact Leaders</h4>
             </div>
             <div className="awardee-card">
               <img
-                src="https://navratanfoundations.com/assets/img/events/event-5.jpg"
+                src="/img/samarpan3.jpg"
                 alt="Environmental Heroes"
               />
               <h4>Environmental Heroes</h4>
             </div>
             <div className="awardee-card">
               <img
-                src="https://navratanfoundations.com/assets/img/events/event-5.jpg"
+                src="/img/samarpan4.jpg"
                 alt="Education Reformers"
               />
               <h4>Education Reformers</h4>
             </div>
             <div className="awardee-card">
               <img
-                src="https://navratanfoundations.com/assets/img/events/event-5.jpg"
+                src="/img/samarpan5.jpg"
                 alt="Social Impact Leaders"
               />
               <h4>Social Impact Leaders</h4>
             </div>
             <div className="awardee-card">
               <img
-                src="https://navratanfoundations.com/assets/img/events/event-5.jpg"
+                src="/img/samarpan6.jpg"
+                alt="Environmental Heroes"
+              />
+              <h4>Environmental Heroes</h4>
+            </div>
+
+            <div className="awardee-card">
+              <img
+                src="/img/samarpan1.jpg"
+                alt="Education Reformers"
+              />
+              <h4>Education Reformers</h4>
+            </div>
+            <div className="awardee-card">
+              <img
+                src="/img/samarpan2.jpg"
+                alt="Social Impact Leaders"
+              />
+              <h4>Social Impact Leaders</h4>
+            </div>
+            <div className="awardee-card">
+              <img
+                src="/img/samarpan3.jpg"
+                alt="Environmental Heroes"
+              />
+              <h4>Environmental Heroes</h4>
+            </div>
+            <div className="awardee-card">
+              <img
+                src="/img/samarpan4.jpg"
+                alt="Education Reformers"
+              />
+              <h4>Education Reformers</h4>
+            </div>
+            <div className="awardee-card">
+              <img
+                src="/img/samarpan5.jpg"
+                alt="Social Impact Leaders"
+              />
+              <h4>Social Impact Leaders</h4>
+            </div>
+            <div className="awardee-card">
+              <img
+                src="/img/samarpan6.jpg"
+                alt="Environmental Heroes"
+              />
+              <h4>Environmental Heroes</h4>
+            </div>
+
+            <div className="awardee-card">
+              <img
+                src="/img/samarpan1.jpg"
+                alt="Education Reformers"
+              />
+              <h4>Education Reformers</h4>
+            </div>
+            <div className="awardee-card">
+              <img
+                src="/img/samarpan2.jpg"
+                alt="Social Impact Leaders"
+              />
+              <h4>Social Impact Leaders</h4>
+            </div>
+            <div className="awardee-card">
+              <img
+                src="/img/samarpan3.jpg"
+                alt="Environmental Heroes"
+              />
+              <h4>Environmental Heroes</h4>
+            </div>
+            <div className="awardee-card">
+              <img
+                src="/img/samarpan4.jpg"
+                alt="Education Reformers"
+              />
+              <h4>Education Reformers</h4>
+            </div>
+            <div className="awardee-card">
+              <img
+                src="/img/samarpan5.jpg"
+                alt="Social Impact Leaders"
+              />
+              <h4>Social Impact Leaders</h4>
+            </div>
+            <div className="awardee-card">
+              <img
+                src="/img/samarpan6.jpg"
                 alt="Environmental Heroes"
               />
               <h4>Environmental Heroes</h4>

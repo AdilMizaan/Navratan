@@ -414,7 +414,7 @@ export default function SheetKavatch() {
         </div>
         <div className="card card-image-only">
           <img
-            src="https://www.navratanfoundations.com/assets/img/events/event-6.jpg"
+            src="/img/Sheet kavatch6.jpeg"
             alt="Sheet Kavatch Distribution"
             className="mission-right-img"
           />
@@ -482,45 +482,102 @@ export default function SheetKavatch() {
           <div className="slider-track">
             <div className="awardee-card">
               <img
-                src="https://www.navratanfoundations.com/assets/img/events/event-7.jpg"
+                src="/img/Sheet kavatch1.jpg"
                 alt="Gallery"
               />
               <h4>Distribution Day</h4>
             </div>
             <div className="awardee-card">
               <img
-                src="https://www.navratanfoundations.com/assets/img/events/event-7.jpg"
+                src="/img/Sheet kavatch2.jpeg"
                 alt="Gallery"
               />
               <h4>Happy Faces</h4>
             </div>
             <div className="awardee-card">
               <img
-                src="https://www.navratanfoundations.com/assets/img/events/event-7.jpg"
+                src="/img/Sheet kavatch3.jpeg"
                 alt="Gallery"
               />
               <h4>Volunteer Support</h4>
             </div>
             <div className="awardee-card">
               <img
-                src="https://www.navratanfoundations.com/assets/img/events/event-7.jpg"
+                src="/img/Sheet kavatch4.jpeg"
                 alt="Gallery"
               />
               <h4>Distribution Day</h4>
             </div>
             <div className="awardee-card">
               <img
-                src="https://www.navratanfoundations.com/assets/img/events/event-7.jpg"
+                src="/img/Sheet kavatch5.jpeg"
                 alt="Gallery"
               />
               <h4>Happy Faces</h4>
             </div>
             <div className="awardee-card">
               <img
-                src="https://www.navratanfoundations.com/assets/img/events/event-7.jpg"
+                src="/img/Sheet kavatch6.jpeg"
                 alt="Gallery"
               />
               <h4>Volunteer Support</h4>
+            </div>
+            <div className="awardee-card">
+              <img
+                src="/img/Sheet kavatch7.jpeg"
+                alt="Gallery"
+              />
+              <h4>Happy Faces</h4>
+            </div>
+
+            <div className="awardee-card">
+              <img
+                src="/img/Sheet kavatch1.jpg"
+                alt="Gallery"
+              />
+              <h4>Distribution Day</h4>
+            </div>
+            <div className="awardee-card">
+              <img
+                src="/img/Sheet kavatch2.jpeg"
+                alt="Gallery"
+              />
+              <h4>Happy Faces</h4>
+            </div>
+            <div className="awardee-card">
+              <img
+                src="/img/Sheet kavatch3.jpeg"
+                alt="Gallery"
+              />
+              <h4>Volunteer Support</h4>
+            </div>
+            <div className="awardee-card">
+              <img
+                src="/img/Sheet kavatch4.jpeg"
+                alt="Gallery"
+              />
+              <h4>Distribution Day</h4>
+            </div>
+            <div className="awardee-card">
+              <img
+                src="/img/Sheet kavatch5.jpeg"
+                alt="Gallery"
+              />
+              <h4>Happy Faces</h4>
+            </div>
+            <div className="awardee-card">
+              <img
+                src="/img/Sheet kavatch6.jpeg"
+                alt="Gallery"
+              />
+              <h4>Volunteer Support</h4>
+            </div>
+            <div className="awardee-card">
+              <img
+                src="/img/Sheet kavatch7.jpeg"
+                alt="Gallery"
+              />
+              <h4>Happy Faces</h4>
             </div>
           </div>
         </div>

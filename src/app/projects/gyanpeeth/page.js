@@ -346,8 +346,8 @@ export default function GyanpeethPage() {
 
         .gallery-carousel img,
         .gallery-carousel video {
-          width: 380px;
-          height: 500px;
+          width: 500px;
+          height: 350px;
           object-fit: cover;
           border-radius: 15px;
           box-shadow: 0 10px 30px rgba(0,0,0,0.15);
@@ -806,12 +806,15 @@ export default function GyanpeethPage() {
         <div className="container">
           <h2 className="section-title">A Day in Navratan Gyanpeeth</h2>
           <div className="gallery-carousel">
-            <img src="/img/hero-one-big.3b2cd132.jpg" alt="Children in class" />
+            <img src="/img/Gyanpeeth1.png" alt="Children in class" />
             <img src="/img/our-campaigns-3.jpg" alt="Group learning session" />
             <img src="/img/our-campaigns-4.jpg" alt="Children activities" />
-            <img src="https://www.navratanfoundations.com/images/gyanpeeth4.jpg" alt="Moral education" />
-            <img src="https://www.navratanfoundations.com/images/gyanpeeth5.jpg" alt="Health awareness" />
-            <img src="https://www.navratanfoundations.com/images/gyanpeeth6.jpg" alt="Personality development" />
+            <img src="/img/Gyanpeeth2.png" alt="Children in class" />
+            <img src="/img/Gyanpeeth3.png" alt="Children in class" />
+            <img src="/img/Gyanpeeth4.png" alt="Children in class" />
+            <img src="/img/Gyanpeeth5.png" alt="Children in class" />
+            <img src="/img/Gyanpeeth6.png" alt="Children in class" />
+            <img src="/img/Gyanpeeth7.png" alt="Children in class" />
           </div>
         </div>
       </section>
@@ -822,21 +825,21 @@ export default function GyanpeethPage() {
           <h2 className="section-title">Success Stories</h2>
           <div className="stories-grid">
             <div className="story-card">
-              <img src="/img/hero-one-big.3b2cd132.jpg" alt="Rahul" />
+              <img src="/img/success2.png" alt="Rahul" />
               <div className="story-content">
                 <h4>Rahul</h4>
                 <p>From out-of-school to excelling in studies and aspiring to be a teacher.</p>
               </div>
             </div>
             <div className="story-card">
-              <img src="/img/our-campaigns-3.jpg" alt="Priya" />
+              <img src="/img/success3.jpg" alt="Priya" />
               <div className="story-content">
                 <h4>Priya</h4>
                 <p>Gained confidence and social skills, now helping others in her community.</p>
               </div>
             </div>
             <div className="story-card">
-              <img src="/img/our-campaigns-4.jpg" alt="Aman" />
+              <img src="/img/success1.png" alt="Aman" />
               <div className="story-content">
                 <h4>Aman</h4>
                 <p>Learned moral values and health awareness, leading a healthier life.</p>
