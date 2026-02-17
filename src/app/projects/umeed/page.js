@@ -477,7 +477,8 @@ export default function UmeedPage() {
         }
 
         .directions-btn {
-          display: inline-block;
+          display: none;
+          // display: inline-block;
           margin-top: 15px;
           padding: 10px 20px;
           background: var(--primary);

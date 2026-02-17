@@ -153,7 +153,8 @@ export default function AllAstitvaCenters() {
         }
 
         .directions-btn {
-          display: inline-block;
+        display: none;
+          // display: inline-block;
           margin-top: 14px;
           padding: 10px 22px;
           background: #fbd45a;
