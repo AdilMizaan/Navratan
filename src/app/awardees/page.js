@@ -1,4 +1,5 @@
 // src/app/awardees/page.js
+"use client";
 
 import AwardeesFilter from '../components/AwardeesFilter';
 import AwardeesFilter2 from '../components/AwardeesFilter2';
