@@ -5,9 +5,19 @@ import Link from 'next/link';
 
 export default function AllCyberurjaCenters() {
   const centers = [
-    {
-      name: "JAMIA MILIA- RIZVIA SCHOOL, VILL CHHOLOS, DADARI, GAUTAM BUDDH NAGAR.",
-      location: "Uttar Pradesh – Dadari",
+      {
+      name: "NAVRATAN AADARSH COMPUTER EDUCATION CENTRE, DELIGHT PUBLIC SCHOOL, SADARPUR.",
+      location: "Uttar Pradesh – Noida",
+      active: true,
+    },
+     {
+      name: "PETRONET DIVYA TARANG COMPUTER EDU. CENTRE, SECTOR 10, NOIDA",
+      location: "Uttar Pradesh – Noida",
+      active: true,
+    },
+     {
+      name: "PETRONET COMPUTER EDUCATION CENTRE, MAHARAJA AGRASEN HIGHER SECONDARY SCHOOL, KHODA COLONY, GHAZIABAD",
+      location: "Uttar Pradesh – Ghaziabad",
       active: true,
     },
     {
@@ -15,6 +25,27 @@ export default function AllCyberurjaCenters() {
       location: "Uttar Pradesh – Noida",
       active: true,
     },
+     {
+      name: "DR A. B. L. SRIVASTAVA COMPUTER EDUCATION CENTRE, NEW GREEN LAWNS PUBLIC SCHOOL, TOWER WALI GALI, VILLAGE BHANGEL, NOIDA",
+      location: "Uttar Pradesh – Noida",
+      active: true,
+    },
+       {
+      name: "DR. A. B. L. SRIVASTAVA COMPUTER TRAINING CENTRE, COMMUNITY CENTRE, SECTOR-31, NITHARI, NOIDA",
+      location: "Uttar Pradesh – Noida",
+      active: true,
+    },
+    {
+      name: "DR. A. B. L. SRIVASTAVA COMPUTER TRAINING CENTRE, 3365, GALI NO 73, E,-2 BLOCK, MOLARBAND, BADARPUR, NEW DELHI.",
+      location: "Delhi",
+      active: true,
+    },
+    {
+      name: "JAMIA MILIA- RIZVIA SCHOOL, VILL CHHOLOS, DADARI, GAUTAM BUDDH NAGAR.",
+      location: "Uttar Pradesh – Dadari",
+      active: true,
+    },
+    
     {
       name: "NAVRATAN COMPUTER EDUCATION CENTRE, KANCHAN PUBLIC SCHOOL, GARHI CHAUKANDI SECTOR 68, NOIDA.",
       location: "Uttar Pradesh – Noida",
@@ -35,44 +66,15 @@ export default function AllCyberurjaCenters() {
       location: "Uttar Pradesh – Noida",
       active: true,
     },
-    {
-      name: "NAVRATAN AADARSH COMPUTER EDUCATION CENTRE, DELIGHT PUBLIC SCHOOL, SADARPUR.",
-      location: "Uttar Pradesh – Noida",
-      active: true,
-    },
+  
     {
       name: "SMT. KUSUM KHOSALA COMPUTER EDUCATION CENTRE, JAMA MASJID, SECT-8, NOIDA",
       location: "Uttar Pradesh – Noida",
       active: true,
     },
     {
-      name: "DR A. B. L. SRIVASTAVA COMPUTER EDUCATION CENTRE, NEW GREEN LAWNS PUBLIC SCHOOL, TOWER WALI GALI, VILLAGE BHANGEL, NOIDA",
-      location: "Uttar Pradesh – Noida",
-      active: true,
-    },
-    {
       name: "M.G. BHATNAGAR COMPUTER EDUCATION CENTRE, SUNPURA, GREATER NOIDA",
       location: "Uttar Pradesh – Greater Noida",
-      active: true,
-    },
-    {
-      name: "PETRONET COMPUTER EDUCATION CENTRE, MAHARAJA AGRASEN HIGHER SECONDARY SCHOOL, KHODA COLONY, GHAZIABAD",
-      location: "Uttar Pradesh – Ghaziabad",
-      active: true,
-    },
-    {
-      name: "PETRONET DIVYA TARANG COMPUTER EDU. CENTRE, SECTOR 10, NOIDA",
-      location: "Uttar Pradesh – Noida",
-      active: true,
-    },
-    {
-      name: "DR. A. B. L. SRIVASTAVA COMPUTER TRAINING CENTRE, COMMUNITY CENTRE, SECTOR-31, NITHARI, NOIDA",
-      location: "Uttar Pradesh – Noida",
-      active: true,
-    },
-    {
-      name: "DR. A. B. L. SRIVASTAVA COMPUTER TRAINING CENTRE, 3365, GALI NO 73, E,-2 BLOCK, MOLARBAND, BADARPUR, NEW DELHI.",
-      location: "Delhi",
       active: true,
     },
   ];
@@ -258,11 +260,11 @@ export default function AllCyberurjaCenters() {
             <div key={index} className="center-card">
               <div className="top-row">
                 <div className="center-location-tag">{center.location}</div>
-                <span
+                {/* <span
                   className={`center-badge ${center.active ? 'active' : 'inactive'}`}
                 >
                   {center.active ? 'Active' : 'Inactive'}
-                </span>
+                </span> */}
               </div>
 
               <h4 className="center-name">{center.name}</h4>

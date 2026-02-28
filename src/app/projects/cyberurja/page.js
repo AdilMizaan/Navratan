@@ -75,10 +75,22 @@ export default function CyberurjaPage() {
   // Featured centers for carousel
   const featuredCenters = [
     {
-      name: "JAMIA MILIA- RIZVIA SCHOOL",
-      locationTag: "Uttar Pradesh – Dadari",
-      address: "Vill Chholos, Dadari, Gautam Buddh Nagar",
-      courses: "Basic Computers, MS Office, Internet",
+      name: "NAVRATAN AADARSH COMPUTER EDUCATION CENTRE",
+      locationTag: "Uttar Pradesh – Noida",
+      address: "Delight Public School, Sadarpur",
+      courses: "Basic Computers, Internet Safety",
+    },
+        {
+      name: "PETRONET DIVYA TARANG COMPUTER EDU. CENTRE",
+      locationTag: "Uttar Pradesh – Noida",
+      address: " SECTOR 10, NOIDA",
+      courses : "Basic Computers, MS Office, Internet & Email",
+    },
+      {
+      name: "PETRONET COMPUTER EDUCATION CENTRE",
+      locationTag: "Uttar Pradesh – Ghaziabad",
+      address: "MAHARAJA AGRASEN HIGHER SECONDARY SCHOOL, KHODA COLONY, GHAZIABAD",
+      courses : "Basic Computers, MS Office, Internet & Email",
     },
     {
       name: "MADHURI SAXENA COMPUTER EDUCATION CENTRE",
@@ -86,6 +98,30 @@ export default function CyberurjaPage() {
       address: "Nithari, Sector-31, Noida",
       courses: "Basic Computer Operations, MS Office",
     },
+     {
+      name: "DR A. B. L. SRIVASTAVA COMPUTER EDUCATION CENTRE",
+      locationTag: "Uttar Pradesh – Noida",
+      address: "NEW GREEN LAWNS PUBLIC SCHOOL, TOWER WALI GALI, VILLAGE BHANGEL, NOIDA",
+      courses : "Basic Computers, MS Office, Internet & Email",
+    },
+       {
+      name: "DR. A. B. L. SRIVASTAVA COMPUTER TRAINING CENTRE",
+      locationTag: "Uttar Pradesh – Noida",
+      address: "COMMUNITY CENTRE, SECTOR-31, NITHARI, NOIDA",
+      courses : "Basic Computers, MS Office, Internet & Email",
+    },
+    {
+      name: "DR. A. B. L. SRIVASTAVA COMPUTER TRAINING CENTRE",
+      locationTag: "Delhi",
+      address: "3365, GALI NO 73, E,-2 BLOCK, MOLARBAND, BADARPUR, NEW DELHI.",
+      courses : "Basic Computers, MS Office, Internet & Email",
+    },
+    {
+      name: "JAMIA MILIA- RIZVIA SCHOOL",
+      locationTag: "Uttar Pradesh – Dadari",
+      address: "Vill Chholos, Dadari, Gautam Buddh Nagar",
+      courses: "Basic Computers, MS Office, Internet",
+    }, 
     {
       name: "NAVRATAN COMPUTER EDUCATION CENTRE",
       locationTag: "Uttar Pradesh – Noida",
@@ -110,12 +146,7 @@ export default function CyberurjaPage() {
       address: "Nithari Sector 31, Noida",
       courses: "Computer Basics, Office Applications",
     },
-    {
-      name: "NAVRATAN AADARSH COMPUTER EDUCATION CENTRE",
-      locationTag: "Uttar Pradesh – Noida",
-      address: "Delight Public School, Sadarpur",
-      courses: "Basic Computers, Internet Safety",
-    },
+    
     {
       name: "SMT. KUSUM KHOSALA COMPUTER EDUCATION CENTRE",
       locationTag: "Uttar Pradesh – Noida",
@@ -422,6 +453,10 @@ export default function CyberurjaPage() {
           transform: scale(1.05);
         }
 
+
+        .stories{
+          display: none;
+        }
         .stories-grid {
           display: grid;
           grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
@@ -834,35 +869,35 @@ export default function CyberurjaPage() {
           <div className="stats-grid">
             <div className="stat-item">
               <i className="fas fa-laptop"></i>
-              <h3 className="counter" data-target="500">
+              <h3 className="counter" data-target="3000">
                 0+
               </h3>
-              <p>Participants Trained</p>
+              <p>Participants Being Trained</p>
             </div>
             <div className="stat-item">
               <i className="fas fa-desktop"></i>
-              <h3 className="counter" data-target="12">
+              <h3 className="counter" data-target="14">
                 0
               </h3>
               <p>Computer Labs/Centers</p>
             </div>
-            <div className="stat-item">
+            {/* <div className="stat-item">
               <i className="fas fa-chart-line"></i>
               <h3 className="counter" data-target="80">
                 0%
               </h3>
               <p>Placement & Skill Improvement Rate</p>
-            </div>
+            </div> */}
             <div className="stat-item">
               <i className="fas fa-clock"></i>
-              <h3 className="counter" data-target="12000">
+              <h3 className="counter" data-target="3500">
                 0+
               </h3>
               <p>Training Hours Delivered</p>
             </div>
             <div className="stat-item">
               <i className="fas fa-handshake"></i>
-              <h3 className="counter" data-target="8">
+              <h3 className="counter" data-target="6">
                 0+
               </h3>
               <p>Corporate & Community Partners</p>
@@ -1018,6 +1053,14 @@ export default function CyberurjaPage() {
               <h4>Basic Digital Skills for Jobs</h4>
               <p>Online job search, resume making in Word/PDF, typing speed practice, using job portals, basic freelancing intro.</p>
             </div>
+
+            <div className="course-card">
+  <div className="card-icon">
+    <i className="fas fa-calculator"></i>
+  </div>
+  <h4>Advance Tally Accounting</h4>
+  <p>GST billing, inventory management, ledger creation, payroll handling, and complete accounting using Tally.</p>
+</div>
           </div>
         </div>
       </section>
@@ -1030,18 +1073,18 @@ export default function CyberurjaPage() {
             Your contribution directly changes lives. See how your donation makes an impact:
           </p>
           <div className="donation-grid">
-            <div className="donation-item">
+            {/* <div className="donation-item">
               <h3>₹1,000</h3>
               <p>Provides basic computer supplies for one student</p>
-            </div>
-            <div className="donation-item">
-              <h3>₹5,000</h3>
-              <p>Sponsors full computer course for one participant</p>
-            </div>
+            </div> */}
             <div className="donation-item">
               <h3>₹10,000</h3>
-              <p>Helps maintain a computer lab for a month</p>
+              <p>Sponsors full computer course for one participant/year</p>
             </div>
+            {/* <div className="donation-item">
+              <h3>₹10,000</h3>
+              <p>Helps maintain a computer lab for a month</p>
+            </div> */}
           </div>
 
           <div className="qr-donate-center">

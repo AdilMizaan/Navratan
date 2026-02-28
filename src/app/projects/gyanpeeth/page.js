@@ -361,6 +361,10 @@ export default function GyanpeethPage() {
           transform: scale(1.05);
         }
 
+
+        .stories{
+        display: none;
+        }
         .stories-grid {
           display: grid;
           grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
@@ -762,7 +766,7 @@ export default function GyanpeethPage() {
         <div className="container">
           <h2 className="section-title">Our Mission</h2>
           <p style={{ fontSize: '1.3rem', maxWidth: '900px', margin: '0 auto', textAlign: 'center' }}>
-            Navratan Gyanpeeth is dedicated to providing underprivileged children with informal education, moral values, health awareness, and social skills for holistic development.
+            Navratan Gyanpeeth is dedicated to providing underprivileged children with informal education upto Class 5th, moral values, health awareness, and social skills for holistic development.
           </p>
         </div>
       </section>
@@ -774,12 +778,12 @@ export default function GyanpeethPage() {
           <div className="stats-grid">
             <div className="stat-item">
               <i className="fas fa-child"></i>
-              <h3 className="counter" data-target="500">0+</h3>
+              <h3 className="counter" data-target="1200">0+</h3>
               <p>Children Supported</p>
             </div>
             <div className="stat-item">
               <i className="fas fa-school"></i>
-              <h3 className="counter" data-target="10">0</h3>
+              <h3 className="counter" data-target="1">0</h3>
               <p>Active Centers</p>
             </div>
             <div className="stat-item">
@@ -789,12 +793,12 @@ export default function GyanpeethPage() {
             </div>
             <div className="stat-item">
               <i className="fas fa-clock"></i>
-              <h3 className="counter" data-target="8000">0+</h3>
-              <p>Learning Hours Delivered</p>
+              <h3 className="counter" data-target="1250">0+</h3>
+              <p>Learning Hours/Year Delivered</p>
             </div>
             <div className="stat-item">
               <i className="fas fa-handshake"></i>
-              <h3 className="counter" data-target="50">0+</h3>
+              <h3 className="counter" data-target="12">0+</h3>
               <p>Volunteers & Active Participation</p>
             </div>
           </div>
@@ -807,7 +811,7 @@ export default function GyanpeethPage() {
           <h2 className="section-title">A Day in Navratan Gyanpeeth</h2>
           <div className="gallery-carousel">
             <img src="/img/Gyanpeeth1.png" alt="Children in class" />
-            <img src="/img/our-campaigns-3.jpg" alt="Group learning session" />
+            {/* <img src="/img/our-campaigns-3.jpg" alt="Group learning session" /> */}
             <img src="/img/our-campaigns-4.jpg" alt="Children activities" />
             <img src="/img/Gyanpeeth2.png" alt="Children in class" />
             <img src="/img/Gyanpeeth3.png" alt="Children in class" />
@@ -903,7 +907,7 @@ export default function GyanpeethPage() {
             <div className="course-card">
               <div className="card-icon"><i className="fas fa-book-open"></i></div>
               <h4>Informal Education</h4>
-              <p>Basic reading, writing, numeracy, and foundational learning tailored for out-of-school children.</p>
+              <p>Basic reading, writing, numeracy, and foundational learning tailored for out-of-school children upto class 5th.</p>
             </div>
             <div className="course-card">
               <div className="card-icon"><i className="fas fa-heart"></i></div>
@@ -937,18 +941,18 @@ export default function GyanpeethPage() {
             Your contribution directly changes lives. See how your donation makes an impact:
           </p>
           <div className="donation-grid">
-            <div className="donation-item">
+            {/* <div className="donation-item">
               <h3>₹1,000</h3>
               <p>Provides books and supplies for one child</p>
-            </div>
+            </div> */}
             <div className="donation-item">
-              <h3>₹5,000</h3>
+              <h3>₹7500</h3>
               <p>Sponsors education for one child for a year</p>
             </div>
-            <div className="donation-item">
+            {/* <div className="donation-item">
               <h3>₹10,000</h3>
               <p>Helps maintain an education center for a month</p>
-            </div>
+            </div> */}
           </div>
           <div className="qr-donate-center">
             <a href="YOUR_DONATION_LINK_HERE" className="btn donate-btn">Donate Now</a>

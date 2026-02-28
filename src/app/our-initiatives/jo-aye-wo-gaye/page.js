@@ -721,31 +721,36 @@ export default function JoAayeWoGaye() {
         </div>
         <div className="rules-container">
           <div className="rule-card">
-            <i className="fas fa-check-circle"></i> Minimum age 15 years. (Lyrics reading allowed only for Senior Citizens).
+            <i className="fas fa-check-circle"></i>Monthly Audition Round (Alternate Month).
           </div>
           <div className="rule-card">
-            <i className="fas fa-check-circle"></i> On-the-spot registration only. Please bring your Aadhaar Card.
+            <i className="fas fa-check-circle"></i>We have two category of Ages: Juniors-5 yrs to 15 yrs, Seniors-16yrs and above.(Lyrics reading allowed only for Senior Citizens).
           </div>
           <div className="rule-card">
-            <i className="fas fa-check-circle"></i> Only first 30 singers (1 song each) on first-come-first basis.
+            <i className="fas fa-check-circle"></i>On-the-spot registration only. Please bring your Aadhaar Card.
+                Only first 30 singers (1 song each) on first-come-first basis.
           </div>
           <div className="rule-card">
-            <i className="fas fa-check-circle"></i> Refundable deposit of ₹500 (Returned same day after program).
+            <i className="fas fa-check-circle"></i>Only Bollywood songs will be allowed.
           </div>
           <div className="rule-card">
-            <i className="fas fa-check-circle"></i> Only Bollywood songs. Season-3 finalists cannot participate.
+            <i className="fas fa-check-circle"></i>Orchestra based Program: We have 4 pieces Musical Band to support participants musically.
           </div>
           <div className="rule-card">
-            <i className="fas fa-check-circle"></i> Orchestra based: Prepare 3-4 popular songs to avoid repetition.
+            <i className="fas fa-check-circle"></i>Prepare 3-4 popular songs to avoid repetition.
+          </div>
+          <div className="rule-card">
+            <i className="fas fa-check-circle"></i>Shortlist candidates according to their remarks and merit basis, judged by our GURUS from each episode will be eligible to participate in Quarter Final, Semi-Final then after Grand Finale as Auditoriom Shows if they qualify.
+          </div>
+          <div className="rule-card">
+            <i className="fas fa-check-circle"></i>We have 3 Awards in Grand-Finale UTTAM-Gayak, UTKRISHT-Gayak & SARVOTTAM-Gayak from both categories (Jrs. & Srs.)
           </div>
         </div>
       </section>
 
       <section className="supported-by">
         <p>
-          <strong>Supported By:</strong> Club-27, Sec-27 RWA, Tri Group of Music,
-          Sparsh-Ehsas Zindagi Ka, DMS-Aarhoi, Harmony Waves, Nav Kala Bhaw
-          Sangam, Aagrim Vidhyapeeth
+          <strong>Supported By:</strong> Tri Group of Music, Sparsh-Ehsas Zindagi Ka, DMS-Aarhoi, Harmony Waves, Nav Kala Bhaw Sangam, Aagrim Vidhyapeeth 
         </p>
       </section>
 
@@ -763,7 +768,7 @@ export default function JoAayeWoGaye() {
           <div className="step">
             <i className="fas fa-microphone-alt"></i>
             <h4>2. Perform</h4>
-            <p>Sing live with a professional orchestra.</p>
+            <p>Sing live with a professional orchestra Band.</p>
           </div>
           <div className="step">
             <i className="fas fa-trophy"></i>
@@ -775,19 +780,19 @@ export default function JoAayeWoGaye() {
 
       <section className="impact-bar" ref={impactBarRef}>
         <div className="stat-item">
-          <h3><span className="counter" data-target="5">0</span>+</h3>
+          <h3><span className="counter" data-target="9">0</span>+</h3>
           <p>Years</p>
         </div>
         <div className="stat-item">
-          <h3><span className="counter" data-target="500">0</span>+</h3>
+          <h3><span className="counter" data-target="1100">0</span>+</h3>
           <p>Singers</p>
         </div>
         <div className="stat-item">
-          <h3><span className="counter" data-target="60">0</span>+</h3>
+          <h3><span className="counter" data-target="100">0</span>+</h3>
           <p>Events</p>
         </div>
         <div className="stat-item">
-          <h3><span className="counter" data-target="1000">0</span>+</h3>
+          <h3><span className="counter" data-target="10000">0</span>+</h3>
           <p>Audience</p>
         </div>
       </section>
@@ -820,12 +825,12 @@ export default function JoAayeWoGaye() {
             </li>
             <li>
               <strong>Participation Limit</strong>
-              Limited to the first 30 singers on a first-come, first-served basis.
+              Limited to the first 30 singers on a first-come, first-served basis in two age categories.Juniors-5 yrs to 15 yrs, Seniors-16yrs and above.(Lyrics reading allowed only for Senior Citizens). 
             </li>
-            <li>
+            {/* <li>
               <strong>Refundable Deposit</strong>
               A registration fee of ₹500 is required, which will be returned to the performer on the same day after the program.
-            </li>
+            </li> */}
           </ul>
           <div className="event-highlight">
             <span>

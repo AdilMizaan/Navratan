@@ -377,8 +377,7 @@ export default function SheetKavatch() {
           <span className="flagship-badge">Annual Winter Drive</span>
           <h1>Sheet Kavatch</h1>
           <p>
-            Ensuring warmth and dignity for every child. A dedicated initiative to
-            distribute sweaters across government and slum schools.
+            Ensuring warmth and dignity for every child. A dedicated initiative to distribute woollen uniform sweaters across government and slum schools.
           </p>
         </div>
       </section>
@@ -387,25 +386,23 @@ export default function SheetKavatch() {
         <div className="card">
           <h2>The Mission of Warmth</h2>
           <p style={{ marginBottom: '20px', color: 'var(--text-gray)' }}>
-            Every November, Navratan Foundations reaches out to those in need,
-            distributing cozy blue uniform sweaters to ensure no child struggles
-            with the winter cold.
+            In the month of November, Navratan Foundations reaches out to those in need, distributing cozy warm uniform sweaters to ensure no child struggles with the chilly winter every year.
           </p>
           <div className="category-mini-grid">
             <div className="cat-item">
               <i className="fas fa-check-circle"></i> 50+ Schools
             </div>
             <div className="cat-item">
-              <i className="fas fa-check-circle"></i> 10,000+ Sweaters
+              <i className="fas fa-check-circle"></i> 45,000+ Sweaters
             </div>
             <div className="cat-item">
-              <i className="fas fa-check-circle"></i> Slum Schools
+              <i className="fas fa-check-circle"></i> Slum Schools of NGOs
             </div>
             <div className="cat-item">
-              <i className="fas fa-check-circle"></i> V-Neck Uniforms
+              <i className="fas fa-check-circle"></i>V-Neck Winter Uniforms
             </div>
             <div className="cat-item">
-              <i className="fas fa-check-circle"></i> GB Nagar Coverage
+              <i className="fas fa-check-circle"></i> Delhi/NCR in place of GB Nagar  Coverage
             </div>
             <div className="cat-item">
               <i className="fas fa-check-circle"></i> Child Welfare
@@ -460,15 +457,15 @@ export default function SheetKavatch() {
           <p>Schools Covered</p>
         </div>
         <div className="stat-item">
-          <h3><span className="counter" data-target="10000">0</span>+</h3>
+          <h3><span className="counter" data-target="45000">0</span>+</h3>
           <p>Sweaters Distributed</p>
         </div>
         <div className="stat-item">
-          <h3><span className="counter" data-target="10">0</span>+</h3>
+          <h3><span className="counter" data-target="22">0</span>+</h3>
           <p>Years of Warmth</p>
         </div>
         <div className="stat-item">
-          <h3><span className="counter" data-target="5">0</span>+</h3>
+          <h3><span className="counter" data-target="15">0</span>+</h3>
           <p>Regions Reached</p>
         </div>
       </section>
@@ -515,20 +512,20 @@ export default function SheetKavatch() {
               />
               <h4>Happy Faces</h4>
             </div>
-            <div className="awardee-card">
+            {/* <div className="awardee-card">
               <img
                 src="/img/Sheet kavatch6.jpeg"
                 alt="Gallery"
               />
               <h4>Volunteer Support</h4>
-            </div>
-            <div className="awardee-card">
+            </div> */}
+            {/* <div className="awardee-card">
               <img
                 src="/img/Sheet kavatch7.jpeg"
                 alt="Gallery"
               />
               <h4>Happy Faces</h4>
-            </div>
+            </div> */}
 
             <div className="awardee-card">
               <img

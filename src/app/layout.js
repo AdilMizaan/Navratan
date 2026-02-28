@@ -1,4 +1,5 @@
 import './globals.css';
+import HydrationFix from '@/app/components/HydrationFix';
 
 export const metadata = {
   title: 'Navratan Foundations',
@@ -8,7 +9,9 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
+      <HydrationFix />
       <body>{children}</body>
     </html>
   );
 }
+

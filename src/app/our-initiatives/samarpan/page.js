@@ -1,6 +1,7 @@
 'use client'
 
-import { useEffect, useRef } from 'react'
+import { useEffect, useRef,} from 'react'
+import NominateForm from '@/app/components/NominateForm';
 
 export default function Samarpan() {
   const impactBarRef = useRef(null)
@@ -32,7 +33,7 @@ export default function Samarpan() {
       })
     }
 
-    const observer = new IntersectionObserver(
+    const observer = new IntersectionObserver( 
       (entries) => {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
@@ -73,6 +74,10 @@ export default function Samarpan() {
           font-family: 'Roboto', sans-serif;
         }
 
+        html {
+  scroll-behavior: smooth;
+}
+  
         body {
           line-height: 1.6;
           color: var(--text-dark);
@@ -321,9 +326,9 @@ export default function Samarpan() {
         }
 
         .dual-cta {
-          display: grid;
-          grid-template-columns: 1fr 1fr;
-          gap: 20px;
+          // display: grid;
+          // grid-template-columns: 1fr 1fr;
+          // gap: 20px;
           padding: 60px 10%;
         }
 
@@ -384,7 +389,7 @@ export default function Samarpan() {
           <span className="flagship-badge">Flagship Event</span>
           <h1>Samarpan Awards</h1>
           <p>
-            A grand culmination of a year-long effort to celebrate the unsung changemakers of our society.
+            A grand culmination of a year-long effort to celebrate the unsung Heroes Of Social Welfares of our society.
           </p>
         </div>
       </section>
@@ -393,8 +398,7 @@ export default function Samarpan() {
         <div className="card">
           <h2>The Celebration</h2>
           <p style={{ marginBottom: '20px', color: 'var(--text-gray)' }}>
-            Samarpan showcases accomplishments and recognizes individuals who have
-            made significant contributions across diverse sectors.
+            Samarpan showcases accomplishments and recognizes individuals and organisations who have made significant contributions across diverse sectors.
           </p>
           <div className="category-mini-grid">
             <div className="cat-item">
@@ -414,6 +418,9 @@ export default function Samarpan() {
             </div>
             <div className="cat-item">
               <i className="fas fa-check-circle"></i> Child Protection
+            </div>
+            <div className="cat-item">
+              <i className="fas fa-check-circle"></i> And many more.
             </div>
           </div>
         </div>
@@ -456,19 +463,19 @@ export default function Samarpan() {
 
       <section className="impact-bar" ref={impactBarRef}>
         <div className="stat-item">
-          <h3><span className="counter" data-target="20">0</span>+</h3>
+          <h3><span className="counter" data-target="23">0</span>+</h3>
           <p>Annual Awards</p>
         </div>
         <div className="stat-item">
-          <h3><span className="counter" data-target="500">0</span>+</h3>
+          <h3><span className="counter" data-target="50000">0</span>+</h3>
           <p>Attendees</p>
         </div>
         <div className="stat-item">
-          <h3><span className="counter" data-target="8">0</span>+</h3>
+          <h3><span className="counter" data-target="10">0</span>+</h3>
           <p>Sectors Honored</p>
         </div>
         <div className="stat-item">
-          <h3><span className="counter" data-target="5">0</span>+</h3>
+          <h3><span className="counter" data-target="20">0</span>+</h3>
           <p>States Covered</p>
         </div>
       </section>
@@ -618,14 +625,17 @@ export default function Samarpan() {
           <p>
             Know someone making a difference? Nominate them for the next Samarpan.
           </p>
-          <a href="#" className="btn">Nominate Now</a>
+           <a href="#nominate-form" className="btn">Nominate Now</a> 
         </div>
-        <div className="cta-box cta-sponsor">
+        {/* <div className="cta-box cta-sponsor">
           <h3>Memorial Sponsorship</h3>
           <p>Sponsor an award in the loving memory of your dear ones.</p>
           <a href="#" className="btn">Inquire Now</a>
-        </div>
+        </div> */}
       </section>
+
+      <NominateForm />
+      
     </>
   )
 }

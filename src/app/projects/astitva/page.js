@@ -77,7 +77,7 @@ export default function AstitvaPage() {
       badge: "Main Hub",
       locationTag: "Uttar Pradesh – Noida",
       address: "E-74, Sector 52, Noida, Uttar Pradesh 201307",
-      courses: "Basic Stitching, Advanced Tailoring",
+      courses: "Basic Stitching, Advanced Tailoring etc.",
       lat: 28.5961,
       lng: 77.3639,
     },
@@ -294,6 +294,9 @@ export default function AstitvaPage() {
           transition: transform 0.4s;
         }
 
+        .stories{
+        display: none;
+        }
         .stories-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 40px; }
         .story-card {
           background: white; border-radius: 20px; overflow: hidden;
@@ -593,12 +596,12 @@ export default function AstitvaPage() {
             </div>
             <div className="stat-item">
               <i className="fas fa-clock"></i>
-              <h3 className="counter" data-target="100000">0+</h3>
+              <h3 className="counter" data-target="18500">0+</h3>
               <p>Training Hours/Year</p>
             </div>
             <div className="stat-item">
               <i className="fas fa-handshake"></i>
-              <h3 className="counter" data-target="15">0+</h3>
+              <h3 className="counter" data-target="5">0+</h3>
               <p>Corporate Partners</p>
             </div>
           </div>
@@ -610,30 +613,30 @@ export default function AstitvaPage() {
         <div className="container">
           <h2 className="section-title">A Day in Astitva</h2>
           <div className="gallery-carousel">
-            <img src="/img/astitva1.jpg" alt="Women in sewing class" />
+            {/* <img src="/img/astitva1.jpg" alt="Women in sewing class" /> */}
             <img src="https://tzuchi-en-backend.storage.googleapis.com/content/images/2024/11/1-800-4.jpg" alt="Group training session" />
-            <img src="/img/astitva1.jpg" alt="Women learning stitching" />
+            {/* <img src="/img/astitva1.jpg" alt="Women learning stitching" /> */}
             <img src="https://thumbs.dreamstime.com/b/group-woman-tailoring-class-discuissing-teacher-cloth-stitching-training-concept-skill-development-250148147.jpg" alt="Tailoring discussion" />
             <img src="https://tzuchi-en-backend.storage.googleapis.com/content/images/2024/11/2-800-6.jpg" alt="Empowered women sewing" />
             <img src="https://media.holtinternational.org/wp-content/uploads/2023/07/Nisha.jpg" alt="Woman with sewing machine" />
             <img src="/img/astitva2.jpg" alt="Women learning stitching" />
-            <img src="/img/astitva3.jpg" alt="Women learning stitching" />
+            {/* <img src="/img/astitva3.jpg" alt="Women learning stitching" /> */}
             <img src="/img/astitva4.jpg" alt="Women learning stitching" />
             <img src="/img/astitva5.jpg" alt="Women learning stitching" />
-            <img src="/img/astitva6.jpg" alt="Women learning stitching" />
-            <img src="/img/astitva7.jpg" alt="Women learning stitching" />
-            <img src="/img/astitva8.jpg" alt="Women learning stitching" />
-            <img src="/img/astitva9.jpg" alt="Women learning stitching" />
+            {/* <img src="/img/astitva6.jpg" alt="Women learning stitching" /> */}
+            {/* <img src="/img/astitva7.jpg" alt="Women learning stitching" /> */}
+            {/* <img src="/img/astitva8.jpg" alt="Women learning stitching" /> */}
+            {/* <img src="/img/astitva9.jpg" alt="Women learning stitching" /> */}
             <img src="/img/astitva10.jpg" alt="Women learning stitching" />
             <img src="/img/astitva11.jpg" alt="Women learning stitching" />
             <img src="/img/astitva12.jpg" alt="Women learning stitching" />
             <img src="/img/astitva13.jpg" alt="Women learning stitching" />
-            <img src="/img/astitva14.jpg" alt="Women learning stitching" />
+            {/* <img src="/img/astitva14.jpg" alt="Women learning stitching" /> */}
             <img src="/img/astitva15.jpg" alt="Women learning stitching" />
             <img src="/img/astitva16.jpg" alt="Women learning stitching" />
-            <img src="/img/astitva17.jpg" alt="Women learning stitching" />
+            {/* <img src="/img/astitva17.jpg" alt="Women learning stitching" /> */}
             <img src="/img/astitva18.jpg" alt="Women learning stitching" />
-            <img src="/img/astitva19.jpg" alt="Women learning stitching" />
+            {/* <img src="/img/astitva19.jpg" alt="Women learning stitching" /> */}
             <img src="/img/astitva20.jpg" alt="Women learning stitching" />
             <img src="/img/astitva21.jpg" alt="Women learning stitching" />
           </div>
@@ -675,7 +678,7 @@ export default function AstitvaPage() {
         <div className="container">
           <h2 className="section-title">Our Network of Empowerment Centers</h2>
           <p style={{ textAlign: 'center', maxWidth: '800px', margin: '0 auto 50px', fontSize: '1.2rem', color: '#555' }}>
-            Astitva is now spread across 37+ centers in Delhi/NCR. Every center provides free training to underprivileged women. Explore on the map and view the complete list of centers!
+            Astitva is now spread across 37+ centers in Delhi/NCR. Every center provides training to underprivileged women. Explore on the map and view the complete list of centers!
           </p>
 
           <div className="centers-carousel">
@@ -687,7 +690,7 @@ export default function AstitvaPage() {
 
                 <div className="card-header">
                   <h4>{center.name}</h4>
-                  {center.badge && <span className="center-badge">{center.badge}</span>}
+                  {/* {center.badge && <span className="center-badge">{center.badge}</span>} */}
                 </div>
 
                 <p className="address">
@@ -742,11 +745,11 @@ export default function AstitvaPage() {
               <p>Sketching, color theory, fabric selection, trend understanding, and basic design concepts.</p>
             </div>
 
-            <div className="course-card">
+            {/* <div className="course-card">
               <div className="card-icon"><i className="fas fa-wallet"></i></div>
               <h4>Financial Literacy</h4>
               <p>Budgeting, saving, basic banking, loan awareness, entrepreneurship basics, and income management.</p>
-            </div>
+            </div> */}
 
             <div className="course-card">
               <div className="card-icon"><i className="fas fa-comments"></i></div>
@@ -765,18 +768,18 @@ export default function AstitvaPage() {
             Your contribution directly changes lives. See how your donation makes an impact:
           </p>
           <div className="donation-grid">
-            <div className="donation-item">
+            {/* <div className="donation-item">
               <h3>₹1,000</h3>
               <p>Provides a complete sewing kit for one student</p>
-            </div>
+            </div> */}
             <div className="donation-item">
-              <h3>₹5,000</h3>
+              <h3>₹2500</h3>
               <p>Sponsors full 6-month training for one woman</p>
             </div>
-            <div className="donation-item">
+            {/* <div className="donation-item">
               <h3>₹10,000</h3>
               <p>Helps maintain a training center for a month</p>
-            </div>
+            </div> */}
           </div>
 
           <div className="qr-donate-center">

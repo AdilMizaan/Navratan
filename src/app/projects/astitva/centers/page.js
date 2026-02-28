@@ -227,11 +227,11 @@ export default function AllAstitvaCenters() {
             <div key={index} className="center-card">
               <div className="top-row">
                 <div className="center-location-tag">{center.location}</div>
-                <span
+                {/* <span
                   className={`center-badge ${center.active ? 'active' : 'handed-over'}`}
                 >
                   {center.active ? 'Active' : 'Handed Over'}
-                </span>
+                </span> */}
               </div>
 
               <h4 className="center-name">{center.name}</h4>
@@ -241,7 +241,7 @@ export default function AllAstitvaCenters() {
               </p>
 
               <p className="course">
-                <i className="fas fa-book-open"></i> Basic Stitching, Advanced Tailoring
+                <i className="fas fa-book-open"></i> Basic Stitching, Advanced Tailoring etc.
               </p>
 
               <a

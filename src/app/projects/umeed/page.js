@@ -370,6 +370,11 @@ export default function UmeedPage() {
           transform: scale(1.05);
         }
 
+
+
+        .stories{
+        display: none;
+        }
         .stories-grid {
           display: grid;
           grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
@@ -748,29 +753,29 @@ export default function UmeedPage() {
           <div className="stats-grid">
             <div className="stat-item">
               <i className="fas fa-female"></i>
-              <h3 className="counter" data-target="500">0+</h3>
+              <h3 className="counter" data-target="470">0+</h3>
               <p>Women Educated</p>
             </div>
             <div className="stat-item">
               <i className="fas fa-school"></i>
-              <h3 className="counter" data-target="8">0</h3>
-              <p>Learning Centers</p>
+              <h3 className="counter" data-target="6">0</h3>
+              <p>We have opened Learning Centers</p>
             </div>
             <div className="stat-item">
               <i className="fas fa-chart-line"></i>
-              <h3 className="counter" data-target="90">0%</h3>
+              <h3 className="counter" data-target="80">0%</h3>
               <p>Attendance & Completion Rate</p>
             </div>
-            <div className="stat-item">
+            {/* <div className="stat-item">
               <i className="fas fa-clock"></i>
               <h3 className="counter" data-target="5000">0+</h3>
               <p>Learning Hours Delivered</p>
-            </div>
-            <div className="stat-item">
+            </div> */}
+            {/* <div className="stat-item">
               <i className="fas fa-handshake"></i>
               <h3 className="counter" data-target="200">0+</h3>
               <p>Community Impact & Awareness</p>
-            </div>
+            </div> */}
           </div>
         </div>
       </section>
