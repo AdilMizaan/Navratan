@@ -72,4 +72,4 @@ const contact = formData.get('contact') || 'N/A';
     console.error('Full catch error in route:', error.message, error.stack);
     return NextResponse.json({ success: false, error: error.message }, { status: 500 });
   }
-}
+}  
