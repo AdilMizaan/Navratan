@@ -703,12 +703,21 @@ export default function JoAayeWoGaye() {
           <h2>Special Attraction</h2>
           <div className="yellow-line"></div>
         </div>
-        <div className="mentor-card">
+        {/* <div className="mentor-card">
           <div className="mentor-info">
             <h3>Mr. Ramesh Nautiyal</h3>
             <span className="mentor-tag">Special Mentor</span>
             <p>
               Disciple of our beloved Musical Magician <strong>Pancham Da (R.D Burman)</strong>. Having lived and learned music at Pancham Da's house in Mumbai, his phenomenal singing and style keep the legacy of R.D Burman alive.
+            </p>
+          </div>
+        </div> */}
+        <div className="mentor-card">
+          <div className="mentor-info">
+            {/* <h3>Mr. Ramesh Nautiyal</h3>
+            <span className="mentor-tag">Special Mentor</span> */}
+            <p>
+              We include a renowned musical personality from the Delhi music fraternity as a Special Mentor in every episode of JAWG. Along with our judges, they guide and inspire new aspirants to enhance their singing skills and stage performance.
             </p>
           </div>
         </div>
