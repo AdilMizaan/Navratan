@@ -743,7 +743,7 @@ export default function JoAayeWoGaye() {
             <i className="fas fa-check-circle"></i>Only Bollywood songs will be allowed.
           </div>
           <div className="rule-card">
-            <i className="fas fa-check-circle"></i>Orchestra based Program: We have 4 pieces Musical Band to support participants musically.
+            <i className="fas fa-check-circle"></i>Orchestra based Program: We have Live Band to support participants musically.
           </div>
           <div className="rule-card">
             <i className="fas fa-check-circle"></i>Prepare 3-4 popular songs to avoid repetition.

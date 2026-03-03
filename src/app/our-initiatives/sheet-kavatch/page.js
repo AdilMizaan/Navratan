@@ -402,7 +402,7 @@ export default function SheetKavatch() {
               <i className="fas fa-check-circle"></i>V-Neck Winter Uniforms
             </div>
             <div className="cat-item">
-              <i className="fas fa-check-circle"></i> Delhi/NCR in place of GB Nagar  Coverage
+              <i className="fas fa-check-circle"></i> Delhi/NCR
             </div>
             <div className="cat-item">
               <i className="fas fa-check-circle"></i> Child Welfare
