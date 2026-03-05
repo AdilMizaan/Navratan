@@ -4,7 +4,7 @@ import { Suspense } from "react";
 import AwardeesFilter2 from "../components/AwardeesFilter2";
 
 export const metadata = {
-  title: "Our Awardees - [Your NGO Name]",
+  title: "Our Awardees - Navratan Foundation",
   description: "Explore our past awardees honored over 23 years.",
 };
 
