@@ -65,11 +65,23 @@
 //   );
 // }
 
-export default function Home() {
+// export default function Home() {
+//   return (
+//     <div>
+//       Home Page Working
+//     </div>
+//   );
+// }
+
+
+
+import Home from './components/Home';  // ya HomePage.js naam se bhi bana sakte ho
+
+export default function Page() {
   return (
-    <div>
-      Home Page Working
-    </div>
+    <>
+      <Home />
+     
+    </>
   );
 }
-
