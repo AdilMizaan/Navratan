@@ -9,7 +9,7 @@ export default function AboutUsSection() {
 
         .about-section {
           background: linear-gradient(to bottom, rgb(255, 255, 255) 0%, rgb(255, 255, 255) 60%, #fef3c7 100%);
-          padding: 140px 0 120px;
+          padding: 80px 0 100px;
           position: relative;
           overflow: hidden;
         }

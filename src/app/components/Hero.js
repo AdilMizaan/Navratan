@@ -3,7 +3,7 @@
 import { useEffect, useState } from 'react';
 
 export default function Hero() {
-  // Typing effect (same rakha)
+  // Typing effect (unchanged)
   const phrases = [
     "Grassroot Education",
     "Knowledge & Opportunity",
@@ -44,36 +44,54 @@ export default function Hero() {
 
   // Carousel images
   const carouselImages = [
-    "/img/astitva1.jpg",
-    "/img/astitva2.jpg",
-    "/img/astitva3.jpg",
-    "/img/astitva1.jpg",
-    "/img/astitva2.jpg",
-    "/img/astitva3.jpg",
-    "/img/astitva1.jpg",
-    "/img/astitva2.jpg",
-    "/img/astitva3.jpg",
-    "/img/astitva1.jpg",
-    "/img/astitva2.jpg",
-    "/img/astitva3.jpg",
-    // aur jitne chahiye add kar do
+    "/img/our-campaigns-3.jpg",
+    "/img/our-campaigns-4.jpg",
+    "/img/our-campaigns-5.jpg",
+    "/img/our-campaigns-6.jpg",
+    "/img/our-campaigns-7.jpg",
+    "/img/our-campaigns-8.jpg",
   ];
 
+  // Duplicate first 2 images for seamless loop (enough for 3-visible)
+  const extendedImages = [...carouselImages, ...carouselImages.slice(0, 2)];
+
   const [currentIndex, setCurrentIndex] = useState(0);
+  const [slidesToShow, setSlidesToShow] = useState(3);
 
-  const nextSlide = () => {
-    setCurrentIndex((prev) => (prev + 1) % carouselImages.length);
-  };
+  // Detect slides visible on resize
+  useEffect(() => {
+    const updateSlides = () => {
+      if (window.innerWidth < 768) {
+        setSlidesToShow(1);
+      } else if (window.innerWidth < 1024) {
+        setSlidesToShow(2);
+      } else {
+        setSlidesToShow(3);
+      }
+    };
 
-  const prevSlide = () => {
-    setCurrentIndex((prev) => (prev - 1 + carouselImages.length) % carouselImages.length);
-  };
+    updateSlides();
+    window.addEventListener('resize', updateSlides);
+    return () => window.removeEventListener('resize', updateSlides);
+  }, []);
+
+  const nextSlide = () => setCurrentIndex(prev => prev + 1);
+  const prevSlide = () => setCurrentIndex(prev => prev - 1);
 
   // Auto slide
   useEffect(() => {
     const interval = setInterval(nextSlide, 5000);
     return () => clearInterval(interval);
   }, []);
+
+  // Infinite loop reset (no visible jump)
+  useEffect(() => {
+    if (currentIndex >= carouselImages.length) {
+      setCurrentIndex(currentIndex - carouselImages.length);
+    } else if (currentIndex < 0) {
+      setCurrentIndex(currentIndex + carouselImages.length);
+    }
+  }, [currentIndex]);
 
   return (
     <>
@@ -139,7 +157,7 @@ export default function Hero() {
           box-shadow: 0 15px 35px rgba(0, 172, 240, 0.4);
         }
 
-        /* Carousel - arrows bahar side mein */
+        /* Carousel */
         .carousel-section {
           width: 100%;
           max-width: 1400px;
@@ -149,7 +167,7 @@ export default function Hero() {
 
         .carousel-wrapper {
           overflow: hidden;
-          margin: 0 70px; /* arrows ke liye left-right space */
+          margin: 0 70px;
         }
 
         .carousel-track {
@@ -158,7 +176,7 @@ export default function Hero() {
         }
 
         .carousel-slide {
-          flex: 0 0 33.333%; /* 3 images visible */
+          flex: 0 0 var(--slide-width);
           padding: 0 15px;
         }
 
@@ -167,7 +185,6 @@ export default function Hero() {
           height: 280px;
           object-fit: cover;
           border-radius: 24px;
-          // box-shadow: 0 10px 30px rgba(0,0,0,0.15);
           transition: transform 0.3s ease;
         }
 
@@ -175,7 +192,7 @@ export default function Hero() {
           transform: scale(1.03);
         }
 
-        /* Arrows - bahar positioned, image se bahar */
+        /* Arrows */
         .carousel-arrow {
           position: absolute;
           top: 50%;
@@ -196,13 +213,8 @@ export default function Hero() {
           z-index: 10;
         }
 
-        .carousel-arrow.prev {
-          left: -30px; /* bahar left side */
-        }
-
-        .carousel-arrow.next {
-          right: -30px; /* bahar right side */
-        }
+        .carousel-arrow.prev { left: -30px; }
+        .carousel-arrow.next { right: -30px; }
 
         .carousel-arrow:hover {
           background: #00acf0;
@@ -232,8 +244,15 @@ export default function Hero() {
           transform: scale(1.3);
         }
 
+        /* Responsive slide width */
+        :root {
+          --slide-width: 33.333%;  /* desktop: 3 images */
+        }
+
         @media (max-width: 1024px) {
-          .carousel-slide { flex: 0 0 50%; }
+          :root {
+            --slide-width: 50%;  /* tablet: 2 images */
+          }
           .carousel-wrapper { margin: 0 50px; }
           .carousel-arrow.prev { left: -20px; }
           .carousel-arrow.next { right: -20px; }
@@ -242,13 +261,16 @@ export default function Hero() {
         }
 
         @media (max-width: 768px) {
-          .carousel-slide { flex: 0 0 100%; }
+          :root {
+            --slide-width: 100%;  /* mobile: 1 image full width */
+          }
           .carousel-wrapper { margin: 0 30px; }
           .carousel-arrow.prev { left: -10px; }
           .carousel-arrow.next { right: -10px; }
-          .hero h1, .typing-text { font-size: 2.8rem; }
+          .hero h1, .typing-text { font-size: 28px; height: 40px; margin-bottom: 80px; margin-top: 10px; }
           .carousel-slide img { height: 280px; }
           .carousel-arrow { width: 50px; height: 50px; font-size: 24px; }
+          .hero-content { height: auto; }
         }
       `}</style>
 
@@ -269,9 +291,9 @@ export default function Hero() {
           <div className="carousel-wrapper">
             <div
               className="carousel-track"
-              style={{ transform: `translateX(-${currentIndex * (100 / 3)}%)` }}
+              style={{ transform: `translateX(-${currentIndex * (100 / slidesToShow)}%)` }}
             >
-              {carouselImages.map((src, index) => (
+              {extendedImages.map((src, index) => (
                 <div key={index} className="carousel-slide">
                   <img src={src} alt={`Project ${index + 1}`} />
                 </div>
@@ -279,7 +301,6 @@ export default function Hero() {
             </div>
           </div>
 
-          {/* Arrows bahar side mein */}
           <button className="carousel-arrow prev" onClick={prevSlide}>
             ←
           </button>
@@ -291,7 +312,7 @@ export default function Hero() {
             {carouselImages.map((_, index) => (
               <div
                 key={index}
-                className={`dot ${index === currentIndex ? "active" : ""}`}
+                className={`dot ${index === currentIndex % carouselImages.length ? "active" : ""}`}
                 onClick={() => setCurrentIndex(index)}
               />
             ))}
