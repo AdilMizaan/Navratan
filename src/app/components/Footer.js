@@ -7,8 +7,9 @@ export default function Footer() {
         footer {
           background:rgb(39, 35, 34);
           color: #e2e8f0;
-          padding: 80px 0 40px;
+          padding: 120px 0 40px;
           font-family: 'Inter', sans-serif;
+          z-index: 0;
         }
 
         .footer-container {
