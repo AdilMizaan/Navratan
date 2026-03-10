@@ -65,7 +65,7 @@ export default function OurProjectsSection() {
         }
 
         .project-info {
-          padding: 5px 3px;
+          padding: 10px 20px;
         }
 
         .project-title {
@@ -140,7 +140,7 @@ export default function OurProjectsSection() {
 
             <div className="project-card">
               <img
-                src="/img/gyanpeeth4.png"
+                src="/img/Gyanpeeth4.png"
                 alt="Navratan Gyanpeeth Project"
                 className="project-image"
               />
