@@ -11,7 +11,8 @@ import SocialEmotionalSection from './SocialEmotionalSection';
 import InspiringStoriesSection from './InspiringStoriesSection';
 import UpcomingEvents from './UpcomingEvents';
 import AwardsTimline from './AwardsTimline';
-// import ActivitiesSection from './ActivitiesSection';
+import ActivitiesSection from './ActivitiesSection';
+import ActivityYTVideos from './ActivityYTVideos';
 
 
 
@@ -59,7 +60,9 @@ export default function Home() {
 
       <SocialEmotionalSection />
 
-      {/* <ActivitiesSection /> */}
+      <ActivitiesSection />
+
+      <ActivityYTVideos />
 
       <InspiringStoriesSection />
 

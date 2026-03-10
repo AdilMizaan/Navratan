@@ -47,9 +47,31 @@ export default function UpcomingEvents() {
       <style jsx global>{`
         .events-section {
         //   background: #f8f9fa;
-          padding: 50px 0;
+          // padding: 50px 0;
         //   border-top: 1px solid #e5e7eb;
         //   border-bottom: 1px solid #e5e7eb;
+
+        padding: 100px 0 50px;
+          background: #ffffff;
+          text-align: center;
+        }
+
+          .heading-main {
+            font-family: 'Shadows Into Light', cursive;
+          font-size: 60px;
+          font-weight: 600;
+          color: rgba(0, 172, 240, 0.67);
+          margin: 0 0 28px 0;
+          line-height: 1.05;
+          letter-spacing: 0px;
+          text-shadow: 1px 1px 3px rgba(0,0,0,0.06);
+        }
+
+        .heading-sub {
+          font-size: 40px;
+          font-weight: 600;
+          color: #212121;
+          margin: -35px 0 60px 0;
         }
 
         .marquee-container {
@@ -57,9 +79,9 @@ export default function UpcomingEvents() {
           white-space: nowrap;
           background: #fbd45a;
           color: #212121;
-          padding: 24px 0;
-          font-weight: 600;
-          font-size: 18px;
+          padding: 40px 0;
+          font-weight: 700;
+          font-size: 30px;
           position: relative;
         }
 
@@ -182,6 +204,10 @@ export default function UpcomingEvents() {
       `}</style>
 
       <section className="events-section">
+         <h2 className="heading-main">Upcoming Events</h2>
+          <h3 className="heading-sub">
+            Stay Updated with Our Upcoming Programs
+          </h3>
         <div className="marquee-container">
           <div className="marquee">
             {events.map(event => (

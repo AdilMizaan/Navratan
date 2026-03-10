@@ -13,7 +13,7 @@ export default function InspiringStoriesSection() {
     <>
       <style jsx>{`
         .stories-section {
-          padding: 0px 0 100px;
+          padding: 100px 0 100px;
           background: #ffffff;
           text-align: center;
         }
