@@ -20,7 +20,7 @@ export default function Header() {
           box-sizing: border-box;
         }
 
-        /* Sticky Header - Yeh poora header sticky banayega */
+        /* Sticky Header */
         .sticky-header {
           position: sticky;
           top: 0;
@@ -124,22 +124,7 @@ export default function Header() {
           color: #00acf0;
         }
 
-        .nav-menu .nav-item::after {
-          content: '';
-          position: absolute;
-          width: 0;
-          height: 2px;
-          bottom: -6px;
-          left: 0;
-          background: #00acf0;
-          transition: width 0.3s;
-        }
-
-        .nav-menu .nav-item:hover::after {
-          width: 100%;
-        }
-
-        /* Dropdown */
+        /* Dropdown - About Us */
         .dropdown {
           position: relative;
         }
@@ -148,7 +133,7 @@ export default function Header() {
           display: none;
           position: absolute;
           background: white;
-          min-width: 180px;
+          min-width: 200px;
           box-shadow: 0 8px 16px rgba(0,0,0,0.1);
           z-index: 1;
           top: 100%;
@@ -171,6 +156,42 @@ export default function Header() {
         .dropdown-content a:hover {
           background: #f0f7ff;
           color: #00acf0;
+        }
+
+        /* Nested Dropdown - Navratan Pariwaar */
+        .dropdown-content .nested-dropdown {
+          position: relative;
+        }
+
+        .dropdown-content .nested-dropdown > a {
+          padding-right: 30px;
+          position: relative;
+        }
+
+        .dropdown-content .nested-dropdown > a::after {
+          content: '›';
+          position: absolute;
+          right: 15px;
+          top: 50%;
+          transform: translateY(-50%);
+          font-size: 18px;
+        }
+
+        .dropdown-content .nested-dropdown .nested-content {
+          display: none;
+          position: absolute;
+          left: 100%;
+          top: 0;
+          background: white;
+          min-width: 180px;
+          box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+          z-index: 2;
+          border-radius: 6px;
+          padding: 10px 0;
+        }
+
+        .dropdown-content .nested-dropdown:hover .nested-content {
+          display: block;
         }
 
         /* Support Button */
@@ -229,6 +250,12 @@ export default function Header() {
           color: #00acf0;
         }
 
+        /* Nested items in mobile - indented */
+        .mobile-menu .nested-item {
+          padding-left: 45px;
+          font-size: 15px;
+        }
+
         .mobile-menu .support-btn {
           margin: 20px 25px;
           display: block;
@@ -240,19 +267,15 @@ export default function Header() {
           .top-bar {
             display: none;
           }
-
           .nav-container {
             height: 70px;
           }
-
           .hamburger {
             display: block;
           }
-
           .nav-menu {
             display: none;
           }
-
           .support-btn {
             display: none;
           }
@@ -261,7 +284,7 @@ export default function Header() {
 
       {/* Sticky Header Wrapper */}
       <div className="sticky-header">
-        {/* Top Bar - desktop only */}
+        {/* Top Bar */}
         <div className="top-bar">
           <div className="top-container">
             <div className="contact-info">
@@ -274,7 +297,6 @@ export default function Header() {
                 E-74, Sector 52, Noida, Uttar Pradesh, India
               </div>
             </div>
-
             <div className="social-icons">
               <a href="https://www.facebook.com/navratanfoundations" target="_blank">
                 <FontAwesomeIcon icon={faFacebookF} />
@@ -302,11 +324,21 @@ export default function Header() {
           <div className="nav-menu">
             <a href="/" className="nav-item">Home</a>
 
+            {/* About Us Dropdown */}
             <div className="dropdown">
-              <a href="/about" className="nav-item">About Us ↓</a>
+              <a href="/about-us" className="nav-item">About Us ↓</a>
               <div className="dropdown-content">
-                <a href="/founder" className="nav-item">Founder Profile</a>
-                <a href="/advisors" className="nav-item">Advisors Committee</a>
+                <a href="/founder" className="nav-item">Founder's Profile</a>
+
+                {/* Navratan Pariwaar with nested dropdown */}
+                <div className="dropdown nested-dropdown">
+                  <a href="/navratan-pariwaar" className="nav-item">Navratan Pariwaar ↓</a>
+                  <div className="nested-content dropdown-content">
+                    <a href="/patrons" className="nav-item">Patrons</a>
+                    <a href="/advisors" className="nav-item">Advisors</a>
+                    <a href="/executive-committee" className="nav-item">Executive Committee</a>
+                  </div>
+                </div>
               </div>
             </div>
 
@@ -329,8 +361,12 @@ export default function Header() {
         {isMobileMenuOpen && (
           <div className="mobile-menu open">
             <a href="/" onClick={toggleMobileMenu}>Home</a>
-            <a href="/about" onClick={toggleMobileMenu}>About Us</a>
-            <a href="/founder" onClick={toggleMobileMenu}>Founder Profile</a>
+            <a href="/about-us" onClick={toggleMobileMenu}>About Us</a>
+            <a href="/founder" onClick={toggleMobileMenu} className="nested-item">→ Founder's Profile</a>
+            <a href="/navratan-pariwaar" onClick={toggleMobileMenu}>Navratan Pariwaar</a>
+            <a href="/patrons" onClick={toggleMobileMenu} className="nested-item">→ Patrons</a>
+            <a href="/advisors" onClick={toggleMobileMenu} className="nested-item">→ Advisors</a>
+            <a href="/executive-committee" onClick={toggleMobileMenu} className="nested-item">→ Executive Committee</a>
             <a href="/projects" onClick={toggleMobileMenu}>Projects</a>
             <a href="/get-involved" onClick={toggleMobileMenu}>Get Involved</a>
             <a href="/our-initiatives" onClick={toggleMobileMenu}>Our Initiatives</a>

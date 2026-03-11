@@ -107,7 +107,7 @@ export default function AwardsTimeline() {
     },
     {
       year: 2020,
-      title: "No Awards Ceremony",
+      title: "No Awardees for 2020 due to the COVID-19 pandemic.",
       category: "N/A",
       description: "No awardees for 2020 due to the COVID-19 pandemic.",
       link: "/awardees?year=2020",
@@ -115,7 +115,7 @@ export default function AwardsTimeline() {
     },
     {
       year: 2021,
-      title: "No Awards Ceremony",
+      title: "No Awardees for 2021 due to the COVID-19 pandemic.",
       category: "N/A",
       description: "No awardees for 2021 due to the COVID-19 pandemic.",
       link: "/awardees?year=2021",
@@ -323,6 +323,7 @@ export default function AwardsTimeline() {
 
         .covid .timeline-category {
           color: #d97706;
+          display: none; /* Hide category for COVID years */
         }
 
         @media (max-width: 768px) {

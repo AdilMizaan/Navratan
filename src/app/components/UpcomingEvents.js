@@ -1,23 +1,36 @@
-"use client";
+'use client';
 
-import { useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 
 export default function UpcomingEvents() {
+  const impactBarRef = useRef(null);
   const [selectedEvent, setSelectedEvent] = useState(null);
 
-  // Placeholder events (real data baad mein daal dena, ya API se fetch kar sakte ho)
+  // Events list — new event first position pe add kiya
   const events = [
     {
-      id: 1,
-      title: "Samarpan 2025 - Annual Fundraiser Event",
-      short: "Samarpan 2025 – Join us for a grand evening of impact!",
-      date: "15 March 2025",
-      time: "6:00 PM onwards",
-      location: "Noida Sector 18 Community Center",
-      description: "Annual fundraising event with cultural performances, award ceremony, and networking. All proceeds go towards underprivileged children's education and women's empowerment programs.",
+      id: 4,
+      title: "JO AAYE WO GAAYE S-4 E-4",
+      short: "JO AAYE WO GAAYE S-4 E-4 - Unseen Upcoming Talented Singers invited for Bollywood Singing Monthly Program",
+      date: "15th March 2026",
+      time: "4:00 PM",
+      location: "Club-27, H Block, Sector-27, Noida",
+      description: "Navratan Foundations invites Unseen Upcoming Talented Singers to participate in Delhi NCR’s The Famous & Prestigious Bollywood Singing Monthly program.",
+      image: "/img/JAWG-15th-march-event.jpeg",   // ← yahan apni image daal dena
       buttonText: "Register Now",
-      buttonLink: "/register-samarpan"
+      buttonLink: "/register-jawg"
     },
+    // {
+    //   id: 1,
+    //   title: "Samarpan 2025 - Annual Fundraiser Event",
+    //   short: "Samarpan 2025 – Join us for a grand evening of impact!",
+    //   date: "15 March 2025",
+    //   time: "6:00 PM onwards",
+    //   location: "Noida Sector 18 Community Center",
+    //   description: "Annual fundraising event with cultural performances, award ceremony, and networking. All proceeds go towards underprivileged children's education and women's empowerment programs.",
+    //   buttonText: "Register Now",
+    //   buttonLink: "/register-samarpan"
+    // },
     {
       id: 2,
       title: "Free Computer Literacy Workshop",
@@ -42,22 +55,67 @@ export default function UpcomingEvents() {
     }
   ];
 
+  useEffect(() => {
+    const counters = document.querySelectorAll('.counter');
+
+    const startCounters = () => {
+      counters.forEach((counter) => {
+        const target = +counter.getAttribute('data-target');
+        const duration = 2500;
+        let startTime = null;
+
+        const step = (currentTime) => {
+          if (!startTime) startTime = currentTime;
+          const progress = Math.min((currentTime - startTime) / duration, 1);
+          const easeOutQuad = (t) => t * (2 - t);
+          counter.innerText = Math.floor(easeOutQuad(progress) * target);
+
+          if (progress < 1) {
+            window.requestAnimationFrame(step);
+          } else {
+            counter.innerText = target;
+            counter.classList.add('flicker-infinite');
+          }
+        };
+
+        window.requestAnimationFrame(step);
+      });
+    };
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            startCounters();
+            observer.unobserve(entry.target);
+          }
+        });
+      },
+      { threshold: 0.5 }
+    );
+
+    if (impactBarRef.current) {
+      observer.observe(impactBarRef.current);
+    }
+
+    return () => {
+      if (impactBarRef.current) {
+        observer.unobserve(impactBarRef.current);
+      }
+    };
+  }, []);
+
   return (
     <>
       <style jsx global>{`
         .events-section {
-        //   background: #f8f9fa;
-          // padding: 50px 0;
-        //   border-top: 1px solid #e5e7eb;
-        //   border-bottom: 1px solid #e5e7eb;
-
-        padding: 100px 0 50px;
+          padding: 100px 0 50px;
           background: #ffffff;
           text-align: center;
         }
 
-          .heading-main {
-            font-family: 'Shadows Into Light', cursive;
+        .heading-main {
+          font-family: 'Shadows Into Light', cursive;
           font-size: 60px;
           font-weight: 600;
           color: rgba(0, 172, 240, 0.67);
@@ -192,22 +250,13 @@ export default function UpcomingEvents() {
           border-top: 1px solid #e5e7eb;
           text-align: right;
         }
-
-        @media (max-width: 600px) {
-          .modal-content {
-            width: 96%;
-          }
-          .modal-header h3 {
-            font-size: 1.3rem;
-          }
-        }
       `}</style>
 
       <section className="events-section">
-         <h2 className="heading-main">Upcoming Events</h2>
-          <h3 className="heading-sub">
-            Stay Updated with Our Upcoming Programs
-          </h3>
+        <h2 className="heading-main">Upcoming Events</h2>
+        <h3 className="heading-sub">
+          Stay Updated with Our Upcoming Programs
+        </h3>
         <div className="marquee-container">
           <div className="marquee">
             {events.map(event => (
@@ -215,7 +264,6 @@ export default function UpcomingEvents() {
                 ★ {event.short} | {event.date} • {event.time} ★ &nbsp;
               </span>
             ))}
-            {/* Duplicate for smooth infinite loop */}
             {events.map(event => (
               <span key={`dup-${event.id}`} onClick={() => setSelectedEvent(event)}>
                 ★ {event.short} | {event.date} • {event.time} ★ &nbsp;
@@ -234,6 +282,15 @@ export default function UpcomingEvents() {
               <span className="close-btn" onClick={() => setSelectedEvent(null)}>×</span>
             </div>
             <div className="modal-body">
+              {/* New Event ke liye poster image show karne ka code */}
+              {selectedEvent.image && (
+                <img 
+                  src={selectedEvent.image} 
+                  alt={selectedEvent.title} 
+                  style={{ width: '100%', borderRadius: '12px', marginBottom: '20px' }} 
+                />
+              )}
+
               <div className="event-detail"><strong>Date:</strong> {selectedEvent.date}</div>
               <div className="event-detail"><strong>Time:</strong> {selectedEvent.time}</div>
               <div className="event-detail"><strong>Location:</strong> {selectedEvent.location}</div>
@@ -242,17 +299,6 @@ export default function UpcomingEvents() {
                 {selectedEvent.description}
               </div>
             </div>
-            {/* <div className="modal-footer">
-              {selectedEvent.buttonLink && (
-                <a 
-                  href={selectedEvent.buttonLink} 
-                  className="btn btn-blue"
-                  style={{padding: '12px 28px', borderRadius: '50px', textDecoration: 'none'}}
-                >
-                  {selectedEvent.buttonText}
-                </a>
-              )}
-            </div> */}
           </div>
         </div>
       )}

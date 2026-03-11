@@ -22,7 +22,7 @@ export default function ActivitiesCarousel() {
     { id: 14, title: "Samarpan 2024", image: "/img/activity-14.jpg" },
     { id: 15, title: "Shaurya Diwas_25th Shahadat Diwas_Capt. Vijayant Thaper", image: "/img/activity-15.jpg" },
     { id: 16, title: "Sheet Kawach-Petronet", image: "/img/activity-16.png" },
-    { id: 17, title: "Sorted Shukriya Mukesh 2024", image: "/img/activity-17.jpg" },
+    { id: 17, title: "Shukriya Mukesh 2024", image: "/img/activity-17.jpg" },
   ];
 
   // Duplicate first 3 for infinite loop (since 3 visible)
