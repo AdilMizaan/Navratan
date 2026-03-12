@@ -328,15 +328,15 @@ export default function Header() {
             <div className="dropdown">
               <a href="/about-us" className="nav-item">About Us ↓</a>
               <div className="dropdown-content">
-                <a href="/founder" className="nav-item">Founder's Profile</a>
+                <a href="/about-us/founder" className="nav-item">Founder's Profile</a>
 
                 {/* Navratan Pariwaar with nested dropdown */}
                 <div className="dropdown nested-dropdown">
-                  <a href="/navratan-pariwaar" className="nav-item">Navratan Pariwaar ↓</a>
+                  <a href="/about-us/navratan-pariwaar" className="nav-item">Navratan Pariwaar ↓</a>
                   <div className="nested-content dropdown-content">
-                    <a href="/patrons" className="nav-item">Patrons</a>
-                    <a href="/advisors" className="nav-item">Advisors</a>
-                    <a href="/executive-committee" className="nav-item">Executive Committee</a>
+                    <a href="/about-us/navratan-pariwaar/patrons" className="nav-item">Patrons</a>
+                    <a href="/about-us/navratan-pariwaar/advisors" className="nav-item">Advisors</a>
+                    <a href="/about-us/navratan-pariwaar/executive-committee" className="nav-item">Executive Committee</a>
                   </div>
                 </div>
               </div>
