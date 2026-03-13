@@ -1,9 +1,54 @@
 "use client";
 
+// ... imports same ...
+import { useState } from 'react';
+
 import Link from 'next/link';
 import YellowCTA from '../components/YellowCTA';
 
 export default function ContactUs() {
+
+    // Inside ContactUs function
+const [status, setStatus] = useState('');
+const [isLoading, setIsLoading] = useState(false);
+
+const handleSubmit = async (e) => {
+  e.preventDefault();
+  setIsLoading(true);
+  setStatus('');
+
+  const formData = new FormData(e.target);
+  const data = {
+    name: formData.get('name'),
+    phone: formData.get('phone'),
+    email: formData.get('email'),
+    subject: formData.get('subject'),
+    message: formData.get('message'),
+  };
+
+  try {
+    const response = await fetch('/api/send-contact', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(data),
+    });
+
+    const result = await response.json();
+
+    if (response.ok) {
+      setStatus('Message sent successfully! We will get back to you soon.');
+      e.target.reset();
+    } else {
+      setStatus(result.error || 'Failed to send message. Please try again.');
+    }
+  } catch (err) {
+    setStatus('Something went wrong. Please check your connection.');
+  } finally {
+    setIsLoading(false);
+  }
+};
+// ---------------------------------------
+
   return (
     <>
       <style jsx>{`
@@ -437,39 +482,57 @@ export default function ContactUs() {
           <div className="form-wrapper">
             <h2>Send Us Message</h2>
 
-            <form>
+            <form onSubmit={handleSubmit}>
               <div className="form-row">
                 <div className="form-group">
                   <label>Your Name</label>
-                  <input type="text" placeholder="Your Name" required />
+                  <input type="text" name="name" placeholder="Your Name" required />
                 </div>
                 <div className="form-group">
                   <label>Phone Number</label>
-                  <input type="tel" placeholder="Your Phone Number" required />
+                  <input type="tel" name="phone" placeholder="Your Phone Number" required />
                 </div>
               </div>
 
               <div className="form-row">
                 <div className="form-group">
                   <label>Email Address</label>
-                  <input type="email" placeholder="Your Email" required />
+                  <input type="email" name="email" placeholder="Your Email" required />
                 </div>
                 <div className="form-group">
                   <label>Subject</label>
-                  <input type="text" placeholder="Subject" required />
+                  <input type="text" name="subject" placeholder="Subject" required />
                 </div>
               </div>
 
               <div className="form-group full-width">
                 <label>Write Message</label>
-                <textarea placeholder="Write us a Message" required></textarea>
+                <textarea name="message" placeholder="Write us a Message" required></textarea>
               </div>
 
-              <div className="submit-wrapper">
+              {/* <div className="submit-wrapper">
                 <button type="submit" className="submit-btn">
                   Send Us Message →
                 </button>
-              </div>
+              </div> */}
+              <div className="submit-wrapper">
+    <button 
+      type="submit" 
+      className="submit-btn"
+      disabled={isLoading}
+    >
+      {isLoading ? 'Sending...' : 'Send Us Message →'}
+    </button>
+  </div>
+
+  {status && (
+    <p 
+      className="status-message" 
+      style={{ color: status.includes('success') ? '#212121' : 'red', textAlign: 'center', marginTop: '20px' }}
+    >
+      {status}
+    </p>
+  )}
             </form>
           </div>
         </div>

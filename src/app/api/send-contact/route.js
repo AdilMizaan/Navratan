@@ -1,6 +1,7 @@
 // app/api/send-contact/route.js
 import { Resend } from 'resend';
 
+
 const resend = new Resend(process.env.RESEND_API_KEY);
 
 export async function POST(req) {
@@ -18,7 +19,7 @@ export async function POST(req) {
 
     const { data, error } = await resend.emails.send({
       from: 'Contact Form <onboarding@resend.dev>', // ya nomination mein jo from use kiya tha
-      to: ['navratanjks@gmail.com'], // yahan tumhari email
+      to: ['akif77761@gmail.com'], // yahan tumhari email
       subject: subject || `New Contact Message from ${name}`,
       html: `
         <h2>New Contact Form Submission</h2>
