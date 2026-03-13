@@ -348,7 +348,7 @@ export default function Header() {
             <a href="/samararpan-2024" className="nav-item">Samararpan 2024</a>
             <a href="/contact-us" className="nav-item">Contact</a>
 
-            <a href="/support" className="support-btn">Support a Cause →</a>
+            <a href="/donate" className="support-btn">Support a Cause →</a>
           </div>
 
           {/* Hamburger */}
@@ -372,7 +372,7 @@ export default function Header() {
             <a href="/our-initiatives" onClick={toggleMobileMenu}>Our Initiatives</a>
             <a href="/samararpan-2024" onClick={toggleMobileMenu}>Samararpan 2024</a>
             <a href="/contact-us" onClick={toggleMobileMenu}>Contact</a>
-            <a href="/support" className="support-btn" onClick={toggleMobileMenu}>Support a Cause →</a>
+            <a href="/donate" className="support-btn" onClick={toggleMobileMenu}>Support a Cause →</a>
           </div>
         )}
       </div>
