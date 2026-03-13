@@ -346,7 +346,7 @@ export default function Header() {
             <a href="/get-involved" className="nav-item">Get Involved</a>
             <a href="/our-initiatives" className="nav-item">Our Initiatives</a>
             <a href="/samararpan-2024" className="nav-item">Samararpan 2024</a>
-            <a href="/contact" className="nav-item">Contact</a>
+            <a href="/contact-us" className="nav-item">Contact</a>
 
             <a href="/support" className="support-btn">Support a Cause →</a>
           </div>
@@ -371,7 +371,7 @@ export default function Header() {
             <a href="/get-involved" onClick={toggleMobileMenu}>Get Involved</a>
             <a href="/our-initiatives" onClick={toggleMobileMenu}>Our Initiatives</a>
             <a href="/samararpan-2024" onClick={toggleMobileMenu}>Samararpan 2024</a>
-            <a href="/contact" onClick={toggleMobileMenu}>Contact</a>
+            <a href="/contact-us" onClick={toggleMobileMenu}>Contact</a>
             <a href="/support" className="support-btn" onClick={toggleMobileMenu}>Support a Cause →</a>
           </div>
         )}
