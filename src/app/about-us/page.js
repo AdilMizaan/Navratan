@@ -153,12 +153,13 @@ export default function AboutUs() {
         // -----------------------------------------------------------------------------------------------------------------------
          .about-section{
           width:100%;
-          padding:80px 0 0px;
+          padding:80px 0 30px;
         //   background:#f7f7f7;
           font-family:Arial, Helvetica, sans-serif;
         }
 
         .about-container{
+        width:1300px;
           display:grid;
           grid-template-columns:1fr 1fr;
           gap:60px;
@@ -282,7 +283,7 @@ export default function AboutUs() {
         // -----------------------------------------------------------------------------------------------------------------------
 
          .about-extra{
-         max-width: 1200px;
+         max-width: 1300px;
           margin: 0 auto;
         padding:80px 30;
         background:#fff;
@@ -337,7 +338,7 @@ export default function AboutUs() {
       }
 
       .president{
-      max-width: 1230px;
+      max-width: 1300px;
           margin: 0 auto;
         padding:80px 30;
         // background:#f4f4f4;
