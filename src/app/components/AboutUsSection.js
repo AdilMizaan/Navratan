@@ -49,7 +49,6 @@ export default function AboutUsSection() {
           color: rgba(0, 172, 240, 0.67);
           margin: 0 0 28px 0;
           line-height: 1.05;
-        //   letter-spacing: -1.5px;
           text-shadow: 1px 1px 3px rgba(0,0,0,0.06);
         }
 
@@ -67,38 +66,26 @@ export default function AboutUsSection() {
           line-height: 1.5;
           color: #212121;
           max-width: 680px;
-        //   margin: 0 0 50px 0;
         }
 
         /* Cards - अब description के ठीक नीचे, about-content में */
         .cards-wrapper {
-        padding: 20px;
-        background: #fbd45a;
+          padding: 20px;
+          background: #fbd45a;
           display: flex;
           justify-content: center;
           gap: 0px;
           border-radius: 10px;
           flex-wrap: wrap;
-          
         }
 
         .card {
           flex: 1;
-        //   min-width: 280px;
-        //   max-width: 340px;
-        //   background: white;
-        //   border-radius: 28px;
-        //   padding: 50px 35px 45px;
-        //   box-shadow: 0 20px 60px rgba(0,0,0,0.08);
           transition: all 0.35s ease;
           position: relative;
           overflow: hidden;
           text-align: center;
         }
-
-      
-
-       
 
         .card-icon {
           font-size: 2.5rem;
@@ -143,7 +130,20 @@ export default function AboutUsSection() {
           box-shadow: 0 18px 50px rgba(251,191,36,0.45);
         }
 
-  
+        /* Naya added style for credentials (simple & matches theme) */
+        .credentials {
+          text-align: left;
+          font-family: 'Inter', sans-serif;
+          font-size: 18px;
+          color: #444;
+          margin-top: -20px;
+          padding-top: 15px;
+          border-top: 1px solid #e0d9a8;
+        }
+
+        .credentials strong {
+          color: #111827;
+        }
 
         @media (max-width: 1024px) {
           .container {
@@ -157,11 +157,6 @@ export default function AboutUsSection() {
 
           .cards-wrapper {
             gap: 35px;
-          }
-
-          .stats-container {
-            flex-direction: column;
-            gap: 50px;
           }
         }
 
@@ -186,10 +181,6 @@ export default function AboutUsSection() {
           .know-more {
             padding: 16px 44px;
             font-size: 1.2rem;
-          }
-
-          .stat-number {
-            font-size: 3.5rem;
           }
         }
       `}</style>
@@ -217,16 +208,21 @@ export default function AboutUsSection() {
               NAVRATAN FOUNDATIONS, a registered non-profit society dedicated to advancing community development with a strong commitment to achieving the Sustainable Development Goals (SDGs). Our primary goal is to foster comprehensive and value-based community growth by extending support and resources to those in need.
             </p>
 
+             {/* Naya added - NITI Aayog registration mention (end mein) */}
+            <div className="credentials">
+              <strong>Registered with NITI Aayog NGO Darpan:</strong> UP/2019/0226969
+            </div>
+
             {/* Cards - description के ठीक नीचे */}
             <div className="cards-wrapper">
               <div className="card">
-                <div className="card-icon"><i class="fa-solid fa-users"></i></div>
+                <div className="card-icon"><i className="fa-solid fa-users"></i></div>
                 <h3>Join Our Team</h3>
                 <p>Explore opportunities to work for Navratan Foundations</p>
               </div>
 
               <div className="card">
-                <div className="card-icon"><i class="fa-solid fa-handshake"></i></div>
+                <div className="card-icon"><i className="fa-solid fa-handshake"></i></div>
                 <h3>Start Contributing</h3>
                 <p>Support the cause and make a difference</p>
               </div>
@@ -236,6 +232,8 @@ export default function AboutUsSection() {
             <a href="/about-us" className="know-more">
               Know More →
             </a>
+
+           
           </div>
         </div>
       </section>
