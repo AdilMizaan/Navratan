@@ -250,6 +250,40 @@ export default function UpcomingEvents() {
           border-top: 1px solid #e5e7eb;
           text-align: right;
         }
+
+        @media (max-width: 768px) {
+          .events-section {
+            padding: 50px 0 10px;
+          }
+
+          .heading-main {
+            font-size: 42px;
+          }
+
+          .heading-sub {
+            font-size: 28px;
+          }
+
+          .marquee-container {
+            padding: 20px 0;
+          }
+
+          .marquee {
+            font-size: 20px;
+          }
+
+          .modal-header h3 {
+            font-size: 1.25rem;
+          }
+
+          .modal-body {
+            padding: 15px;
+          }
+
+          .event-detail {
+            font-size: 0.95rem;
+          }
+        }
       `}</style>
 
       <section className="events-section">

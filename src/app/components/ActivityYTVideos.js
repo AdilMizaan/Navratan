@@ -86,7 +86,7 @@ export default function ActivityYTVideos() {
           }
 
           .heading-sub {
-            font-size: 30px;
+            font-size: 28px;
           }
         }
       `}</style>

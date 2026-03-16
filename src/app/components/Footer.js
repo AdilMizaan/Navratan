@@ -204,10 +204,10 @@ export default function Footer() {
           <div className="footer-column">
             <h3>Non Profit</h3>
             <ul>
-              <li><a href="/patrons">Patrons</a></li>
-              <li><a href="/founder-profile">Founder's Profile</a></li>
-              <li><a href="/executive-committee">Executive Committee</a></li>
-              <li><a href="/advisors">Advisors</a></li>
+              <li><a href="/about-us/navratan-pariwaar/patrons">Patrons</a></li>
+              <li><a href="/about-us/founder">Founder's Profile</a></li>
+              <li><a href="/about-us/navratan-pariwaar/executive-committee">Executive Committee</a></li>
+              <li><a href="/about-us/navratan-pariwaar/advisors">Advisors</a></li>
             </ul>
           </div>
 

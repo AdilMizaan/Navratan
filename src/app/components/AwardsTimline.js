@@ -160,7 +160,7 @@ export default function AwardsTimeline() {
            font-family: 'Shadows Into Light', cursive;
           font-size: 60px;
           font-weight: 600;
-          color: rgba(0, 172, 240, 0.67);
+          color: #00acf0;
           margin: 0 0 28px 0;
           line-height: 1.05;
           letter-spacing: 0px;
@@ -327,6 +327,15 @@ export default function AwardsTimeline() {
         }
 
         @media (max-width: 768px) {
+          .section-title-main {
+            font-size: 42px;
+          }
+            .section-title {
+            font-size: 28px;
+          }
+          .section-subtitle {
+            font-size: 1rem;
+          }
           .timeline::before {
             left: 30px;
           }

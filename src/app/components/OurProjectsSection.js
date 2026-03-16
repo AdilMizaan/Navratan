@@ -101,15 +101,16 @@ export default function OurProjectsSection() {
 
         @media (max-width: 768px) {
           .projects-section {
-            padding: 80px 0 60px;
+            padding: 50px 0 20px;
           }
+            
 
           .section-title {
-            font-size: 36px;
+            font-size: 42px;
           }
 
           .section-subtitle {
-            font-size: 26px;
+            font-size: 28px;
           }
 
           .project-image {

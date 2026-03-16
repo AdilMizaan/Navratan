@@ -233,7 +233,7 @@ export default function AboutUsSection() {
             </div>
 
             {/* Know More button - cards के नीचे */}
-            <a href="/about" className="know-more">
+            <a href="/about-us" className="know-more">
               Know More →
             </a>
           </div>

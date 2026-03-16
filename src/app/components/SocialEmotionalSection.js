@@ -147,7 +147,7 @@ export default function SocialEmotionalSection() {
               Social-emotional development and support should become an essential piece and mainstay of our lives. Education and awareness around it should flow smoothly to establish the framework for positive social associations, bringing about effective positive mental health in the community. Youths and the old, being the most vulnerable sections of society need our helping hands and gracious charity to curb their psychological barriers and break their opinionated silence. To settle themselves they need to be counseled well and a Social Emotional Reach campaign makes it easy to reach out to such individuals. We have collaborated with DayaRani Wellness Advisory.
             </p>
 
-            <a href="/dayarani" className="discover-btn">
+            <a href="https://dayarani.in/" className="discover-btn">
               Discover More →
             </a>
           </div>

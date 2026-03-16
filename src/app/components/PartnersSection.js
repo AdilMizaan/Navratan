@@ -145,11 +145,11 @@ export default function PartnersSection() {
           }
 
           .heading-main {
-            font-size: 36px;
+            font-size: 42px;
           }
 
           .heading-sub {
-            font-size: 26px;
+            font-size: 28px;
           }
 
           .carousel-wrapper {

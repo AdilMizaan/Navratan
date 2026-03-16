@@ -208,7 +208,7 @@ export default function SDGSection() {
             ))}
           </div>
 
-          <a href="/sdgs" className="learn-more-btn">
+          <a href="/projects" className="learn-more-btn">
             Learn More →
           </a>
         </div>

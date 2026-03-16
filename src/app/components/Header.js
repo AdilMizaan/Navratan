@@ -263,7 +263,7 @@ export default function Header() {
         }
 
         /* Responsive */
-        @media (max-width: 768px) {
+        @media (max-width: 1100px) {
           .top-bar {
             display: none;
           }

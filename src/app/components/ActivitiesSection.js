@@ -81,7 +81,7 @@ export default function ActivitiesCarousel() {
       <style jsx>{`
         .activities-section {
           background: #f9fafb;
-          padding: 100px 20px;
+          padding: 100px 20px 50px;
           text-align: center;
         }
 
@@ -207,6 +207,14 @@ export default function ActivitiesCarousel() {
           .activity-title {
             font-size: 1.1rem;
           }
+            .section-title{
+            font-size: 42px;
+            }
+            .section-subtitle{
+            font-size: 28px;
+      }
+             .activities-section {
+          padding: 50px 20px;
         }
       `}</style>
 
