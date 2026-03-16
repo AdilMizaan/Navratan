@@ -4,25 +4,25 @@ export default function SDGSection() {
   const sdgCards = [
     {
       number: "4",
-    //   title: "QUALITY EDUCATION",
-      image: "/img/sdg-1.png", // apni image daal dena
+      // title: "QUALITY EDUCATION",
+      image: "/img/sdg-1.png",
       desc: "Ensuring inclusive and equitable quality education and promoting lifelong learning opportunities for all"
     },
     {
       number: "5",
-    //   title: "GENDER EQUALITY",
+      // title: "GENDER EQUALITY",
       image: "/img/sdg-2.png",
       desc: "Working towards achieving gender equality and empowering all women and girls"
     },
     {
       number: "8",
-    //   title: "DECENT WORK AND ECONOMIC GROWTH",
+      // title: "DECENT WORK AND ECONOMIC GROWTH",
       image: "/img/sdg-3.png",
       desc: "Promoting sustained, inclusive and sustainable economic growth, full and productive employment and decent work for all"
     },
     {
       number: "3",
-    //   title: "GOOD HEALTH AND WELL-BEING",
+      // title: "GOOD HEALTH AND WELL-BEING",
       image: "/img/sdg-4.png",
       desc: "Ensuring healthy lives and promoting well-being for all at all ages"
     }
@@ -47,7 +47,6 @@ export default function SDGSection() {
         }
 
         .heading {
-        //   font-family: 'Playfair Display', serif;
           font-size: 48px;
           font-weight: 700;
           color: #212121;
@@ -74,24 +73,21 @@ export default function SDGSection() {
 
         .cards-row {
           display: flex;
+          flex-wrap: wrap;           /* ← important fix */
           justify-content: center;
-          gap: 20px;
-          flex-wrap: nowrap;
-        //   overflow-x: auto;
-          padding: 0 20px;
-          margin-bottom: 20px;
+          gap: 24px 20px;
+          margin-bottom: 40px;
         }
 
         .sdg-card {
-          flex: 0 0 280px;
+          flex: 0 0 280px;           /* base size for large screens */
           background: white;
           border-radius: 10px;
           padding: 10px;
           box-shadow: 0 15px 45px rgba(0,0,0,0.08);
           transition: all 0.4s ease;
-          overflow: hidden;
           text-align: center;
-          min-height: 180px;
+          min-height: 340px;         /* better consistency */
         }
 
         .sdg-card:hover {
@@ -101,13 +97,13 @@ export default function SDGSection() {
 
         .card-image {
           width: 60%;
-        //   height: 200px;
-          object-fit: cover;
-          margin-top: 10px;
+          object-fit: contain;       /* better than cover for SDG icons */
+          margin: 20px auto 0;
+          display: block;
         }
 
         .card-content {
-          padding: 30px 20px;
+          padding: 20px;
         }
 
         .card-title {
@@ -115,7 +111,7 @@ export default function SDGSection() {
           font-size: 22px;
           font-weight: 700;
           color: #111827;
-          margin: 0 0 0px 0;
+          margin: 0 0 12px 0;
         }
 
         .card-desc {
@@ -124,8 +120,6 @@ export default function SDGSection() {
           color: #4b5563;
           line-height: 1.6;
           margin: 0;
-          margin-top: -20px;
-          margin-bottom: -20;
         }
 
         .learn-more-btn {
@@ -149,37 +143,43 @@ export default function SDGSection() {
           box-shadow: 0 20px 55px rgba(36, 219, 251, 0.45);
         }
 
-        @media (max-width: 1024px) {
-          .cards-row {
-            gap: 30px;
-          }
+        /* ────────────────────────────────────────
+           Responsive adjustments
+        ──────────────────────────────────────── */
 
+        @media (max-width: 1100px) {
           .sdg-card {
-            flex: 0 0 45%;
+            flex: 0 0 45%;           /* 2 cards per row */
+            max-width: 45%;
           }
         }
 
-        @media (max-width: 1168px) {
+        @media (max-width: 640px) {
           .sdg-section {
-            padding: 80px 0 60px;
+            padding: 60px 0 50px;
           }
 
           .heading {
             font-size: 38px;
           }
 
-          .sub-heading {
-            font-size: 28px;
+          .description {
+            font-size: 16px;
           }
 
           .cards-row {
-            flex-direction: column;
-            gap: 40px;
+            gap: 32px 20px;
+          }
+
+          .sdg-card {
+            flex: 0 0 100%;          /* 1 card per row on mobile */
+            max-width: 420px;        /* nice max width on small screens */
+            margin: 0 auto;
           }
 
           .learn-more-btn {
             padding: 16px 48px;
-            font-size: 1.25rem;
+            font-size: 17px;
           }
         }
       `}</style>
@@ -197,11 +197,12 @@ export default function SDGSection() {
               <div key={index} className="sdg-card">
                 <img
                   src={card.image}
-                  alt={card.title}
+                  alt={`SDG ${card.number}`}
                   className="card-image"
                 />
                 <div className="card-content">
-                  <h3 className="card-title">{card.title}</h3>
+                  {/* Uncomment if you want to show titles again */}
+                  {/* <h3 className="card-title">{card.title || `SDG ${card.number}`}</h3> */}
                   <p className="card-desc">{card.desc}</p>
                 </div>
               </div>
