@@ -284,7 +284,7 @@ export default function AboutUs() {
          .about-extra{
          max-width: 1200px;
           margin: 0 auto;
-        padding:80px 0;
+        padding:80px 30;
         background:#fff;
         font-family:Arial;
       }
@@ -339,7 +339,7 @@ export default function AboutUs() {
       .president{
       max-width: 1230px;
           margin: 0 auto;
-        padding:80px 0;
+        padding:80px 30;
         // background:#f4f4f4;
         // padding:80px 8%;
         margin-bottom: -100px;

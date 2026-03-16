@@ -397,6 +397,19 @@ const handleSubmit = async (e) => {
         }
           .map-wrapper{ height: 400px; }
         }
+        @media (max-width: 1024px) {
+          .hero h1 { font-size: 50px; }
+          .contact-details-section, .contact-form-section { padding: 70px 0; }
+          .left-content h2 { font-size: 48px; }
+          .left-content h3 { font-size: 32px; }
+          .form-wrapper h2 { font-size: 42px; }
+          .form-wrapper {
+          height: 950px; /* Same height for both - adjust if needed */
+          margin-bottom: 50px;
+        }
+          .map-wrapper{ height: 400px; }
+        }
+          
       `}</style>
 
       {/* Hero Section */}

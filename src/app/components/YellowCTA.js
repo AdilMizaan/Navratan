@@ -160,6 +160,20 @@ export default function YellowCTA() {
             height: 40px;
           }
         }
+
+         @media (max-width: 1024px) {
+          .cta-left h2 {
+            font-size: 26px;  /* Adjust heading size for tablets */
+          }
+            .cta-left h3 {
+            font-size: 22px;  /* Adjust heading size for tablets */
+          }
+            .cta-btn {
+            width: 100%;
+            padding: 14px 30px;
+            font-size: 14px;
+          }
+        }
       `}</style>
 
       <section className="yellow-cta">

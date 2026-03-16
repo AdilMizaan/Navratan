@@ -332,7 +332,7 @@ export default function Header() {
 
                 {/* Navratan Pariwaar with nested dropdown */}
                 <div className="dropdown nested-dropdown">
-                  <a href="/about-us/navratan-pariwaar" className="nav-item">Navratan Pariwaar ↓</a>
+                  <a href="" className="nav-item">Navratan Pariwaar ↓</a>
                   <div className="nested-content dropdown-content">
                     <a href="/about-us/navratan-pariwaar/patrons" className="nav-item">Patrons</a>
                     <a href="/about-us/navratan-pariwaar/advisors" className="nav-item">Advisors</a>
@@ -362,11 +362,11 @@ export default function Header() {
           <div className="mobile-menu open">
             <a href="/" onClick={toggleMobileMenu}>Home</a>
             <a href="/about-us" onClick={toggleMobileMenu}>About Us</a>
-            <a href="/founder" onClick={toggleMobileMenu} className="nested-item">→ Founder's Profile</a>
-            <a href="/navratan-pariwaar" onClick={toggleMobileMenu}>Navratan Pariwaar</a>
-            <a href="/patrons" onClick={toggleMobileMenu} className="nested-item">→ Patrons</a>
-            <a href="/advisors" onClick={toggleMobileMenu} className="nested-item">→ Advisors</a>
-            <a href="/executive-committee" onClick={toggleMobileMenu} className="nested-item">→ Executive Committee</a>
+            <a href="/about-us/founder" onClick={toggleMobileMenu} className="nested-item">→ Founder's Profile</a>
+            <a href="/about-us/navratan-pariwaar" onClick={toggleMobileMenu}>Navratan Pariwaar</a>
+            <a href="/about-us/navratan-pariwaar/patrons" onClick={toggleMobileMenu} className="nested-item">→ Patrons</a>
+            <a href="/about-us/navratan-pariwaar/advisors" onClick={toggleMobileMenu} className="nested-item">→ Advisors</a>
+            <a href="/about-us/navratan-pariwaar/executive-committee" onClick={toggleMobileMenu} className="nested-item">→ Executive Committee</a>
             <a href="/projects" onClick={toggleMobileMenu}>Projects</a>
             <a href="/get-involved" onClick={toggleMobileMenu}>Get Involved</a>
             <a href="/our-initiatives" onClick={toggleMobileMenu}>Our Initiatives</a>
