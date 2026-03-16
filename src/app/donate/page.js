@@ -1,8 +1,7 @@
 "use client";
 
-import Link from 'next/link';  // Add this import for navigation
 import YellowCTA from '../components/YellowCTA';  // Import the YellowCTA component
-import PartnersSection from '../components/PartnersSection';  // Import the PartnersSection component
+
 
 import { useEffect, useState } from "react";
 

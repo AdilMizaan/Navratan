@@ -171,7 +171,7 @@ export default function YellowCTA() {
                 <h2>Join Us in Building a Brighter Future for All</h2>
               </div>
               <div className="cta-right">
-                <a href="/get-involved" className="cta-btn">Be Part of the Change</a>
+                <a href="/contact-us" className="cta-btn">Be Part of the Change</a>
               </div>
             </div>
           </div>

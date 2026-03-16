@@ -195,7 +195,7 @@ export default function Footer() {
               Join hands to serve a purpose beyond yourself, and be the change you seek
             </p>
 
-            <a href="/support" className="support-btn">
+            <a href="/donate" className="support-btn">
               Support a Cause →
             </a>
           </div>
@@ -218,8 +218,8 @@ export default function Footer() {
               <li><a href="/about-us">About Us</a></li>
               <li><a href="/projects">Projects</a></li>
               <li><a href="/contact-us">Contact Us</a></li>
-              <li><a href="/privacy-policy">Privacy Policy</a></li>
-              <li><a href="/conditions">Conditions</a></li>
+              <li><a href="/about-us">Privacy Policy</a></li>
+              <li><a href="/about-us">Conditions</a></li>
             </ul>
           </div>
 
@@ -252,16 +252,16 @@ export default function Footer() {
             </div>
 
             <div className="social-icons">
-              <a href="https://facebook.com/navratanfoundations" className="social-icon">
+              <a href="https://www.facebook.com/navratanfoundations" target="_blank" className="social-icon">
                 <i className="fab fa-facebook-f"></i>
               </a>
-              <a href="https://instagram.com/navratanfoundations" className="social-icon">
+              <a href="https://www.instagram.com/navratanfoundations" target="_blank" className="social-icon">
                 <i className="fab fa-instagram"></i>
               </a>
-              <a href="https://youtube.com/@navratanfoundations" className="social-icon">
+              <a href="https://www.youtube.com/user/navjks" target="_blank" className="social-icon">
                 <i className="fab fa-youtube"></i>
               </a>
-              <a href="https://linkedin.com/company/navratan-foundations" className="social-icon">
+              <a href="https://www.linkedin.com/company/navratan-foundations" target="_blank" className="social-icon">
                 <i className="fab fa-linkedin-in"></i>
               </a>
             </div>
