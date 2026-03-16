@@ -159,7 +159,7 @@ export default function SDGSection() {
           }
         }
 
-        @media (max-width: 768px) {
+        @media (max-width: 1168px) {
           .sdg-section {
             padding: 80px 0 60px;
           }
