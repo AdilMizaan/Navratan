@@ -14,6 +14,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <head>
+        <link rel="icon" type="image/png" sizes="192x192" href="/favicon-192x192.png"></link>
         {/* Font Awesome preload with onload for faster apply (flash kam karega) */}
         <link
           rel="preload"
