@@ -71,6 +71,9 @@ export default function StatsSection() {
   return (
     <>
       <style jsx>{`
+      body {
+      background: #ffffff;
+      }
         .stats-section {
           background: #fbd45a;
           padding: 70px 0;

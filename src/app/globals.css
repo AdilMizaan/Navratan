@@ -5,6 +5,10 @@
 @import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css');
 
 
+/* Prevent FOUC + white flash */
+
+
+
 /* Optional: custom styles agar chaho to yahan daal sakte ho */
 body {
   margin: 0;
@@ -23,7 +27,15 @@ body {
   }
 }
 
-html,
+/* Default body bg mat set karo – pages khud handle kar lenge */
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  background-color: transparent; /* Ya #ffffff agar default white chahiye */
+}
+
+/* html,
 body {
   max-width: 100vw;
   overflow-x: hidden;
@@ -35,7 +47,7 @@ body {
   font-family: Arial, Helvetica, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-}
+} */
 
 * {
   box-sizing: border-box;
