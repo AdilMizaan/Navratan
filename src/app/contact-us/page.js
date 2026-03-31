@@ -265,7 +265,7 @@ const handleSubmit = async (e) => {
         /* ------------------------- CONTACT FORM SECTION (updated) ------------------------- */
         .contact-form-section {
           padding: 50px 0 150px;
-        //   background: #f8f9fa;
+          background: #f8f9fa;
         }
 
         .contact-form-container {

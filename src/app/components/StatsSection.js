@@ -72,7 +72,8 @@ export default function StatsSection() {
     <>
       <style jsx>{`
       body {
-      background: #ffffff;
+      // background: #ffffff;
+       background: #f8fafc;
       }
         .stats-section {
           background: #fbd45a;
