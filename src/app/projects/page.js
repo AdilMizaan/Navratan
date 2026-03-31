@@ -232,7 +232,7 @@ export default function Projects() {
           <div className="projects-grid">
             <a href="/projects/astitva" className="project-card">
               <img
-                src="/img/NF-projects/NF-Astitva.jpg" // apni image daal do
+                src="/img/astitva.jpg" // apni image daal do
                 alt="Astitva Project"
                 className="project-image"
               />
@@ -246,7 +246,7 @@ export default function Projects() {
 
             <a href="/projects/gyanpeeth" className="project-card">
               <img
-                src="/img/NF-projects/NF-Gyaanpeeth.jpg"
+                src="/img/Gyanpeeth4.png"
                 alt="Navratan Gyanpeeth Project"
                 className="project-image"
               />
@@ -260,7 +260,7 @@ export default function Projects() {
 
             <a href="/projects/umeed" className="project-card">
               <img
-                src="/img/NF-projects/NF-ummed3.jpeg"
+                src="/img/umeed.jpg"
                 alt="Umeed Project"
                 className="project-image"
               />
@@ -274,7 +274,7 @@ export default function Projects() {
 
             <a href="/projects/cyberurja" className="project-card">
               <img
-                src="/img/NF-projects/NF-Computer Centre (2).jpg"
+                src="/img/cyberuja.jpg"
                 alt="Cyberurja Project"
                 className="project-image"
               />

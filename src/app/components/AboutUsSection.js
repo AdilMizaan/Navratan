@@ -1,6 +1,35 @@
 "use client";
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+import { useState, useEffect } from 'react';
+
 export default function AboutUsSection() {
+  const images = [
+    // "/img/AboutSectionImage.webp",
+    // "/img/NF-projects/NF-Astitva (2).jpg",
+    "/img/NF-projects/NF-Astitva (3).jpg",
+    "/img/NF-projects/NF-Astitva.jpg",
+    "/img/NF-projects/NF-Computer Centre (2).jpg",
+    "/img/NF-projects/NF-Computer Centre (3).jpg",
+    "/img/NF-projects/NF-Gyaanpeeth.jpg",
+    "/img/NF-projects/NF-Gyanpeeth.jpg",
+    "/img/NF-projects/NF-Sheet Kawach.jpeg",
+    "/img/NF-projects/NF-ummed3.jpeg",
+    "/img/NF-projects/NF-Ummeed.jpg",
+    "/img/NF-projects/NF-WheelChair Distribution.jpg",
+    // Agar 5th image nahi hai toh repeat kar sakte ho ya nayi add kar dena
+  ];
+
+  const [currentIndex, setCurrentIndex] = useState(0);
+
+  // Auto slide every 5 seconds
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentIndex((prev) => (prev + 1) % images.length);
+    }, 5000); // 5 seconds
+
+    return () => clearInterval(interval);
+  }, [images.length]);
+
   return (
     <>
       <style jsx>{`
@@ -24,18 +53,32 @@ export default function AboutUsSection() {
           align-items: center;
         }
 
+        /* Image Container with Fade Effect */
         .image-container {
           position: relative;
+          height: 650px;
+          border-radius: 32px;
+          overflow: hidden;
+          box-shadow: 0 25px 70px rgba(0,0,0,0.15);
         }
 
         .about-image {
+          position: absolute;
+          top: 0;
+          left: 0;
           width: 100%;
-          height: auto;
-          border-radius: 32px;
-          box-shadow: 0 25px 70px rgba(0,0,0,0.15);
+          height: 100%;
           object-fit: cover;
+          opacity: 0;
+          transition: opacity 1.2s ease-in-out;
         }
 
+        .about-image.active {
+          opacity: 1;
+          z-index: 2;
+        }
+
+        /* Content Side - Same as before */
         .about-content {
           display: flex;
           flex-direction: column;
@@ -68,7 +111,6 @@ export default function AboutUsSection() {
           max-width: 680px;
         }
 
-        /* Cards - अब description के ठीक नीचे, about-content में */
         .cards-wrapper {
           padding: 20px;
           background: #fbd45a;
@@ -130,7 +172,6 @@ export default function AboutUsSection() {
           box-shadow: 0 18px 50px rgba(251,191,36,0.45);
         }
 
-        /* Naya added style for credentials (simple & matches theme) */
         .credentials {
           text-align: left;
           font-family: 'Inter', sans-serif;
@@ -145,18 +186,17 @@ export default function AboutUsSection() {
           color: #111827;
         }
 
+        /* Responsive */
         @media (max-width: 1024px) {
           .container {
             grid-template-columns: 1fr;
             gap: 80px;
           }
-
           .about-heading {
             font-size: 48px;
           }
-
-          .cards-wrapper {
-            gap: 35px;
+          .image-container {
+            height: 450px;
           }
         }
 
@@ -164,20 +204,19 @@ export default function AboutUsSection() {
           .about-section {
             padding: 80px 0 60px;
           }
-
           .about-heading {
             font-size: 42px;
           }
-
           .quote {
             font-size: 28px;
           }
-
+          .image-container {
+            height: 380px;
+          }
           .cards-wrapper {
             flex-direction: column;
             gap: 45px;
           }
-
           .know-more {
             padding: 16px 44px;
             font-size: 1.2rem;
@@ -187,16 +226,19 @@ export default function AboutUsSection() {
 
       <section className="about-section">
         <div className="container">
-          {/* Left Image */}
+          {/* Left Side - Image Slider with Fade */}
           <div className="image-container">
-            <img
-              src="/img/AboutSectionImage.webp"
-              alt="Children playing in mud near Taj Mahal"
-              className="about-image"
-            />
+            {images.map((img, index) => (
+              <img
+                key={index}
+                src={img}
+                alt={`Navratan Foundation ${index + 1}`}
+                className={`about-image ${index === currentIndex ? 'active' : ''}`}
+              />
+            ))}
           </div>
 
-          {/* Right Content */}
+          {/* Right Content - Same as before */}
           <div className="about-content">
             <h2 className="about-heading">About Us</h2>
 
@@ -208,12 +250,10 @@ export default function AboutUsSection() {
               NAVRATAN FOUNDATIONS, a registered non-profit society dedicated to advancing community development with a strong commitment to achieving the Sustainable Development Goals (SDGs). Our primary goal is to foster comprehensive and value-based community growth by extending support and resources to those in need.
             </p>
 
-             {/* Naya added - NITI Aayog registration mention (end mein) */}
             <div className="credentials">
               <strong>Registered with NITI Aayog NGO Darpan:</strong> UP/2019/0226969
             </div>
 
-            {/* Cards - description के ठीक नीचे */}
             <div className="cards-wrapper">
               <div className="card">
                 <div className="card-icon"><i className="fa-solid fa-users"></i></div>
@@ -228,12 +268,9 @@ export default function AboutUsSection() {
               </div>
             </div>
 
-            {/* Know More button - cards के नीचे */}
             <a href="/about-us" className="know-more">
               Know More →
             </a>
-
-           
           </div>
         </div>
       </section>

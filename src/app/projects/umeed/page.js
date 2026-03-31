@@ -727,7 +727,7 @@ export default function UmeedPage() {
               <a href="/contact-us" className="btn">Join Us in Building an Educated Nation</a>
             </div>
             <div className="intro-visual">
-              <img src="/img/NF-projects/NF-ummed3.jpeg" alt="Women in Umeed literacy class" className="intro-img" />
+              <img src="/img/umeed.jpg" alt="Women in Umeed literacy class" className="intro-img" />
               <div className="image-overlay">
                 <p>Knowledge Today, Progress Tomorrow</p>
               </div>
@@ -785,6 +785,7 @@ export default function UmeedPage() {
         <div className="container">
           <h2 className="section-title">A Day in Umeed</h2>
           <div className="gallery-carousel">
+            <img src="/img/umeed.jpg" alt="Women in literacy session" />
             <img src="/img/NF-projects/NF-ummed3.jpeg" alt="Women in literacy session" />
             <img src="/img/NF-projects/NF-Ummeed.jpg" alt="Women in literacy session" />
             <img src="/img/umeed3.png" alt="Women in literacy session" />

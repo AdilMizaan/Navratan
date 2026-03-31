@@ -841,7 +841,7 @@ export default function CyberurjaPage() {
             </div>
 
             <div className="intro-visual">
-              <img src="/img/NF-projects/NF-Computer Centre (2).jpg" alt="Students in Cyberurja computer training" className="intro-img" />
+              <img src="/img/cyberuja.jpg" alt="Students in Cyberurja computer training" className="intro-img" />
               <div className="image-overlay">
                 <p>Digital Skills Today, Opportunities Tomorrow</p>
               </div>
