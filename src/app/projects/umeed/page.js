@@ -724,10 +724,10 @@ export default function UmeedPage() {
                   <span>Literacy & Life Skills Certification</span>
                 </div>
               </div>
-              <a href="#donate" className="btn">Join Us in Building an Educated Nation</a>
+              <a href="/contact-us" className="btn">Join Us in Building an Educated Nation</a>
             </div>
             <div className="intro-visual">
-              <img src="/img/umeed.jpg" alt="Women in Umeed literacy class" className="intro-img" />
+              <img src="/img/NF-projects/NF-ummed3.jpeg" alt="Women in Umeed literacy class" className="intro-img" />
               <div className="image-overlay">
                 <p>Knowledge Today, Progress Tomorrow</p>
               </div>
@@ -785,15 +785,13 @@ export default function UmeedPage() {
         <div className="container">
           <h2 className="section-title">A Day in Umeed</h2>
           <div className="gallery-carousel">
-            <img src="/img/umeed1.png" alt="Women in literacy session" />
-            <img src="/img/umeed2.png" alt="Women in literacy session" />
+            <img src="/img/NF-projects/NF-ummed3.jpeg" alt="Women in literacy session" />
+            <img src="/img/NF-projects/NF-Ummeed.jpg" alt="Women in literacy session" />
             <img src="/img/umeed3.png" alt="Women in literacy session" />
             <img src="/img/umeed4.png" alt="Women in literacy session" />
             <img src="/img/umeed5.jpg" alt="Women in literacy session" />
             <img src="/img/umeed6.jpg" alt="Women in literacy session" />
             <img src="/img/umeed7.jpg" alt="Women in literacy session" />
-            <img src="/img/our-campaigns-9.jpg" alt="Women in literacy session" />
-            <img src="/img/our-campaigns-10.jpg" alt="Group discussion" />
           </div>
         </div>
       </section>
@@ -914,13 +912,13 @@ export default function UmeedPage() {
           </div>
           <div className="qr-donate-center">
             {/* <img src="/img/qr.jpg" alt="QR Code" className="qr-image" /> */}
-            <a href="YOUR_DONATION_LINK_HERE" className="btn donate-btn">Donate Now</a>
+            <a href="/donate" className="btn donate-btn">Donate Now</a>
           </div>
         </div>
       </section>
 
       {/* Sticky CTA */}
-      <a href="#donate" className="sticky-cta">
+      <a href="/donate" className="sticky-cta">
         Empower a Woman Today → Donate Now
       </a>
     </>

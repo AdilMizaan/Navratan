@@ -837,11 +837,11 @@ export default function CyberurjaPage() {
                 </div>
               </div>
 
-              <a href="#donate" className="btn">Join Us in Empowering the Digital Future</a>
+              <a href="/contact-us" className="btn">Join Us in Empowering the Digital Future</a>
             </div>
 
             <div className="intro-visual">
-              <img src="/img/cyberuja.jpg" alt="Students in Cyberurja computer training" className="intro-img" />
+              <img src="/img/NF-projects/NF-Computer Centre (2).jpg" alt="Students in Cyberurja computer training" className="intro-img" />
               <div className="image-overlay">
                 <p>Digital Skills Today, Opportunities Tomorrow</p>
               </div>
@@ -1001,9 +1001,18 @@ export default function CyberurjaPage() {
           </div>
 
           <div className="view-all-wrapper">
-            <Link href="/projects/cyberurja/centers" className="btn">
+            {/* <Link href="/projects/cyberurja/centers" className="btn">
               View All Centers →
-            </Link>
+            </Link> */}
+            <a
+  href="/img/centers-pdf/NF-List of COMPUTER CENTRES.pdf"
+  download="CyberUrja-Centers-List.pdf"
+  className="btn"
+  style={{ display: 'inline-flex', alignItems: 'center', gap: '10px' }}
+>
+  All Centers List
+  <i className="fas fa-download"></i>
+</a>
           </div>
         </div>
       </section>
@@ -1088,13 +1097,13 @@ export default function CyberurjaPage() {
           </div>
 
           <div className="qr-donate-center">
-            <a href="YOUR_DONATION_LINK_HERE" className="btn donate-btn">Donate Now</a>
+            <a href="/donate" className="btn donate-btn">Donate Now</a>
           </div>
         </div>
       </section>
 
       {/* Sticky CTA */}
-      <a href="#donate" className="sticky-cta">
+      <a href="/donate" className="sticky-cta">
         Empower Through Digital Skills → Donate Now
       </a>
     </>

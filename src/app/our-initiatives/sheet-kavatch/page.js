@@ -81,7 +81,7 @@ export default function SheetKavatch() {
 
         .hero {
           background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
-            url('https://navratanfoundations.com/_next/static/media/hero-one-big.3b2cd132.jpg') center/cover;
+            url('/img/hero-one-big.3b2cd132.jpg') center/cover;
           height: 500px;
           display: flex;
           align-items: center;
@@ -587,7 +587,7 @@ export default function SheetKavatch() {
             Help us protect one more child from the cold. Your small gift makes a
             big difference.
           </p>
-          <a href="#" className="btn">Donate Now</a>
+          <a href="/donate" className="btn">Donate Now</a>
         </div>
         <div className="cta-box cta-sponsor">
           <h3>Become a Partner</h3>
@@ -595,7 +595,7 @@ export default function SheetKavatch() {
             Corporates and individuals can partner with us for bulk distribution
             drives.
           </p>
-          <a href="#" className="btn">Inquire Now</a>
+          <a href="/contact-us" className="btn">Inquire Now</a>
         </div>
       </section>
     </>

@@ -86,7 +86,7 @@ export default function Samarpan() {
 
         .hero {
           background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
-            url('https://navratanfoundations.com/_next/static/media/hero-one-big.3b2cd132.jpg') center/cover;
+            url('/img/hero-one-big.3b2cd132.jpg') center/cover;
           height: 500px;
           display: flex;
           align-items: center;
@@ -164,12 +164,14 @@ export default function Samarpan() {
           padding: 0 !important;
           overflow: hidden;
           border-radius: 12px;
+          
         }
 
         .mission-right-img {
           width: 100%;
           height: 500px;
           object-fit: cover;
+          object-position: top;
         }
 
         .how-it-works {
@@ -426,7 +428,7 @@ export default function Samarpan() {
         </div>
         <div className="card card-image-only">
           <img
-            src="https://navratanfoundations.com/assets/img/events/event-4.jpg"
+            src="/img/event-4.jpg"
             alt="Samarpan Event"
             className="mission-right-img"
           />
@@ -621,7 +623,7 @@ export default function Samarpan() {
 
       <section className="dual-cta">
         <div className="cta-box cta-nominate">
-          <h3>Nominate a Hero</h3>
+          <h3>Nominate An Unsung Hero</h3>
           <p>
             Know someone making a difference? Nominate them for the next Samarpan.
           </p>

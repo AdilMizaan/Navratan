@@ -1,5 +1,6 @@
 'use client';
 
+import SupportedBySection from '@/app/components/SupportedBySection';
 import { useEffect, useRef } from 'react';
 
 export default function JoAayeWoGaye() {
@@ -69,7 +70,7 @@ export default function JoAayeWoGaye() {
         /* Page-specific styles - no universal resets */
         .joaaye-page .hero {
           background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)),
-            url('https://navratanfoundations.com/_next/static/media/hero-one-big.3b2cd132.jpg') center/cover;
+            url('/img/hero-one-big.3b2cd132.jpg') center/cover;
           height: 500px;
           display: flex;
           align-items: center;
@@ -193,7 +194,7 @@ export default function JoAayeWoGaye() {
         }
 
         .joaaye-page .mission-bg-img {
-          background-image: url('https://navratanfoundations.com/assets/img/events/event-2.jpg');
+          background-image: url('/img/JAWG/JAWG-2023 FINALE  (451).JPG');
           background-size: cover;
           background-position: center;
           background-repeat: no-repeat;
@@ -278,7 +279,7 @@ export default function JoAayeWoGaye() {
         }
 
         .joaaye-page .supported-by {
-          padding: 30px 10%;
+          padding: 0px 1%;
           text-align: center;
           background: #fff;
           border-top: 1px solid #eee;
@@ -387,7 +388,7 @@ export default function JoAayeWoGaye() {
           display: flex;
           gap: 20px;
           width: max-content;
-          animation: scrollLeft 20s linear infinite;
+          animation: scrollLeft 60s linear infinite;
           padding: 10px 0;
         }
 
@@ -708,37 +709,38 @@ export default function JoAayeWoGaye() {
         </div>
         <div className="rules-container">
           <div className="rule-card">
-            <i className="fas fa-check-circle"></i>Monthly Audition Round (Alternate Month).
+            <i className="fas fa-check-circle"></i>Monthly Audition Round.
           </div>
           <div className="rule-card">
-            <i className="fas fa-check-circle"></i>We have two category of Ages: Juniors-5 yrs to 15 yrs, Seniors-16yrs and above.(Lyrics reading allowed only for Senior Citizens).
+            <i className="fas fa-check-circle"></i>We have two category of Ages: Juniors-5 yrs to 15 yrs, Seniors-16yrs and above
           </div>
           <div className="rule-card">
-            <i className="fas fa-check-circle"></i>On-the-spot registration only. Please bring your Aadhaar Card.
-                Only first 30 singers (1 song each) on first-come-first basis.
+            <i className="fas fa-check-circle"></i>On-the-spot registration on first-come-first basis for first 30 singers only. Aadhaar Card Mandatory.
           </div>
           <div className="rule-card">
-            <i className="fas fa-check-circle"></i>Only Bollywood songs will be allowed.
+            <i className="fas fa-check-circle"></i>Only 1 Bollywood songs will be allowed. Participants below 60 will not be allowed to help of lyrics reading
           </div>
           <div className="rule-card">
             <i className="fas fa-check-circle"></i>Orchestra based Program: We have Live Band to support participants musically.
           </div>
           <div className="rule-card">
-            <i className="fas fa-check-circle"></i>Prepare 3-4 popular songs to avoid repetition.
+            <i className="fas fa-check-circle"></i>Do come prepared with 3-4 popular songs to avoid repetition.
           </div>
           <div className="rule-card">
-            <i className="fas fa-check-circle"></i>Shortlist candidates according to their remarks and merit basis, judged by our GURUS from each episode will be eligible to participate in Quarter Final, Semi-Final then after Grand Finale as Auditoriom Shows if they qualify.
+            <i className="fas fa-check-circle"></i>Shortlist candidates based on their merit as judged by our GURU’S in each episode will be eligible to participate in Quarter Final, Semi-Final & Grand in Grand Auditorium Shows. 
           </div>
           <div className="rule-card">
-            <i className="fas fa-check-circle"></i>We have 3 Awards in Grand-Finale UTTAM-Gayak, UTKRISHT-Gayak & SARVOTTAM-Gayak from both categories (Jrs. & Srs.)
+            <i className="fas fa-check-circle"></i>In Grand-Finale the top winner will be Honored as SARVOTTAM-Gayak, 1st Runner Up will be awarded as ATI-UTTAM-Gayak , Rest Finalists will be awarded as UTTAM-Gayak  from both categories (Jrs. & Srs.)
           </div>
         </div>
       </section>
 
+      <SupportedBySection />
+
       <section className="supported-by">
-        <p>
+        {/* <p>
           <strong>Supported By:</strong> Tri Group of Music, Sparsh-Ehsas Zindagi Ka, DMS-Aarhoi, Harmony Waves, Nav Kala Bhaw Sangam, Aagrim Vidhyapeeth 
-        </p>
+        </p> */}
       </section>
 
       <section className="how-it-works">
@@ -790,12 +792,38 @@ export default function JoAayeWoGaye() {
           <div className="yellow-line"></div>
         </div>
         <div className="slider-track">
-          <img src="/img/Jo aye wo gaye1.jpg" className="gallery-item" alt="Event" />
-          <img src="/img/Jo aye wo gaye2.jpg" className="gallery-item" alt="Event" />
-          <img src="/img/Jo aye wo gaye3.jpg" className="gallery-item" alt="Event" />
-          <img src="/img/Jo aye wo gaye4.jpg" className="gallery-item" alt="Event" />
-          <img src="/img/Jo aye wo gaye5.jpg" className="gallery-item" alt="Event" />
-          <img src="/img/Jo aye wo gaye6.jpg" className="gallery-item" alt="Event" />
+          <img src="/img/JAWG/IMG-20240129-WA0021.jpg" className="gallery-item" alt="Event" />
+          <img src="/img/JAWG/IMG-20240225-WA0028.jpg" className="gallery-item" alt="Event" />
+          <img src="/img/JAWG/JAWG 2019 Pulwama D (3).JPG" className="gallery-item" alt="Event" />
+          <img src="/img/JAWG/JAWG 2019 Pulwama D (5).JPG" className="gallery-item" alt="Event" />
+          <img src="/img/JAWG/JAWG 2019 Pulwama D (73).JPG" className="gallery-item" alt="Event" />
+          <img src="/img/JAWG/JAWG-3 Finale (10).JPG" className="gallery-item" alt="Event" />
+          <img src="/img/JAWG/JAWG-3 Finale (49).JPG" className="gallery-item" alt="Event" />
+          <img src="/img/JAWG/JAWG-3 Finale (251).JPG" className="gallery-item" alt="Event" />
+          <img src="/img/JAWG/JAWG-3 Finale (394).JPG" className="gallery-item" alt="Event" />
+          <img src="/img/JAWG/JAWG-3 Finale (436).JPG" className="gallery-item" alt="Event" />
+          <img src="/img/JAWG/JAWG-3 Finale (437).JPG" className="gallery-item" alt="Event" />
+          <img src="/img/JAWG/JAWG-2018 JUNIOR JULY Photos (1).jpg" className="gallery-item" alt="Event" />
+          <img src="/img/JAWG/JAWG-2023 FINALE  (78).JPG" className="gallery-item" alt="Event" />
+          <img src="/img/JAWG/JAWG-2023 FINALE  (106).JPG" className="gallery-item" alt="Event" />
+          <img src="/img/JAWG/JAWG-2023 FINALE  (148).JPG" className="gallery-item" alt="Event" />
+          <img src="/img/JAWG/JAWG-2023 FINALE  (451).JPG" className="gallery-item" alt="Event" />
+          <img src="/img/JAWG/Jo Aaye Woh Gaaye-3 (88).JPG" className="gallery-item" alt="Event" />
+          <img src="/img/JAWG/NF- JAWG 2018 Invitation Card Finale.jpg" className="gallery-item" alt="Event" />
+          <img src="/img/JAWG/NF-JAWG Finale 2018 Photos (17).JPG" className="gallery-item" alt="Event" />
+          <img src="/img/JAWG/NF-JAWG Grand Finale 2018 Photos (41).JPG" className="gallery-item" alt="Event" />
+          <img src="/img/JAWG/NF-JAWG Grand Finale 2018 Photos (117).JPG" className="gallery-item" alt="Event" />
+          <img src="/img/JAWG/NF-JAWG Grand Finale 2018 Photos (535).JPG" className="gallery-item" alt="Event" />
+          <img src="/img/JAWG/NF-JAWG Grand Finale 2018 Photos (572).JPG" className="gallery-item" alt="Event" />
+          <img src="/img/JAWG/NF-JAWG Khurja.jpg" className="gallery-item" alt="Event" />
+          <img src="/img/JAWG/NF-JAWG-20 Photos  (25).JPG" className="gallery-item" alt="Event" />
+          <img src="/img/JAWG/NF-JAWG-20 Photos  (98).JPG" className="gallery-item" alt="Event" />
+          <img src="/img/JAWG/NF-JAWG-20 Photos  (131).JPG" className="gallery-item" alt="Event" />
+          <img src="/img/JAWG/NF-JAWG-20 Photos  (151).JPG" className="gallery-item" alt="Event" />
+          <img src="/img/JAWG/NF-JAWG-2018 Epi1 24-6-201 Photos (21).JPG" className="gallery-item" alt="Event" />
+          <img src="/img/JAWG/NF-JAWG-2018 Epi1 24-6-201 Photos (64).JPG" className="gallery-item" alt="Event" />
+          <img src="/img/JAWG/NF-JAWG-2018 Epi1 24-6-201 Photos (141).JPG" className="gallery-item" alt="Event" />
+          <img src="/img/JAWG/NF-JAWG-2018 Epi1 24-6-201 Photos (283).JPG" className="gallery-item" alt="Event" />
         </div>
       </section>
 
@@ -851,9 +879,9 @@ export default function JoAayeWoGaye() {
             </div>
           </div>
           <div className="contact-btn-wrapper">
-            <button className="btn-contact">
+            <a className="btn-contact" href="/contact-us" >
               Contact Us <i className="fas fa-paper-plane"></i>
-            </button>
+            </a>
           </div>
         </div>
       </section>

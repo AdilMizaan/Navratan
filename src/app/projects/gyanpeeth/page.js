@@ -749,7 +749,7 @@ export default function GyanpeethPage() {
                   <span>Holistic Development & Moral Education</span>
                 </div>
               </div>
-              <a href="#donate" className="btn">Join Us in Shaping Young Minds</a>
+              <a href="/contact-us" className="btn">Join Us in Shaping Young Minds</a>
             </div>
             <div className="intro-visual">
               <img src="/img/our-campaigns-4.jpg" alt="Children in Navratan Gyanpeeth classroom" className="intro-img" />
@@ -891,11 +891,11 @@ export default function GyanpeethPage() {
             ))}
           </div>
 
-          <div className="view-all-wrapper">
+          {/* <div className="view-all-wrapper">
             <Link href="/projects/gyanpeeth/centers" className="btn">
               View All Centers →
             </Link>
-          </div>
+          </div> */}
         </div>
       </section>
 
@@ -955,13 +955,13 @@ export default function GyanpeethPage() {
             </div> */}
           </div>
           <div className="qr-donate-center">
-            <a href="YOUR_DONATION_LINK_HERE" className="btn donate-btn">Donate Now</a>
+            <a href="/donate" className="btn donate-btn">Donate Now</a>
           </div>
         </div>
       </section>
 
       {/* Sticky CTA */}
-      <a href="#donate" className="sticky-cta">
+      <a href="/donate" className="sticky-cta">
         Empower a Child Today → Donate Now
       </a>
     </>

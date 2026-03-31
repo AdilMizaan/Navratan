@@ -18,7 +18,7 @@ export async function POST(req) {
     }
 
     const { data, error } = await resend.emails.send({
-      from: 'Contact Form <onboarding@resend.dev>', // ya nomination mein jo from use kiya tha
+      from: 'Navratan Foundation <onboarding@resend.dev>', // ya nomination mein jo from use kiya tha
       to: ['akif77761@gmail.com'], // yahan tumhari email
       subject: subject || `New Contact Message from ${name}`,
       html: `

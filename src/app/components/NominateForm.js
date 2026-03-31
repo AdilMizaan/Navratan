@@ -85,7 +85,7 @@ export default function NominateForm() {
             Nomination Form
           </h2>
 
-          {success && (
+          {/* {success && (
             <div
               style={{
                 background: "#e6ffe6",
@@ -115,7 +115,7 @@ export default function NominateForm() {
             >
               {error}
             </div>
-          )}
+          )} */}
 
           <form
             onSubmit={handleSubmit}
@@ -405,6 +405,38 @@ export default function NominateForm() {
               </small>
             </div>
 
+            {success && (
+            <div
+              style={{
+                background: "#e6ffe6",
+                color: "#006400",
+                padding: "15px",
+                borderRadius: "8px",
+                marginBottom: "30px",
+                textAlign: "center",
+                fontWeight: "bold",
+              }}
+            >
+              Nomination successfully submitted! Thank you for your contribution
+              🙏
+            </div>
+          )}
+
+          {error && (
+            <div
+              style={{
+                background: "#ffe6e6",
+                color: "#c00",
+                padding: "15px",
+                borderRadius: "8px",
+                marginBottom: "30px",
+                textAlign: "center",
+              }}
+            >
+              {error}
+            </div>
+          )}
+
             <button
               type="submit"
               disabled={loading}
@@ -422,6 +454,8 @@ export default function NominateForm() {
             >
               {loading ? "Submitting..." : "Submit Nomination"}
             </button>
+
+
           </form>
         </div>
       </section>

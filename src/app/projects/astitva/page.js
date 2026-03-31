@@ -547,7 +547,7 @@ export default function AstitvaPage() {
                 </div>
               </div>
 
-              <a href="#donate" className="btn">Join Us in Empowering More Lives</a>
+              <a href="/contact-us" className="btn">Join Us in Empowering More Lives</a>
             </div>
 
             <div className="intro-visual">
@@ -714,9 +714,18 @@ export default function AstitvaPage() {
           </div>
 
           <div className="view-all-wrapper">
-            <Link href="/projects/astitva/centers" className="btn">
+            {/* <Link href="/projects/astitva/centers" className="btn">
               View All Centers →
-            </Link>
+            </Link> */}
+            <a
+  href="/img/centers-pdf/NF-WOMEN TAILORING TRANING CENTRES.pdf"
+  download="Astitva-Centers-List.pdf"
+  className="btn"
+  style={{ display: 'inline-flex', alignItems: 'center', gap: '10px' }}
+>
+  All Centers List
+  <i className="fas fa-download"></i>
+</a>
           </div>
         </div>
       </section>
@@ -783,13 +792,13 @@ export default function AstitvaPage() {
           </div>
 
           <div className="qr-donate-center">
-            <a href="YOUR_DONATION_LINK_HERE" className="btn donate-btn">Donate Now</a>
+            <a href="/donate" className="btn donate-btn">Donate Now</a>
           </div>
         </div>
       </section>
 
       {/* Sticky CTA */}
-      <a href="#donate" className="sticky-cta">
+      <a href="/donate" className="sticky-cta">
         Empower a Woman Today → Donate Now
       </a>
     </>

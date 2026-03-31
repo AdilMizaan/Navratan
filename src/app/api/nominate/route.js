@@ -43,7 +43,7 @@ const contact = formData.get('contact') || 'N/A';
     console.log(`Sending email to ${process.env.ADMIN_EMAIL} with ${attachments.length} attachments`);
 
     const { data, error } = await resend.emails.send({
-      from: 'onboarding@resend.dev',  // Test ke liye safe sender
+      from: 'Navratan Foundation <onboarding@resend.dev>',  // Test ke liye safe sender
       to: process.env.ADMIN_EMAIL,
       subject: `New Nomination - ${name}`,
       html: `
