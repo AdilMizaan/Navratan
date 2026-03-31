@@ -1014,7 +1014,7 @@ export default function CyberurjaPage() {
   <i className="fas fa-download"></i>
 </a> */}
             <a
-  href="/img/centers-pdf/NF-WOMEN TAILORING TRANING CENTRES.pdf"
+  href="/img/centers-pdf/NF-List of COMPUTER CENTRES.pdf"
   target="_blank"                    // ← Yeh important line
   rel="noopener noreferrer"          // ← Security ke liye best practice
   className="btn"
