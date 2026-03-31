@@ -9,7 +9,9 @@ export default function AwardeesJourney() {
     years.push({
       year,
       isCovid: year === 2020 || year === 2021,
-      pdfLink: (year === 2020 || year === 2021) ? null : `/img/awardees-pdf/Awardees-${year}.pdf`
+      pdfLink: (year === 2020 || year === 2021) 
+        ? null 
+        : `/img/awardees-pdf/Awardees-${year}.pdf`
     });
   }
 
@@ -167,11 +169,14 @@ export default function AwardeesJourney() {
                 ) : (
                   <a
                     href={item.pdfLink}
-                    download={`Awardees-${item.year}.pdf`}
+                    target="_blank"           // ← Yeh important hai
+                    rel="noopener noreferrer" // ← Security ke liye best practice
                     className="year-btn"
                   >
                     {item.year}
-                    <span className="download-icon"><i className="fas fa-download"></i></span>
+                    <span className="download-icon">
+                      <i className="fas fa-download"></i>
+                    </span>
                   </a>
                 )}
               </div>

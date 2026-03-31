@@ -1004,11 +1004,25 @@ export default function CyberurjaPage() {
             {/* <Link href="/projects/cyberurja/centers" className="btn">
               View All Centers →
             </Link> */}
-            <a
+            {/* <a
   href="/img/centers-pdf/NF-List of COMPUTER CENTRES.pdf"
   download="CyberUrja-Centers-List.pdf"
   className="btn"
   style={{ display: 'inline-flex', alignItems: 'center', gap: '10px' }}
+>
+  All Centers List
+  <i className="fas fa-download"></i>
+</a> */}
+            <a
+  href="/img/centers-pdf/NF-WOMEN TAILORING TRANING CENTRES.pdf"
+  target="_blank"                    // ← Yeh important line
+  rel="noopener noreferrer"          // ← Security ke liye best practice
+  className="btn"
+  style={{ 
+    display: 'inline-flex', 
+    alignItems: 'center', 
+    gap: '10px' 
+  }}
 >
   All Centers List
   <i className="fas fa-download"></i>

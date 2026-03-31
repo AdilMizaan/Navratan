@@ -12,7 +12,7 @@ export default function UpcomingEvents() {
       id: 4,
       title: "JO AAYE WO GAAYE S-4 E-4",
       short: "JO AAYE WO GAAYE S-4 E-4 - Unseen Upcoming Talented Singers invited for Bollywood Singing Monthly Program",
-      date: "15th March 2026",
+      date: "17th May 2026",
       time: "4:00 PM",
       location: "Club-27, H Block, Sector-27, Noida",
       description: "Navratan Foundations invites Unseen Upcoming Talented Singers to participate in Delhi NCR’s The Famous & Prestigious Bollywood Singing Monthly program.",
