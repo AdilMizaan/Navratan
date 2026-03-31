@@ -117,6 +117,7 @@ export default function AboutUs() {
         .about-section {
           width: 100%;
           padding: 80px 0 30px;
+          background: #f8fafc;
         }
 
         .about-container {
