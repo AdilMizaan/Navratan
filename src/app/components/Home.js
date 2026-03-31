@@ -19,8 +19,8 @@ import AwardeesJourney from './AwardeesJourney';
 
 export default function Home() {
   return (
-    <>
-      <style jsx global>{`
+    <main className="overflow-x-hidden">
+      {/* <style jsx global>{`
         // * { box-sizing: border-box; }
         // body { margin: 0; font-family: 'Poppins', sans-serif; color: #333; background: white; line-height: 1.6; }
         // .container { max-width: 1200px; margin: 0 auto; padding: 0 20px; }
@@ -34,7 +34,7 @@ export default function Home() {
       
 
         
-      `}</style>
+      `}</style> */}
 
       {/* Hero */}
       <Hero />
@@ -71,6 +71,6 @@ export default function Home() {
 
       <AwardeesJourney />
 
-    </>
+    </main>
   );
 }
