@@ -32,8 +32,24 @@
 
 // export default nextConfig;
 
+
+// --------------------------working--------------------------
+// const nextConfig = {
+//   output: 'export'
+// };
+
+// export default nextConfig;
+
+// -----------------------------------------
+
+/** @type {import('next').NextConfig} */
 const nextConfig = {
-  output: 'export'
+  output: 'export',
+  trailingSlash: true,
+  // Agar aapne images use ki hain toh ye bhi zaroori ho sakta hai:
+  images: {
+    unoptimized: true,
+  },
 };
 
 export default nextConfig;

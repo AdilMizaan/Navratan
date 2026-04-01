@@ -27,7 +27,7 @@ const handleSubmit = async (e) => {
   };
 
   try {
-    const response = await fetch('/api/send-contact', {
+    const response = await fetch('https://navratanfoundations.com/contact.php', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify(data),
@@ -35,11 +35,11 @@ const handleSubmit = async (e) => {
 
     const result = await response.json();
 
-    if (response.ok) {
+    if (result.success) {
       setStatus('Message sent successfully! We will get back to you soon.');
       e.target.reset();
     } else {
-      setStatus(result.error || 'Failed to send message. Please try again.');
+      setStatus(result.error || 'Failed to send. Please try again.');
     }
   } catch (err) {
     setStatus('Something went wrong. Please check your connection.');
@@ -47,6 +47,99 @@ const handleSubmit = async (e) => {
     setIsLoading(false);
   }
 };
+
+// ---------------------------------------------
+// const handleSubmit = async (e) => {
+//   e.preventDefault();
+//   setIsLoading(true);
+//   setStatus('');
+
+//   const formData = new FormData(e.target);
+//   const data = {
+//     name: formData.get('name'),
+//     phone: formData.get('phone'),
+//     email: formData.get('email'),
+//     subject: formData.get('subject'),
+//     message: formData.get('message'),
+//   };
+
+//   try {
+//     const response = await fetch('https://api.resend.com/emails', {
+//       method: 'POST',
+//       headers: {
+//         'Authorization': `Bearer ${process.env.NEXT_PUBLIC_RESEND_API_KEY}`,
+//         'Content-Type': 'application/json',
+//       },
+//       body: JSON.stringify({
+//         from: 'Navratan Foundation <onboarding@resend.dev>',
+//         to: ['akif77761@gmail.com'],
+//         subject: data.subject || `New Contact Message from ${data.name}`,
+//         html: `
+//           <h2>New Contact Form Submission</h2>
+//           <p><strong>Name:</strong> ${data.name}</p>
+//           <p><strong>Phone:</strong> ${data.phone || 'Not provided'}</p>
+//           <p><strong>Email:</strong> ${data.email}</p>
+//           <p><strong>Subject:</strong> ${data.subject || 'No subject'}</p>
+//           <hr />
+//           <p><strong>Message:</strong></p>
+//           <p>${data.message.replace(/\n/g, '<br>')}</p>
+//           <br />
+//           <p>Reply directly to: ${data.email}</p>
+//         `,
+//       }),
+//     });
+
+//     if (response.ok) {
+//       setStatus('Message sent successfully! We will get back to you soon.');
+//       e.target.reset();
+//     } else {
+//       const result = await response.json();
+//       setStatus(result.message || 'Failed to send. Please try again.');
+//     }
+//   } catch (err) {
+//     setStatus('Something went wrong. Please check your connection.');
+//   } finally {
+//     setIsLoading(false);
+//   }
+// };
+
+// ----------------------------------------------------
+
+// const handleSubmit = async (e) => {
+//   e.preventDefault();
+//   setIsLoading(true);
+//   setStatus('');
+
+//   const formData = new FormData(e.target);
+//   const data = {
+//     name: formData.get('name'),
+//     phone: formData.get('phone'),
+//     email: formData.get('email'),
+//     subject: formData.get('subject'),
+//     message: formData.get('message'),
+//   };
+
+//   try {
+//     const response = await fetch('/api/send-contact', {
+//       method: 'POST',
+//       headers: { 'Content-Type': 'application/json' },
+//       body: JSON.stringify(data),
+//     });
+
+//     const result = await response.json();
+
+//     if (response.ok) {
+//       setStatus('Message sent successfully! We will get back to you soon.');
+//       e.target.reset();
+//     } else {
+//       setStatus(result.error || 'Failed to send message. Please try again.');
+//     }
+//   } catch (err) {
+//     setStatus('Something went wrong. Please check your connection.');
+//   } finally {
+//     setIsLoading(false);
+//   }
+// };
 // ---------------------------------------
 
   return (
