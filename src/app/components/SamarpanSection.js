@@ -5,7 +5,7 @@ export default function SamarpanSection() {
     {
       year: 2025,
       title: "Samarpan 2025",
-      pdfLink: "/img/samarpan-pdf/Samarpan 2025.pdf",
+      pdfLink: "/img/samarpan-pdf/Samarpan 2025_compressed.pdf",
     },
     {
       year: 2024,
