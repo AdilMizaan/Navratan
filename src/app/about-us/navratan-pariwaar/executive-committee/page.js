@@ -6,7 +6,7 @@ export default function ExecutiveCommittee() {
 
     const executives = [
     {
-      name: "Dr. Ashok Srivastva",
+      name: "Dr. Ashok Srivastava",
       title: "President",
       description: "A man with a golden heart and a humble personality, he has dedicated the last 35 years to social work. Holding degrees from a lasting impact on various communities.",
       image: "/img/executive-committee/founder-in-circle-e1600241339973.png"
@@ -24,7 +24,7 @@ export default function ExecutiveCommittee() {
       image: "/img/executive-committee/varsha-Srivastava.png"
     },
     {
-      name: "Murari Prasad Srivastva",
+      name: "Murari Prasad Srivastava",
       title: "Vice President",
       description: "A retired professional from FCI, Noida, with a deep passion for theater and social work. Currently, he is an active Real Estate Consultant specializing in Noida, Greater Noida, and the NCR region, while remaining engaged in community welfare activities.",
       image: "/img/executive-committee/murari-prasad-150x150-1.png"
@@ -42,7 +42,7 @@ export default function ExecutiveCommittee() {
       image: "/img/executive-committee/someshwar-sharma.png"
     },
     {
-      name: "Vivek Srivastva",
+      name: "Vivek Srivastava",
       title: "Vice President",
       description: "A science graduate with a PG in Business Administration, he has 15 years of experience in healthcare administration. Having worked with major hospitals, he is actively engaged in social media and aims to improve healthcare infrastructure and social services.",
       image: "/img/executive-committee/vivek-kumar.png"
@@ -54,17 +54,18 @@ export default function ExecutiveCommittee() {
       image: "/img/executive-committee/mulridharan.png"
     },
     {
-      name: "Anuranjan Srivastva",
+      name: "Anuranjan Srivastava",
       title: "Treasurer",
       description: "An entrepreneur and social worker with over 15 years of experience in IT, Publishing, and Education. Committed to vocational education, he founded 'Skilled ME', a company providing skill training programs and digital solutions, fostering growth for underprivileged youth.",
       image: "/img/executive-committee/anuranjan-srivastava-150x150-1.png"
     },
     {
-      name: "Vineet Khare",
-      title: "Media In Charge",
-      description: "A technocrat with over 30 years of experience in digital media. Founder of Creative, a digital media company, he specializes in LAMP and search content. Passionate about technology, he actively contributes digital services to various NGO events.",
-      image: "/img/executive-committee/vineet-khare.png"
+      name: "Mrs. Anshumali Sinha",
+      title: "Cultural Secretary and Social Media In charge",
+      description: "A Computer Science graduate with an MBA in Finance & Marketing, she has 8 years of corporate experience. A trained vocalist, she passionately manages cultural and social initiatives, balancing her love for music with community service.",
+      image: "/img/executive-committee/anshumali-sinha.png"
     },
+   
     {
       name: "Mrs. Shalini Agrawal",
       title: "Joint Secretary",
@@ -83,14 +84,14 @@ export default function ExecutiveCommittee() {
       description: "A dedicated social worker with a B.A. and B.Ed., she has served as Treasurer and Secretary at Lioness Club. Passionate about education, she records audiobooks for the blind and supports underprivileged children by providing free education at her home.",
       image: "/img/executive-committee/geeta.png"
     },
-    {
-      name: "Mrs. Anshumali Sinha",
-      title: "Cultural Secretary and Social Media In charge",
-      description: "A Computer Science graduate with an MBA in Finance & Marketing, she has 8 years of corporate experience. A trained vocalist, she passionately manages cultural and social initiatives, balancing her love for music with community service.",
-      image: "/img/executive-committee/anshumali-sinha.png"
+     {
+      name: "Vineet Khare",
+      title: "Media In Charge",
+      description: "A technocrat with over 30 years of experience in digital media. Founder of Creative, a digital media company, he specializes in LAMP and search content. Passionate about technology, he actively contributes digital services to various NGO events.",
+      image: "/img/executive-committee/vineet-khare.png"
     },
     {
-      name: "Anil Srivastva",
+      name: "Anil Srivastava",
       title: "Joint Media In Charge",
       description: "A postgraduate in Sociology and experienced journalist, he has been associated with Navratan Foundation since 2015. Currently serving as Joint Media In-charge, he uses his expertise to support the organization's media outreach and social initiatives.",
       image: "/img/executive-committee/anil-srivastava.png"

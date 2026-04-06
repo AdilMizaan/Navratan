@@ -228,7 +228,7 @@ export default function Footer() {
             <h3>Contact Us</h3>
             <div className="contact-item">
               <i className="fas fa-phone contact-icon"></i>
-              <span>+91-70111540309</span>
+              <span>+91-7011540309</span>
             </div>
             <div className="contact-item">
               <i className="fas fa-envelope contact-icon"></i>

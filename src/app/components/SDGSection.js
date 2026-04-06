@@ -54,6 +54,10 @@ export default function SDGSection() {
           line-height: 1.1;
         }
 
+        .highlight-navratan {
+          color: #00acf0;
+        }
+
         .sub-heading {
           font-family: 'Playfair Display', serif;
           font-size: 32px;
@@ -186,10 +190,10 @@ export default function SDGSection() {
 
       <section className="sdg-section">
         <div className="container">
-          <h2 className="heading">At NAVRATAN FOUNDATIONS our efforts are towards achieving SDG</h2>
+          <h2 className="heading">At <span className="highlight-navratan">NAVRATAN FOUNDATIONS</span> our efforts<br/>are towards achieving SDG</h2>
 
           <p className="description">
-            We are dedicated to promoting gender equality, quality education, decent work, economic growth, and mental health, in alignment with SDGs 4, 5, 8, and 3.
+            We are dedicated to promoting SDG 3 /Good Health & Well being , SDG 4 -Quality Education, SDG 5 -Gender Equality and SDG 8  -Decent Work and Economic Growth
           </p>
 
           <div className="cards-row">

@@ -82,6 +82,7 @@ export default function SocialEmotionalSection() {
 
         .discover-btn:hover {
           background: #00acf0;
+          color: white;
           transform: translateY(-6px);
           box-shadow: 0 20px 55px rgba(36, 247, 251, 0.45);
         }
@@ -140,15 +141,18 @@ export default function SocialEmotionalSection() {
           {/* Right: 40% width content */}
           <div className="right-content">
             <h2 className="heading">
-              Social Emotional Reach Programme
+              The DayaRani Emotional Wellbeing Movement
             </h2>
 
-            <p className="description">
+            {/* <p className="description">
               Social-emotional development and support should become an essential piece and mainstay of our lives. Education and awareness around it should flow smoothly to establish the framework for positive social associations, bringing about effective positive mental health in the community. Youths and the old, being the most vulnerable sections of society need our helping hands and gracious charity to curb their psychological barriers and break their opinionated silence. To settle themselves they need to be counseled well and a Social Emotional Reach campaign makes it easy to reach out to such individuals. We have collaborated with DayaRani Wellness Advisory.
+            </p> */}
+            <p className="description">
+              DayaRani is a purpose-driven think tank and advisory dedicated to advancing emotional wellbeing as a way of life. Founded as a tribute to values of compassion and resilience, it works to create an inclusive ecosystem where individuals can understand, rewire, and reinvent themselves through self-awareness and holistic tools. With a strong focus on preventive emotional wellness, DayaRani combines research, awareness, and innovative interventions to break stigma, build resilience, and inspire meaningful transformation across communities and workplaces.
             </p>
 
             <a href="https://dayarani.in/" className="discover-btn">
-              Discover More →
+              Visit Website  →
             </a>
           </div>
         </div>

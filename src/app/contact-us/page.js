@@ -431,6 +431,7 @@ const handleSubmit = async (e) => {
           border-radius: 8px;
           font-size: 16px;
           background: white;
+          color: #253339;
           transition: border 0.3s;
         }
 

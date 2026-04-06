@@ -114,17 +114,26 @@ export default function Hero() {
           width: 100%;
         }
 
+        .hero-content .hero-title {
+          font-size: 3.5rem;
+          font-weight: 700;
+          margin-bottom: 1rem;
+          line-height: 1.2;
+        }
+
         .hero h1 {
-          font-size: 5.2rem;
+          font-size: 3.2rem;
           font-weight: 600;
           margin-bottom: 1rem;
           line-height: 1.1;
         }
 
         .typing-text {
-          height: 120px;
-          font-size: 5.2rem;
+          height: 60px;
+          font-size: 3.2rem;
           font-weight: 600;
+          margin-top: 10px;
+          margin-bottom: 40px;
           color: #00acf0;
           display: inline-block;
           border-right: 4px solid #00acf0;
@@ -141,8 +150,8 @@ export default function Hero() {
         .btn-explore {
           margin-top: 100px;
           padding: 16px 48px;
-          background: #00acf0;
-          color: white;
+          background: #fbd45a;
+          color: black;
           font-size: 1.25rem;
           font-weight: 600;
           border-radius: 9999px;
@@ -152,7 +161,8 @@ export default function Hero() {
         }
 
         .btn-explore:hover {
-          background: #0090d0;
+          background: #00acf0;
+          color: white;
           transform: translateY(-3px);
           box-shadow: 0 15px 35px rgba(0, 172, 240, 0.4);
         }
@@ -271,13 +281,17 @@ export default function Hero() {
           .carousel-slide img { height: 280px; }
           .carousel-arrow { width: 50px; height: 50px; font-size: 24px; }
           .hero-content { height: auto; }
+          .hero-content .hero-title {
+          font-size: 2rem;
+          margin-bottom: 50px;}
         }
       `}</style>
 
       <section className="hero">
         <div className="hero-content">
+          <h1 className='hero-title' >Empowering Lives | Enriching Futures</h1>
           <h1>
-            Unlocking Futures with <br />
+            Unlocking Futures<br />
             <span className="typing-text">{displayText}</span>
           </h1>
 

@@ -7,13 +7,14 @@ import StatsSection from './StatsSection';
 import SDGSection from './SDGSection';
 import ImpactSection from './ImpactSection';
 import PartnersSection from './PartnersSection';
-import SocialEmotionalSection from './SocialEmotionalSection';
+// import SocialEmotionalSection from './SocialEmotionalSection';
 import InspiringStoriesSection from './InspiringStoriesSection';
 import UpcomingEvents from './UpcomingEvents';
 // import AwardsTimline from './AwardsTimline';
 import ActivitiesSection from './ActivitiesSection';
 import ActivityYTVideos from './ActivityYTVideos';
 import AwardeesJourney from './AwardeesJourney';
+import DayaRaniSection from './DayaRanisection';
 
 
 
@@ -59,7 +60,8 @@ export default function Home() {
       {/* Partners */}
       <PartnersSection />
 
-      <SocialEmotionalSection />
+      {/* <SocialEmotionalSection /> */}
+      <DayaRaniSection />
 
       <ActivitiesSection />
 
