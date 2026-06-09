@@ -19,10 +19,34 @@ export default function Patrons() {
       image: "/img/patrons/atul-mangal-150x150-1.png"
     },
     {
+      name: "Renu Adawal",
+      title: "Social Entrepreneur, New Delhi",
+      description: "Renu Adawal is a postgraduate in Home Science and Child Psychology from Vansathali University, Jaipur. Besides this, she has done various important courses in computer education from NIIT, Delhi. Despite being a successful homemaker, she is a great philanthropist and has been involved in many charity and religious works in Delhi NCR. She loves sharing brilliant ideas related to social welfare.",
+      image: "/img/patrons/renu-adwal-150x150-1.png"
+    },
+    {
+      name: "Mr. Raj Kumar",
+      title: "Former Member Tribunal",
+      description: "Mr. Raj Kumar was born on 10 December 1953 at holy place VINDHACHAL in the District of Mirzapur in Uttar Pradesh.He was educated at Allahabad from Primary to Post Graduate level.He did his M.Sc.  in Statistics from Allahabad University in1974.In 1976 he was selected in PCS exam of U.P. and was awarded Sales Tax Service. As an administrative  tax officer he rose to the highest post of the Department,the Member of Tribunal from where he retired on 31 Dec.2013.After retirement he is now setteled at Lucknow the capital of U.P. Mr.Raj Kumar is basically an Acamedician.He was all through First Class student to Post Graduate level.Mr Kumar has vide interest in the field of financial management",
+      image: "/img/patrons/Mr_Raj_Kumar_150x150.png"
+    },
+    {
       name: "Atul Srivastava",
       title: "CEO, Effective People, Mumbai",
       description: "Mr. Atul Srivastava is founder of Effective People, helping companies build efficient leadership, manage changes, and establish robust HR practices through his vast and rich experience. A postgraduate in commerce with experience in managing...",
       image: "/img/patrons/atul-srivastava-150x150-1.png"
+    },
+    {
+      name: "Jamil Ahmad",
+      title: "",
+      description: "Jamil Ahmad is a law graduate from Lucknow University. He served the government for more than 37 years in the field of general administration, personnel department, vigilance department, and commercial and institutional department. Prior to serving the Noida Authority as Deputy Secretary, he served NEPZ as an administrative officer. Post-retirement, he is associated with Dasna Ghaziabad as Director General.",
+      image: "/img/patrons/jamil-ahmad.png"
+    },
+     {
+      name: "Anoop Jairath",
+      title: "",
+      description: "A Chartered Accountant by profession, rendering professional services in corporate tax, Assurance, and Business Advisory Services. Joined Rotary in 2005, and rose to be the President of the Rotary Club of Noida. He has established a blood bank in Noida along with several social projects. He is also the Vice-President of Suprayas Centre of Excellence, an NGO involved in developing employable skills in underprivileged children.",
+      image: "/img/patrons/anoop-jairath.png"
     },
     {
       name: "Vibha Mishra",
@@ -31,10 +55,10 @@ export default function Patrons() {
       image: "/img/patrons/vibha-mishra-150x150-1.png"
     },
     {
-      name: "Renu Adawal",
-      title: "Social Entrepreneur, New Delhi",
-      description: "Renu Adawal is a postgraduate in Home Science and Child Psychology from Vansathali University, Jaipur. Besides this, she has done various important courses in computer education from NIIT, Delhi. Despite being a successful homemaker, she is a great philanthropist and has been involved in many charity and religious works in Delhi NCR. She loves sharing brilliant ideas related to social welfare.",
-      image: "/img/patrons/renu-adwal-150x150-1.png"
+      name: "P.K. Gupta",
+      title: "",
+      description: "Praveen Kumar Gupta completed his B.Tech in 1976 and joined the Industries Department, Govt of UP. He was part of the industrial development in Noida and Greater Noida during 1987-97 and retired from Aligarh as Deputy Commissioner, Industries. He is currently leading a retired life and is associated with various social welfare activities.",
+      image: "/img/patrons/pk-gupta.png"
     },
     {
       name: "Dhurendra Chaturvedi",
@@ -42,24 +66,6 @@ export default function Patrons() {
       description: "A postgraduate of the University of Allahabad. Joined the State Govt Commercial Tax Department as a PCS officer. Retired as the Additional Commissioner Grade-1 of the Varanasi Zone of the Commercial Tax Department, Government of Uttar Pradesh. He was responsible for tax collection, dispute settlement, industry-department relations, policy making, and general administration of one of the biggest zones in the state.",
       image: "/img/patrons/DHURENDRA-CHATURVEDI.png"
     },
-    {
-      name: "Jamil Ahmad",
-      title: "",
-      description: "Jamil Ahmad is a law graduate from Lucknow University. He served the government for more than 37 years in the field of general administration, personnel department, vigilance department, and commercial and institutional department. Prior to serving the Noida Authority as Deputy Secretary, he served NEPZ as an administrative officer. Post-retirement, he is associated with Dasna Ghaziabad as Director General.",
-      image: "/img/patrons/jamil-ahmad.png"
-    },
-    {
-      name: "P.K. Gupta",
-      title: "",
-      description: "Praveen Kumar Gupta completed his B.Tech in 1976 and joined the Industries Department, Govt of UP. He was part of the industrial development in Noida and Greater Noida during 1987-97 and retired from Aligarh as Deputy Commissioner, Industries. He is currently leading a retired life and is associated with various social welfare activities.",
-      image: "/img/patrons/pk-gupta.png"
-    },
-    {
-      name: "Anoop Jairath",
-      title: "",
-      description: "A Chartered Accountant by profession, rendering professional services in corporate tax, Assurance, and Business Advisory Services. Joined Rotary in 2005, and rose to be the President of the Rotary Club of Noida. He has established a blood bank in Noida along with several social projects. He is also the Vice-President of Suprayas Centre of Excellence, an NGO involved in developing employable skills in underprivileged children.",
-      image: "/img/patrons/anoop-jairath.png"
-    }
   ];
 
   return (

@@ -20,7 +20,7 @@ export default function OurProjectsSection() {
         }
 
         .section-title {
-           font-family: 'Shadows Into Light', cursive;
+          font-family: 'Shadows Into Light', cursive;
           font-size: 60px;
           font-weight: 600;
           color: rgba(0, 172, 240, 0.67);
@@ -37,19 +37,27 @@ export default function OurProjectsSection() {
           margin: -38px 0 70px 0;
         }
 
+        /* Updated Projects Grid - Flexbox for perfect alignment */
         .projects-grid {
-          display: grid;
-          grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-          gap: 20px;
+          display: flex;
+          flex-wrap: wrap;
+          gap: 24px;
+          justify-content: center;
+          align-items: stretch;
         }
 
         .project-card {
+          flex: 0 0 calc(33.333% - 16px);
+          max-width: 420px;
+          min-width: 280px;
           background: white;
           border-radius: 24px;
           overflow: hidden;
           box-shadow: 0 20px 60px rgba(0,0,0,0.08);
           transition: all 0.4s ease;
-          position: relative;
+          display: block;
+          text-decoration: none;
+          color: inherit;
         }
 
         .project-card:hover {
@@ -59,13 +67,13 @@ export default function OurProjectsSection() {
 
         .project-image {
           width: 100%;
-          height: 200px;
+          height: 220px;
           object-fit: cover;
           border-radius: 24px 24px 0 0;
         }
 
         .project-info {
-          padding: 10px 20px;
+          padding: 20px;
         }
 
         .project-title {
@@ -77,40 +85,36 @@ export default function OurProjectsSection() {
         }
 
         .project-desc {
-        //   font-family: 'Inter', sans-serif;
           font-size: 14px;
           font-weight: 500;
           color: #212121;
-        //   line-height: 1.7;
           margin: 0;
+          line-height: 1.5;
         }
 
+        /* Responsive */
         @media (max-width: 1024px) {
+          .project-card {
+            flex: 0 0 calc(50% - 12px);
+          }
+          
           .section-title {
             font-size: 42px;
           }
 
           .section-subtitle {
             font-size: 28px;
-          }
-
-          .project-image {
-            height: 280px;
           }
         }
 
         @media (max-width: 768px) {
           .projects-section {
-            padding: 50px 0 20px;
-          }
-            
-
-          .section-title {
-            font-size: 42px;
+            padding: 80px 0 60px;
           }
 
-          .section-subtitle {
-            font-size: 28px;
+          .project-card {
+            flex: 0 0 100%;
+            max-width: 100%;
           }
 
           .project-image {
@@ -127,7 +131,7 @@ export default function OurProjectsSection() {
           <div className="projects-grid">
             <a href="/projects/astitva" className="project-card">
               <img
-                src="/img/astitva.jpg" // apni image daal do
+                src="/img/astitva.jpg"
                 alt="Astitva Project"
                 className="project-image"
               />
@@ -155,7 +159,7 @@ export default function OurProjectsSection() {
 
             <a href="/projects/umeed" className="project-card">
               <img
-                src="/img/umeed.jpg" 
+                src="/img/umeed.jpg"
                 alt="Umeed Project"
                 className="project-image"
               />
@@ -177,6 +181,21 @@ export default function OurProjectsSection() {
                 <h3 className="project-title">Cyberurja</h3>
                 <p className="project-desc">
                   Empowering with Computer Education
+                </p>
+              </div>
+            </a>
+
+            <a href="/projects/aparajita" className="project-card">
+              <img
+                src="/img/aparajita/aparajita-main.jpeg"
+                style={{ objectPosition: "bottom" }}
+                alt="Aparajita Project"
+                className="project-image"
+              />
+              <div className="project-info">
+                <h3 className="project-title">Aparajita</h3>
+                <p className="project-desc">
+                  A Special Initiative for Women’s Empowerment Through Football
                 </p>
               </div>
             </a>

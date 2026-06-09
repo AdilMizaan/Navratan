@@ -2,6 +2,8 @@
 
 import { useEffect, useRef,} from 'react'
 import NominateForm from '@/app/components/NominateForm';
+import MeetOurAwardeesSection from '@/app/components/MeetOurAwardeesSection';
+import SamarpanHighlightsYT from '@/app/components/SamarpanHighlightsYT';
 
 export default function Samarpan() {
   const impactBarRef = useRef(null)
@@ -620,6 +622,8 @@ export default function Samarpan() {
           </div>
         </div>
       </section>
+      <SamarpanHighlightsYT />
+      <MeetOurAwardeesSection />
 
       <section className="dual-cta">
         <div className="cta-box cta-nominate">

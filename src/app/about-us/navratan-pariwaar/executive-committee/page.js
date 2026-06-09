@@ -12,16 +12,28 @@ export default function ExecutiveCommittee() {
       image: "/img/executive-committee/founder-in-circle-e1600241339973.png"
     },
     {
-      name: "Mr. R. K. Saxena",
-      title: "Sr. Vice President",
-      description: "A retired IRS officer who served for over 40 years as Asst. Commissioner for Customs & Central Excise. He is an active Real Estate Consultant specializing in Noida, Greater Noida, and the NCR region, while remaining engaged in community welfare activities.",
-      image: "/img/executive-committee/r-k-saxena-150x150-1.png"
-    },
-    {
       name: "Varsha Srivastva",
-      title: "Vice President",
+      title: "Sr. Vice President",
       description: "An artist, educator, and homemaker with a decade-long association with Navratan. Passionate about creative expression, she is a self-taught artist known for her vibrant works. Recently, she has dedicated herself to educating underprivileged children with utmost dedication.",
       image: "/img/executive-committee/varsha-Srivastava.png"
+    },
+    {
+      name: "A.V. Murlidharan",
+      title: "General Secretary",
+      description: "A science graduate with a postgraduate degree in Marketing and International Trade. Since 1999, he has led RAVI International, providing automation and barcoding solutions. A dedicated social worker, he is now exploring digital outdoor media innovations.",
+      image: "/img/executive-committee/mulridharan.png"
+    },
+    {
+      name: "Anuranjan Srivastava",
+      title: "Treasurer",
+      description: "An entrepreneur and social worker with over 15 years of experience in IT, Publishing, and Education. Committed to vocational education, he founded 'Skilled ME', a company providing skill training programs and digital solutions, fostering growth for underprivileged youth.",
+      image: "/img/executive-committee/anuranjan-srivastava-150x150-1.png"
+    },
+    {
+      name: "Vivek Srivastava",
+      title: "Vice President",
+      description: "A science graduate with a PG in Business Administration, he has 15 years of experience in healthcare administration. Having worked with major hospitals, he is actively engaged in social media and aims to improve healthcare infrastructure and social services.",
+      image: "/img/executive-committee/vivek-kumar.png"
     },
     {
       name: "Murari Prasad Srivastava",
@@ -42,22 +54,16 @@ export default function ExecutiveCommittee() {
       image: "/img/executive-committee/someshwar-sharma.png"
     },
     {
-      name: "Vivek Srivastava",
+      name: "Mrs. Shalini Agrawal",
       title: "Vice President",
-      description: "A science graduate with a PG in Business Administration, he has 15 years of experience in healthcare administration. Having worked with major hospitals, he is actively engaged in social media and aims to improve healthcare infrastructure and social services.",
-      image: "/img/executive-committee/vivek-kumar.png"
+      description: "A yoga practitioner for over 7 years, she promotes holistic health, especially for the elderly. In Hyderabad, she teaches yoga while also managing business ventures, including a successful restaurant franchise, showcasing her entrepreneurial spirit.",
+      image: "/img/executive-committee/shalini-agarwal-150x150-1.png"
     },
     {
-      name: "A.V. Murlidharan",
-      title: "General Secretary",
-      description: "A science graduate with a postgraduate degree in Marketing and International Trade. Since 1999, he has led RAVI International, providing automation and barcoding solutions. A dedicated social worker, he is now exploring digital outdoor media innovations.",
-      image: "/img/executive-committee/mulridharan.png"
-    },
-    {
-      name: "Anuranjan Srivastava",
-      title: "Treasurer",
-      description: "An entrepreneur and social worker with over 15 years of experience in IT, Publishing, and Education. Committed to vocational education, he founded 'Skilled ME', a company providing skill training programs and digital solutions, fostering growth for underprivileged youth.",
-      image: "/img/executive-committee/anuranjan-srivastava-150x150-1.png"
+      name: "Vineet Khare",
+      title: "Media In Charge",
+      description: "A technocrat with over 30 years of experience in digital media. Founder of Creative, a digital media company, he specializes in LAMP and search content. Passionate about technology, he actively contributes digital services to various NGO events.",
+      image: "/img/executive-committee/vineet-khare.png"
     },
     {
       name: "Mrs. Anshumali Sinha",
@@ -65,12 +71,11 @@ export default function ExecutiveCommittee() {
       description: "A Computer Science graduate with an MBA in Finance & Marketing, she has 8 years of corporate experience. A trained vocalist, she passionately manages cultural and social initiatives, balancing her love for music with community service.",
       image: "/img/executive-committee/anshumali-sinha.png"
     },
-   
     {
-      name: "Mrs. Shalini Agrawal",
+      name: "Mrs. Geeta Misra",
       title: "Joint Secretary",
-      description: "A yoga practitioner for over 7 years, she promotes holistic health, especially for the elderly. In Hyderabad, she teaches yoga while also managing business ventures, including a successful restaurant franchise, showcasing her entrepreneurial spirit.",
-      image: "/img/executive-committee/shalini-agarwal-150x150-1.png"
+      description: "A dedicated social worker with a B.A. and B.Ed., she has served as Treasurer and Secretary at Lioness Club. Passionate about education, she records audiobooks for the blind and supports underprivileged children by providing free education at her home.",
+      image: "/img/executive-committee/geeta.png"
     },
     {
       name: "Shubhransh Shekhar",
@@ -79,16 +84,10 @@ export default function ExecutiveCommittee() {
       image: "/img/executive-committee/shubhranshu-shekhar.png"
     },
     {
-      name: "Mrs. Geeta Misra",
-      title: "Joint Secretary",
-      description: "A dedicated social worker with a B.A. and B.Ed., she has served as Treasurer and Secretary at Lioness Club. Passionate about education, she records audiobooks for the blind and supports underprivileged children by providing free education at her home.",
-      image: "/img/executive-committee/geeta.png"
-    },
-     {
-      name: "Vineet Khare",
-      title: "Media In Charge",
-      description: "A technocrat with over 30 years of experience in digital media. Founder of Creative, a digital media company, he specializes in LAMP and search content. Passionate about technology, he actively contributes digital services to various NGO events.",
-      image: "/img/executive-committee/vineet-khare.png"
+      name: "Neeraj Bhatnagar",
+      title: "Executive Member",
+      description: "An entrepreneur since 2010, he has over 30 years of experience spanning TV and computer industries. Deeply involved in social work from a young age, he embodies his father's values and remains committed to making a meaningful societal impact.",
+      image: "/img/executive-committee/neeraj-bhatnagar.png"
     },
     {
       name: "Anil Srivastava",
@@ -97,17 +96,17 @@ export default function ExecutiveCommittee() {
       image: "/img/executive-committee/anil-srivastava.png"
     },
     {
-      name: "Gurjeet Singh",
+      name: "Sardar Gurjeet Singh",
       title: "Executive Member",
       description: "A creative artist known for unique and aesthetically pleasing projects. He collaborates with businesses and individuals, embracing the mantra 'Create with the heart, build with the mind,' bringing innovation to his artistic endeavors.",
       image: "/img/executive-committee/gurjeet-singh.png"
     },
-    {
-      name: "Neeraj Bhatnagar",
-      title: "Executive Member",
-      description: "An entrepreneur since 2010, he has over 30 years of experience spanning TV and computer industries. Deeply involved in social work from a young age, he embodies his father's values and remains committed to making a meaningful societal impact.",
-      image: "/img/executive-committee/neeraj-bhatnagar.png"
-    }
+    // {
+    //   name: "Mr. R. K. Saxena",
+    //   title: "Sr. Vice President",
+    //   description: "A retired IRS officer who served for over 40 years as Asst. Commissioner for Customs & Central Excise. He is an active Real Estate Consultant specializing in Noida, Greater Noida, and the NCR region, while remaining engaged in community welfare activities.",
+    //   image: "/img/executive-committee/r-k-saxena-150x150-1.png"
+    // },
   ];
 
   return (

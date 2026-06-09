@@ -44,7 +44,8 @@ export default function Hero() {
 
   // Carousel images
   const carouselImages = [
-    "/img/our-campaigns-3.jpg",
+    // "/img/our-campaigns-3.jpg",
+    "/img/WhatsApp Image 2026-04-09 at 10.00.39.jpeg",
     "/img/our-campaigns-4.jpg",
     "/img/our-campaigns-5.jpg",
     "/img/our-campaigns-6.jpg",

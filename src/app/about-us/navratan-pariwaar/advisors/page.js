@@ -7,51 +7,51 @@ export default function Advisors() {
     const advisors = [
       
     {
+      name: "Dr. Achyut Kumar Tripathi",
+      title: "",
+      subtitle: "Ayurvdeacharya",
+      description: "He hails from a lineage rich in Ayurvedic wisdom, inheriting the legacy of Ayurvedic knowledge from his esteemed ancestors. Recognized for his profound expertise and research in Ayurveda, he has been honored with prestigious accolades such as the 'Ratna membership' by the Government of India. He continues to lead studies on Ayurvedic medicine globally.",
+      image: "/img/advisors/Achyut-Kumar-tripathi.png"
+    },
+    {
       name: "Mr. Mukesh Nigam",
       title: "",
-      subtitle: "",
+      subtitle: "Ex-Banker",
       description: "He is retired as Branch Manager from a Nationalized Bank of India. He has been involved with many social activities in Noida for the last 32 years. Mr. Mukesh is known for his dedication and commitment.",
       image: "/img/advisors/mukesh-nigam-150x150-1.png"
     },
     {
       name: "Chitranjan Saxena",
       title: "",
-      subtitle: "",
+      subtitle: "Real Estate Consultant",
       description: "He is a graduate from Delhi University. Worked with Parasnath & Association as a Director from 1986 to 1992 and then started his own business of real estate consultancy in 1992. He has a keen interest in social work.",
       image: "/img/advisors/chitranjan-saxena-1-150x150-1.png"
     },
     {
       name: "Ratan Kumar",
       title: "",
-      subtitle: "",
+      subtitle: "ISO Expert",
       description: "He is B.Tech. (Mechanical) from IET, Bundelkhand University. Retired after 35 years with the Tata Group. Currently, he works as a Lead Auditor for certification and is a Rotarian with a keen interest in social work.",
       image: "/img/advisors/ratan-kumar.png"
     },
     {
-      name: "Dr. Achyut Kumar Tripathi",
-      title: "",
-      subtitle: "",
-      description: "He hails from a lineage rich in Ayurvedic wisdom, inheriting the legacy of Ayurvedic knowledge from his esteemed ancestors. Recognized for his profound expertise and research in Ayurveda, he has been honored with prestigious accolades such as the 'Ratna membership' by the Government of India. He continues to lead studies on Ayurvedic medicine globally.",
-      image: "/img/advisors/Achyut-Kumar-tripathi.png"
-    },
-    {
       name: "Chitranh Shekhar Dhar",
       title: "",
-      subtitle: "",
+      subtitle: "Former Corporate Executive",
       description: "Mr. Shekhar Dhar, a law postgraduate, started his business at a very early age. After a successful business career, he shifted to Delhi and is currently working as a social worker for a noble cause and associated with RSS as Town head of the Noida region.",
       image: "/img/advisors/shekhar-dhar.png"
     },
     {
       name: "Sanjay Pandey",
       title: "",
-      subtitle: "",
+      subtitle: "Retd. Army Official",
       description: "Young, energetic, and a sensational singer who stole a million hearts, Sanjay Pandey started his career in the Army and was heading EME Regimental Musical Band for over 19 years. His graceful stage presence mesmerizes audiences in no time.",
       image: "/img/advisors/sanjay-pandey.png"
     },
     {
       name: "Deepak Naidu",
       title: "",
-      subtitle: "",
+      subtitle: "Retd. Sr. Corporate Executive",
       description: "Born and brought up in Delhi, Deepak Naidu is passionate about singing. After retiring in 2014, he started his second inning of singing, supported by his family, and is now associated with NGO's cultural music activities.",
       image: "/img/advisors/deepak-naidu.png"
     }

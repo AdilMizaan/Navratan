@@ -3,6 +3,11 @@
 export default function SamarpanSection() {
   const samarpanYears = [
     {
+      year: 2026,
+      title: "Samarpan 2026",
+      pdfLink: "/img/samarpan-pdf/Samarpan 2026.pdf",
+    },
+    {
       year: 2025,
       title: "Samarpan 2025",
       pdfLink: "/img/samarpan-pdf/Samarpan 2025_compressed.pdf",

@@ -8,7 +8,7 @@ export default function AboutUsSection() {
     // "/img/NF-projects/NF-Astitva (2).jpg",
     "/img/NF-projects/NF-Astitva (3).jpg",
     "/img/NF-projects/NF-Astitva.jpg",
-    "/img/NF-projects/NF-Computer Centre (2).jpg",
+    "/img/WhatsApp Image 2026-04-09 at 11.25.26.jpeg",
     "/img/NF-projects/NF-Computer Centre (3).jpg",
     "/img/NF-projects/NF-Gyaanpeeth.jpg",
     "/img/NF-projects/NF-Gyanpeeth.jpg",

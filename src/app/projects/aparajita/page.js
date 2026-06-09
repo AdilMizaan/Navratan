@@ -1,0 +1,494 @@
+// src/app/projects/aparajita/page.js
+'use client';
+
+import { useEffect } from 'react';
+
+export default function AparajitaPage() {
+  useEffect(() => {
+    // Counter Animation
+    const runCounter = (counter) => {
+      const target = +counter.getAttribute('data-target');
+      const speed = 200;
+      const increment = target / speed;
+      let count = 0;
+
+      const updateCount = () => {
+        count += increment;
+        if (count < target) {
+          counter.innerText = Math.ceil(count) + (target > 1000 ? '+' : '');
+          setTimeout(updateCount, 1);
+        } else {
+          counter.innerText = target + (target >= 1000 ? '+' : '');
+        }
+      };
+      updateCount();
+    };
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+            if (!entry.target.dataset.animated) {
+              const counter = entry.target.querySelector('.counter');
+              if (counter) runCounter(counter);
+              entry.target.dataset.animated = 'true';
+            }
+          }
+        });
+      },
+      { threshold: 0.3 }
+    );
+
+    document.querySelectorAll('.stat-item').forEach((item) => {
+      observer.observe(item);
+    });
+
+    return () => observer.disconnect();
+  }, []);
+
+  return (
+    <>
+      <style jsx global>{`
+        .hero {
+          position: relative;
+          height: 50vh;
+          min-height: 400px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          text-align: center;
+          color: white;
+          overflow: hidden;
+        }
+
+        .video-container {
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          overflow: hidden;
+          z-index: -2;
+        }
+
+        .video-container .hero-bg {
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          min-width: 100%;
+          min-height: 100%;
+          width: auto;
+          height: auto;
+          transform: translate(-50%, -50%);
+          pointer-events: none;
+        }
+
+        .hero-overlay {
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          background: rgba(0, 0, 0, 0.45);
+          z-index: -1;
+        }
+
+        .hero-content {
+          z-index: 1;
+          max-width: 900px;
+          padding: 0 20px;
+        }
+
+        :root {
+          --primary: #fbd45a;
+          --secondary: #fbd45a;
+          --accent: white;
+          --light: #f8f9fa;
+          --dark: #212529;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Roboto', sans-serif; color: #333; background: #fff; line-height: 1.7; }
+        h1, h2, h3, h4 { font-weight: 700; color: var(--dark); }
+
+        .container { max-width: 1300px; margin: 0 auto; padding: 0 20px; }
+
+        .hero h1 { 
+          color: white; 
+          font-size: 90px; 
+          margin-bottom: 3px; 
+          text-shadow: 0 4px 12px rgba(0,0,0,0.6); 
+        }
+        .hero p { font-size: 1.5rem; margin-bottom: 2.5rem; font-weight: 300; }
+
+        /* Hero Responsive */
+        @media (max-width: 768px) {
+          .hero h1 { font-size: 60px; }
+          .hero p { font-size: 1.2rem; }
+          .hero { min-height: 350px; height: 45vh; }
+        }
+        @media (max-width: 480px) {
+          .hero h1 { font-size: 48px; }
+          .hero p { font-size: 1.1rem; }
+        }
+
+        .btn {
+          display: inline-block;
+          padding: 14px 40px;
+          background: var(--primary);
+          color: black;
+          text-decoration: none;
+          border-radius: 50px;
+          font-weight: 600;
+          font-size: 16px;
+          transition: all 0.3s ease;
+          box-shadow: 0 8px 20px rgba(138, 138, 138, 0.3);
+        }
+
+        .btn:hover {
+          transform: translateY(-5px);
+          background: #00acf0;
+          color: white;
+          box-shadow: 0 12px 30px rgba(126, 126, 126, 0.4);
+        }
+
+        .intro-section { background: #fffaf5; padding: 100px 0; display: flex; align-items: center; }
+        .section-title {
+          font-size: 42px;
+          text-align: center;
+          margin-bottom: 60px;
+          position: relative;
+        }
+        .section-title::after {
+          content: '';
+          width: 80px;
+          height: 4px;
+          background: var(--primary);
+          position: absolute;
+          bottom: -15px;
+          left: 50%;
+          transform: translateX(-50%);
+          border-radius: 2px;
+        }
+
+        .intro-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center; }
+        .intro-text p { font-size: 16px; margin-bottom: 1.8rem; color: #444; }
+        .key-highlights { display: flex; flex-wrap: wrap; gap: 25px; margin: 40px 0; }
+        .highlight-item {
+          display: flex;
+          align-items: center;
+          gap: 12px;
+          background: white;
+          padding: 15px 25px;
+          border-radius: 50px;
+          box-shadow: 0 5px 15px rgba(0, 0, 0, 0.12);
+          font-weight: 500;
+          color: var(--dark);
+        }
+        .highlight-item i { font-size: 1.8rem; color: var(--primary); }
+
+        .intro-visual { position: relative; border-radius: 20px; overflow: hidden; box-shadow: 0 20px 50px rgba(0,0,0,0.15); }
+        .intro-img { width: 700px; height: 450px; object-fit: cover; object-position: bottom; display: block; }
+        .image-overlay {
+          position: absolute;
+          bottom: 0;
+          left: 0;
+          right: 0;
+          background: linear-gradient(to top, rgba(0, 0, 0, 0.8), transparent);
+          color: white;
+          padding: 25px;
+          text-align: center;
+          font-size: 1.3rem;
+          font-weight: 600;
+        }
+
+        @media (max-width: 992px) {
+          .intro-grid { grid-template-columns: 1fr; }
+          .intro-visual { order: -1; }
+        }
+
+        section { padding: 100px 0; }
+
+        .gallery{ padding-bottom: 0; }
+
+        .stats {
+          background: linear-gradient(135deg, var(--secondary), #fbd45a);
+          color: black;
+          padding: 80px 0;
+        }
+        .stats-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 30px; text-align: center; }
+        .stat-item {
+          padding: 30px;
+          background: rgb(255, 255, 255);
+          border-radius: 15px;
+          backdrop-filter: blur(10px);
+        }
+        .stat-item i { font-size: 3.5rem; margin-bottom: 15px; color: black; }
+        .stat-item h3 { font-size: 2.5rem; margin: 10px 0; color: black; }
+
+        .gallery-carousel { display: flex; overflow-x: auto; gap: 20px; padding: 20px 0; scroll-snap-type: x mandatory; }
+        .gallery-carousel img {
+          width: 500px; height: 350px; object-fit: cover; border-radius: 15px;
+          box-shadow: 0 10px 30px rgba(0,0,0,0.15); flex-shrink: 0; scroll-snap-align: center;
+        }
+
+
+        .courses-grid {
+          display: grid;
+          grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+          gap: 30px;
+          margin-top: 40px;
+        }
+
+        .course-card {
+          background: white;
+          border-radius: 16px;
+          padding: 30px 25px;
+          box-shadow: 0 8px 25px rgba(0,0,0,0.08);
+          text-align: center;
+          transition: all 0.3s ease;
+          border: 1px solid #f0f0f0;
+        }
+
+        .course-card:hover {
+          transform: translateY(-10px);
+          box-shadow: 0 15px 35px rgba(251,212,90,0.25);
+          border-color: var(--primary);
+        }
+
+        .card-icon {
+          font-size: 3rem;
+          color: var(--primary);
+          margin-bottom: 20px;
+          background: rgba(251,212,90,0.1);
+          width: 90px;
+          height: 90px;
+          line-height: 90px;
+          border-radius: 50%;
+          margin: 0 auto 20px;
+        }
+
+        /* === Fixed Donation Section (Same as Astitva) === */
+        .donation {
+          background: linear-gradient(135deg, #8ddcfb, #8ddcfb);
+          text-align: center;
+          padding: 100px 0;
+        }
+        .donation-grid {
+          display: grid;
+          grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+          gap: 30px;
+          margin: 40px 0;
+        }
+        .donation-item {
+          background: white;
+          padding: 30px;
+          border-radius: 20px;
+          box-shadow: 0 10px 25px rgba(233,30,99,0.15);
+        }
+        .donation-item h3 {
+          color: var(--primary);
+          font-size: 2rem;
+        }
+        .donate-btn {
+          font-size: 1.4rem !important;
+          padding: 18px 60px !important;
+          min-width: 280px;
+          text-align: center;
+        }
+
+        .sticky-cta {
+          text-decoration: none;
+          position: fixed;
+          bottom: 30px;
+          right: 30px;
+          background: var(--primary);
+          color: black;
+          padding: 15px 30px;
+          border-radius: 50px;
+          box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+          z-index: 1000;
+          font-weight: 600;
+          transition: all 0.3s;
+        }
+        .sticky-cta:hover {
+          background: #00acf0;
+          color: white;
+          transform: scale(1.08);
+        }
+      `}</style>
+
+      {/* Hero Section - Responsive */}
+      <section className="hero">
+        <div className="video-container">
+          <img className="hero-bg" src="/img/hero-one-big.3b2cd132.jpg" alt="Aparajita Girls Football" />
+        </div>
+        <div className="hero-overlay"></div>
+        <div className="hero-content">
+          <h1>Aparajita</h1>
+          <p>Empowering Girls Through Football ⚽✨</p>
+          <a href="#donate" className="btn">Support Our Girls Today</a>
+        </div>
+      </section>
+
+      {/* Intro Section */}
+      <section className="intro-section">
+        <div className="container">
+          <h2 className="section-title">Aparajita: Unstoppable Girls on the Field</h2>
+
+          <div className="intro-grid">
+            <div className="intro-text">
+              <p>
+                In its Silver Jubilee Year, <strong>Navratan Foundations</strong> has launched <strong>Aparajita</strong> — a special initiative to nurture confidence, leadership, and sporting excellence among young girls through professional football training.
+              </p>
+              <p>
+                Girls from the “Kick Karo” team are receiving advanced training at <strong>Barua Football Academy, Noida Stadium</strong> under National Coach Mr. Anadi Barua.
+              </p>
+
+              <div className="key-highlights">
+                <div className="highlight-item">
+                  <i className="fas fa-trophy"></i>
+                  <span>Silver Jubilee Initiative</span>
+                </div>
+                <div className="highlight-item">
+                  <i className="fas fa-users"></i>
+                  <span>18 Talented Girls</span>
+                </div>
+                <div className="highlight-item">
+                  <i className="fas fa-futbol"></i>
+                  <span>Professional Training</span>
+                </div>
+                <div className="highlight-item">
+                  <i className="fas fa-heart"></i>
+                  <span>Building Confidence & Leadership</span>
+                </div>
+              </div>
+
+              <a href="/contact-us" className="btn">Join Our Mission</a>
+            </div>
+
+            <div className="intro-visual">
+              <img
+                src="/img/aparajita/aparajita-main.jpeg"
+                alt="Girls playing football - Aparajita"
+                className="intro-img"
+              />
+              <div className="image-overlay">
+                <p>Play Bold. Rise Higher. Become Unconquerable.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Mission */}
+      <section className="mission">
+        <div className="container">
+          <h2 className="section-title">Our Mission</h2>
+          <p style={{ fontSize: '1.3rem', maxWidth: '900px', margin: '0 auto', textAlign: 'center' }}>
+            To empower young girls through football by building physical strength, mental resilience, leadership qualities, and self-confidence, enabling them to become true <strong>Aparajitas</strong> — unconquerable women of tomorrow.
+          </p>
+        </div>
+      </section>
+
+      {/* Impact Stats */}
+      <section className="stats">
+        <div className="container">
+          <h2 className="section-title" style={{ color: 'black' }}>Our Impact</h2>
+          <div className="stats-grid">
+            <div className="stat-item">
+              <i className="fas fa-users"></i>
+              <h3 className="counter" data-target="18">0</h3>
+              <p>Girls in Training</p>
+            </div>
+            <div className="stat-item">
+              <i className="fas fa-futbol"></i>
+              <h3 className="counter" data-target="1">0</h3>
+              <p>Professional Academy</p>
+            </div>
+            <div className="stat-item">
+              <i className="fas fa-clock"></i>
+              <h3 className="counter" data-target="25">0</h3>
+              <p>Years of Service</p>
+            </div>
+            <div className="stat-item">
+              <i className="fas fa-trophy"></i>
+              <h3 className="counter" data-target="100">0</h3>
+              <p>Dreams Nurtured</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Gallery */}
+      <section className="gallery">
+        <div className="container">
+          <h2 className="section-title">Aparajita in Action</h2>
+          <div className="gallery-carousel">
+            <img src="/img/aparajita/aparajita-gallery-1.png" alt="Girls football training" />
+            <img src="/img/aparajita/aparajita-gallery-2.png" alt="Girls playing football" />
+            <img src="/img/aparajita/aparajita-gallery-3.png" alt="Training session" />
+            <img src="/img/aparajita/aparajita-main.jpeg" style={{ objectPosition: 'bottom' }} alt="Team spirit" />
+          </div>
+        </div>
+      </section>
+
+      {/* Training Program */}
+      <section className="curriculum">
+        <div className="container">
+          <h2 className="section-title">Our Training Program</h2>
+          <div className="courses-grid">
+            <div className="course-card">
+              <div className="card-icon"><i className="fas fa-futbol"></i></div>
+              <h4>Advanced Football Skills</h4>
+              <p>Technical training, ball control, passing, shooting, and tactical understanding.</p>
+            </div>
+            <div className="course-card">
+              <div className="card-icon"><i className="fas fa-running"></i></div>
+              <h4>Physical Fitness</h4>
+              <p>Strength, speed, stamina, agility, and injury prevention.</p>
+            </div>
+            <div className="course-card">
+              <div className="card-icon"><i className="fas fa-brain"></i></div>
+              <h4>Mental Strength & Leadership</h4>
+              <p>Confidence building, teamwork, and sportsmanship.</p>
+            </div>
+            <div className="course-card">
+              <div className="card-icon"><i className="fas fa-graduation-cap"></i></div>
+              <h4>Holistic Development</h4>
+              <p>Education support, nutrition, and personality development.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Donation Section - Fixed Styling */}
+      <section className="donation" id="donate">
+        <div className="container">
+          <h2 className="section-title">Support Aparajita</h2>
+          <p style={{ fontSize: '1.3rem', maxWidth: '800px', margin: '0 auto 50px', textAlign: 'center' }}>
+            Your contribution will help more girls become strong, confident, and successful athletes.
+          </p>
+          <div className="donation-grid">
+            <div className="donation-item">
+              <h3>₹5,000</h3>
+              <p>One month’s professional training for one girl</p>
+            </div>
+            <div className="donation-item">
+              <h3>₹25,000</h3>
+              <p>6 months full training + kit + nutrition support</p>
+            </div>
+          </div>
+
+          <a href="/donate" className="btn donate-btn">Donate Now</a>
+        </div>
+      </section>
+
+      {/* Sticky CTA */}
+      <a href="/donate" className="sticky-cta">
+        Empower a Girl Through Football → Donate Now
+      </a>
+    </>
+  );
+}

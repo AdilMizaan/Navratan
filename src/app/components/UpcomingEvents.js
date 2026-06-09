@@ -9,28 +9,31 @@ export default function UpcomingEvents() {
   // Events list — new event first position pe add kiya
   const events = [
     {
-      id: 4,
+      id: 1,
       title: "JO AAYE WO GAAYE S-4 E-4",
       short: "JO AAYE WO GAAYE S-4 E-4 - Unseen Upcoming Talented Singers invited for Bollywood Singing Monthly Program",
-      date: "17th May 2026",
+      date: "19th July 2026",
       time: "4:00 PM",
       location: "Club-27, H Block, Sector-27, Noida",
       description: "Navratan Foundations invites Unseen Upcoming Talented Singers to participate in Delhi NCR’s The Famous & Prestigious Bollywood Singing Monthly program.",
-      image: "/img/JAWG-15th-march-event.jpeg",   // ← yahan apni image daal dena
+      // image: "/img/JAWG-15th-march-event.jpeg",   // ← yahan apni image daal dena
       buttonText: "Register Now",
       buttonLink: "/register-jawg"
     },
     // {
-    //   id: 1,
-    //   title: "Samarpan 2025 - Annual Fundraiser Event",
-    //   short: "Samarpan 2025 – Join us for a grand evening of impact!",
-    //   date: "15 March 2025",
-    //   time: "6:00 PM onwards",
-    //   location: "Noida Sector 18 Community Center",
-    //   description: "Annual fundraising event with cultural performances, award ceremony, and networking. All proceeds go towards underprivileged children's education and women's empowerment programs.",
+    //   id: 4,
+    //   title: "JO AAYE WO GAAYE S-4 E-4",
+    //   short: "JO AAYE WO GAAYE S-4 E-4 - Unseen Upcoming Talented Singers invited for Bollywood Singing Monthly Program",
+    //   date: "17th May 2026",
+    //   time: "4:00 PM",
+    //   location: "Club-27, H Block, Sector-27, Noida",
+    //   description: "Navratan Foundations invites Unseen Upcoming Talented Singers to participate in Delhi NCR’s The Famous & Prestigious Bollywood Singing Monthly program.",
+    //   image: "/img/JAWG-15th-march-event.jpeg",   // ← yahan apni image daal dena
     //   buttonText: "Register Now",
-    //   buttonLink: "/register-samarpan"
+    //   buttonLink: "/register-jawg"
     // },
+    // {
+  
     {
       id: 2,
       title: "Free Computer Literacy Workshop",

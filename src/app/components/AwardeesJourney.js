@@ -2,7 +2,7 @@
 
 export default function AwardeesJourney() {
   const startYear = 2003;
-  const endYear = 2025;
+  const endYear = 2026;
 
   const years = [];
   for (let year = startYear; year <= endYear; year++) {
@@ -150,7 +150,7 @@ export default function AwardeesJourney() {
           <h2 className="section-title-main">Awardees List</h2>
           <h2 className="section-title">Our Journey of Recognition</h2>
           <p className="section-subtitle">
-            2003 to 2025 - Honors and awards received for social contributions
+            2003 to 2026 - Honors and awards received for social contributions
           </p>
 
           {/* Years Grid */}

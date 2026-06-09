@@ -1,7 +1,7 @@
 "use client";
 
-import Link from 'next/link';  // Add this import for navigation
-import YellowCTA from '../components/YellowCTA';  // Import the YellowCTA component
+import Link from 'next/link';
+import YellowCTA from '../components/YellowCTA';
 
 export default function Projects() {
   return (
@@ -10,9 +10,7 @@ export default function Projects() {
         @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Inter:wght@400;500;600;700&display=swap');
         @import url('https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap');
 
-
         // ------------------------- HERO SECTION -------------------------
-
         .hero {
           position: relative;
           height: 50vh;
@@ -25,7 +23,7 @@ export default function Projects() {
           overflow: hidden;
         }
 
-            .video-container {
+        .video-container {
           position: absolute;
           top: 0;
           left: 0;
@@ -63,50 +61,46 @@ export default function Projects() {
           padding: 0 20px;
         }
 
-         body { font-family: 'Roboto', sans-serif; color: #333; background: #fff; line-height: 1.7; }
-        h1, h2, h3, h4 { font-weight: 700; color: var(--dark); }
-
-        .container { max-width: 1300px; margin: 0 auto; padding: 0 20px; }
-
-        .hero h1 { color: white; font-size: 70px; margin-bottom: 3px; text-shadow: 0 4px 12px rgba(0,0,0,0.6); }
-        .hero p { font-size: 1.5rem; margin-bottom: 2.5rem; font-weight: 300; }
-
-           .btn {
-          display: inline-block;
-          padding: 14px 40px;
-          background: #fbd45a;
-          color: black;
-          text-decoration: none;
-          border-radius: 50px;
-          font-weight: 600;
-          font-size: 16px;
-          transition: all 0.3s ease;
-          box-shadow: 0 8px 20px rgba(138, 138, 138, 0.3);
+        body { 
+          font-family: 'Roboto', sans-serif; 
+          color: #333; 
+          background: #fff; 
+          line-height: 1.7; 
         }
 
-        .btn:hover {
-          transform: translateY(-5px);
-          background: #00acf0;
-          color: white;
-          box-shadow: 0 12px 30px rgba(126, 126, 126, 0.4);
+        h1, h2, h3, h4 { 
+          font-weight: 700; 
+          color: var(--dark); 
         }
 
-        // -----------------------------------------------------------------------------------------------------------------------
+        .container { 
+          max-width: 1400px; 
+          margin: 0 auto; 
+          padding: 0 30px; 
+        }
 
+        .hero h1 { 
+          color: white; 
+          font-size: 70px; 
+          margin-bottom: 3px; 
+          text-shadow: 0 4px 12px rgba(0,0,0,0.6); 
+        }
+        
+        .hero p { 
+          font-size: 1.5rem; 
+          margin-bottom: 2.5rem; 
+          font-weight: 300; 
+        }
+
+        // ------------------------- PROJECTS SECTION -------------------------
         .projects-section {
           padding: 120px 0 200px;
           background: #ffffff;
           text-align: center;
         }
 
-        .container {
-          max-width: 1400px;
-          margin: 0 auto;
-          padding: 0 30px;
-        }
-
         .section-title {
-           font-family: 'Shadows Into Light', cursive;
+          font-family: 'Shadows Into Light', cursive;
           font-size: 60px;
           font-weight: 600;
           color: rgba(0, 172, 240, 0.67);
@@ -123,20 +117,27 @@ export default function Projects() {
           margin: -38px 0 70px 0;
         }
 
+        /* Updated Projects Grid - Flexbox */
         .projects-grid {
-          display: grid;
-          grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-          gap: 20px;
+          display: flex;
+          flex-wrap: wrap;
+          gap: 24px;
+          justify-content: center;
+          align-items: stretch;
         }
 
         .project-card {
+          flex: 0 0 calc(33.333% - 16px);
+          max-width: 420px;
+          min-width: 280px;
           background: white;
           border-radius: 24px;
           overflow: hidden;
           box-shadow: 0 20px 60px rgba(0,0,0,0.08);
           transition: all 0.4s ease;
-          position: relative;
-          display: block;  /* Ensure Link passes this for <a> */
+          display: block;
+          text-decoration: none;
+          color: inherit;
         }
 
         .project-card:hover {
@@ -146,13 +147,13 @@ export default function Projects() {
 
         .project-image {
           width: 100%;
-          height: 200px;
+          height: 220px;
           object-fit: cover;
           border-radius: 24px 24px 0 0;
         }
 
         .project-info {
-          padding: 10px 20px;
+          padding: 20px;
         }
 
         .project-title {
@@ -164,54 +165,48 @@ export default function Projects() {
         }
 
         .project-desc {
-        //   font-family: 'Inter', sans-serif;
           font-size: 14px;
           font-weight: 500;
           color: #212121;
-        //   line-height: 1.7;
           margin: 0;
+          line-height: 1.5;
         }
 
+        /* Responsive */
         @media (max-width: 1024px) {
+          .project-card {
+            flex: 0 0 calc(50% - 12px);
+          }
+          
           .section-title {
             font-size: 42px;
           }
-
           .section-subtitle {
             font-size: 28px;
-          }
-
-          .project-image {
-            height: 280px;
           }
         }
 
         @media (max-width: 768px) {
-
-        .hero h1{font-size: 50px;}
+          .hero h1 {
+            font-size: 50px;
+          }
+          
           .projects-section {
-            padding: 80px 0 60px;
+            padding: 80px 0 100px;
           }
 
-          .section-title {
-            font-size: 36px;
-          }
-
-          .section-subtitle {
-            font-size: 26px;
+          .project-card {
+            flex: 0 0 100%;
+            max-width: 100%;
           }
 
           .project-image {
             height: 240px;
           }
-             .projects-section {
-          padding: 50px 0 100px;
-         
-        }
         }
       `}</style>
 
-       {/* Hero Section */}
+      {/* Hero Section */}
       <section className="hero">
         <div className="video-container">
           <img className="hero-bg" src="/img/hero-one-big.3b2cd132.jpg" alt="" />
@@ -220,19 +215,16 @@ export default function Projects() {
         <div className="hero-content">
           <h1>Our Projects</h1>
           <p>The Projects that Defines Us</p>
-          {/* <a href="#donate" className="btn">Support A Woman Today</a> */}
         </div>
       </section>
 
+      {/* Projects Section */}
       <section className="projects-section">
         <div className="container">
-          {/* <h2 className="section-title">Our Projects</h2> */}
-          {/* <p className="section-subtitle">The Projects that Defines Us</p> */}
-
           <div className="projects-grid">
             <a href="/projects/astitva" className="project-card">
               <img
-                src="/img/astitva.jpg" // apni image daal do
+                src="/img/astitva.jpg"
                 alt="Astitva Project"
                 className="project-image"
               />
@@ -282,6 +274,21 @@ export default function Projects() {
                 <h3 className="project-title">Cyberurja</h3>
                 <p className="project-desc">
                   Empowering with Computer Education
+                </p>
+              </div>
+            </a>
+
+            <a href="/projects/aparajita" className="project-card">
+              <img
+                src="/img/aparajita/aparajita-main.jpeg"
+                style={{ objectPosition: "bottom" }}
+                alt="Aparajita Project"
+                className="project-image"
+              />
+              <div className="project-info">
+                <h3 className="project-title">Aparajita</h3>
+                <p className="project-desc">
+                  A Special Initiative for Women’s Empowerment Through Football
                 </p>
               </div>
             </a>
