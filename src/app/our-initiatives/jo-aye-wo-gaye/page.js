@@ -107,6 +107,7 @@ export default function JoAayeWoGaye() {
           margin-top: -40px;
           position: relative;
           z-index: 10;
+          color: #212121;
         }
 
         .joaaye-page .event-info-box {
@@ -137,6 +138,7 @@ export default function JoAayeWoGaye() {
           padding: 40px 10%;
           background: var(--light-blue);
           align-items: stretch;
+          color: #212121;
         }
 
         .joaaye-page .card {
@@ -206,11 +208,11 @@ export default function JoAayeWoGaye() {
           padding: 60px 10%;
           background: #fdfdfd;
           text-align: center;
+          color: #212121;
         }
 
         .joaaye-page .mentor-section h2 {
           font-size: 2.2rem;
-          color: #212121;
         }
 
         .joaaye-page .heading-wrapper {
@@ -248,6 +250,7 @@ export default function JoAayeWoGaye() {
         .joaaye-page .rules-section {
           padding: 60px 10%;
           background: var(--light-blue);
+          color: #212121;
         }
 
         .joaaye-page .rules-section h2 {
@@ -294,7 +297,7 @@ export default function JoAayeWoGaye() {
 
         .joaaye-page .how-it-works h2 {
           font-size: 2.2rem;
-          color: #212121;
+          color: #FFF;
         }
 
         .joaaye-page .steps {

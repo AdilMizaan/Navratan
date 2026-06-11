@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect } from 'react';
+import { useState, useEffect } from "react";
 
 export default function ImpactSection() {
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -10,6 +10,14 @@ export default function ImpactSection() {
     "/img/awards-2.jpg",
     "/img/awards-3.jpg",
     "/img/awards-4.jpg",
+    "/img/awards-5.jpeg",
+    "/img/awards-6.jpeg",
+    "/img/awards-7.jpeg",
+    "/img/awards-8.jpeg",
+    "/img/awards-9.jpeg",
+    "/img/awards-10.jpeg",
+    "/img/awards-11.jpeg",
+    "/img/awards-12.jpeg",
     // jitne chahiye add kar do
   ];
 
@@ -32,7 +40,7 @@ export default function ImpactSection() {
         .impact-section {
           position: relative;
           padding: 100px 0 100px;
-          background: url('/img/map.png') center/cover no-repeat;
+          background: url("/img/map.png") center/cover no-repeat;
           background-attachment: fixed;
           text-align: center;
           color: white;
@@ -54,14 +62,14 @@ export default function ImpactSection() {
         }
 
         .heading-main {
-          font-family: 'Shadows Into Light', cursive;
+          font-family: "Shadows Into Light", cursive;
           font-size: 60px;
           font-weight: 600;
           color: rgba(0, 172, 240, 0.67);
           margin: 0 0 28px 0;
           line-height: 1.05;
           letter-spacing: 0px;
-          text-shadow: 1px 1px 3px rgba(0,0,0,0.06);
+          text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.06);
         }
 
         .heading-sub {
@@ -80,7 +88,7 @@ export default function ImpactSection() {
         .slider {
           overflow: hidden;
           border-radius: 24px;
-          box-shadow: 0 25px 70px rgba(0,0,0,0.25);
+          box-shadow: 0 25px 70px rgba(0, 0, 0, 0.25);
         }
 
         .slider-track {
@@ -120,7 +128,7 @@ export default function ImpactSection() {
           justify-content: center;
           transition: all 0.35s;
           z-index: 100; /* bahut upar rakha taaki image ke upar na aaye */
-          box-shadow: 0 8px 25px rgba(0,0,0,0.2);
+          box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
         }
 
         .arrow.prev {
@@ -132,9 +140,9 @@ export default function ImpactSection() {
         }
 
         .arrow:hover {
-          background: rgba(96,165,250,0.7);
+          background: rgba(96, 165, 250, 0.7);
           transform: translateY(-50%) scale(1.12);
-          box-shadow: 0 12px 35px rgba(96,165,250,0.4);
+          box-shadow: 0 12px 35px rgba(96, 165, 250, 0.4);
         }
 
         @media (max-width: 1024px) {
@@ -156,8 +164,12 @@ export default function ImpactSection() {
             font-size: 26px;
           }
 
-          .arrow.prev { left: -60px; }
-          .arrow.next { right: -60px; }
+          .arrow.prev {
+            left: -60px;
+          }
+          .arrow.next {
+            right: -60px;
+          }
         }
 
         @media (max-width: 768px) {
@@ -183,8 +195,12 @@ export default function ImpactSection() {
             font-size: 24px;
           }
 
-          .arrow.prev { left: -40px; }
-          .arrow.next { right: -40px; }
+          .arrow.prev {
+            left: -40px;
+          }
+          .arrow.next {
+            right: -40px;
+          }
         }
       `}</style>
 
@@ -193,13 +209,11 @@ export default function ImpactSection() {
 
         <div className="container">
           <h2 className="heading-main">Recognizing Impact</h2>
-          <h3 className="heading-sub">
-            Navratan Foundations in the Spotlight
-          </h3>
+          <h3 className="heading-sub">Navratan Foundations in the Spotlight</h3>
 
           <div className="slider-wrapper">
             <div className="slider">
-              <div 
+              <div
                 className="slider-track"
                 style={{ transform: `translateX(-${currentSlide * 100}%)` }}
               >
@@ -209,7 +223,8 @@ export default function ImpactSection() {
                       src={src}
                       alt={`Impact Event ${index + 1}`}
                       onError={(e) => {
-                        e.target.src = "https://via.placeholder.com/1100x520/cccccc/000000?text=Image+Not+Found";
+                        e.target.src =
+                          "https://via.placeholder.com/1100x520/cccccc/000000?text=Image+Not+Found";
                         console.error("Image failed to load:", src);
                       }}
                     />
