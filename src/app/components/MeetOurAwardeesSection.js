@@ -8,11 +8,25 @@ export default function MeetOurAwardeesSection() {
     "BnTuhGdg6Ew",  // 3rd video ID
     "63bGCQEfMhM",  // 1st video ID (replace with real)
     "c9xwuihzCec",  // 2nd video ID
-    "lxDMPiS6m3c",
+    "lxDMPiS6m3c",  // 3rd video ID
     "cMu-x2UJ-eQ",  // 1st video ID (replace with real)
     "GolMr2C85rE",  // 2nd video ID
-    "0WDTfqvV33g",
+    "0WDTfqvV33g",  // 3rd video ID
+
     // agar aur videos chahiye to yahan add kar do
+    //Samarpan-2026 Awardees profile
+    "XqxrC5qltLM",
+    "T-fnwysy21Q",
+    "8ZSdGuxO85w",
+    "xgY1f4nz7AY",
+    "2VX4tRoB8bQ",
+    "LlNo9l-nAkA",
+    "IvK126PNczo",
+    "G-ViNDMwEEc",
+    "dPADUQU6o8w",
+    "NaUU0kiEMC4",
+    "U1JkpXbH1ks",
+
   ];
 
   return (

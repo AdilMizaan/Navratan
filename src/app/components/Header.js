@@ -100,7 +100,7 @@ export default function Header() {
         }
 
         .logo-img {
-          height: 50px;
+          height: 65px;
           width: auto;
         }
 
@@ -317,7 +317,7 @@ export default function Header() {
         {/* Main Navigation */}
         <div className="nav-container">
           <div className="logo-container">
-            <img src="/img/logo.png" alt="Navratan Foundations" className="logo-img" />
+            <img src="/img/silver jublee logo.png" alt="Navratan Foundations" className="logo-img" />
           </div>
 
           {/* Desktop Menu */}

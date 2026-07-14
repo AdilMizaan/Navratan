@@ -29,7 +29,7 @@ export default function Footer() {
         }
 
         .logo-img {
-          height: 80px;
+          height: 95px;
           width: auto;
           object-fit: contain;
         }
@@ -187,7 +187,7 @@ export default function Footer() {
           {/* Logo Section */}
           <div className="logo-section">
             <img
-              src="/img/footer-logo1.png"
+              src="\img\Footer logo + silver jublee.png"
               alt="Navratan Foundations Logo"
               className="logo-img"
             />

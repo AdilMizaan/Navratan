@@ -10,52 +10,40 @@ export default function UpcomingEvents() {
   const events = [
     {
       id: 1,
-      title: "JO AAYE WO GAAYE S-4 E-4",
-      short: "JO AAYE WO GAAYE S-4 E-4 - Unseen Upcoming Talented Singers invited for Bollywood Singing Monthly Program",
+      title: "JO AAYE WO GAAYE Season-4 Episode-6",
+      short: "JO AAYE WO GAAYE Season-4 Episode-6 | Unseen Upcoming Talented Singers invited for Bollywood Singing Monthly Program",
       date: "19th July 2026",
-      time: "4:00 PM",
+      time: "5:00 PM",
       location: "Club-27, H Block, Sector-27, Noida",
       description: "Navratan Foundations invites Unseen Upcoming Talented Singers to participate in Delhi NCR’s The Famous & Prestigious Bollywood Singing Monthly program.",
-      // image: "/img/JAWG-15th-march-event.jpeg",   // ← yahan apni image daal dena
+      image: "/img/JAWG/JAWG S4E6.jpeg",  // ← yahan apni image daal dena
       buttonText: "Register Now",
       buttonLink: "/register-jawg"
     },
-    // {
-    //   id: 4,
-    //   title: "JO AAYE WO GAAYE S-4 E-4",
-    //   short: "JO AAYE WO GAAYE S-4 E-4 - Unseen Upcoming Talented Singers invited for Bollywood Singing Monthly Program",
-    //   date: "17th May 2026",
-    //   time: "4:00 PM",
-    //   location: "Club-27, H Block, Sector-27, Noida",
-    //   description: "Navratan Foundations invites Unseen Upcoming Talented Singers to participate in Delhi NCR’s The Famous & Prestigious Bollywood Singing Monthly program.",
-    //   image: "/img/JAWG-15th-march-event.jpeg",   // ← yahan apni image daal dena
-    //   buttonText: "Register Now",
-    //   buttonLink: "/register-jawg"
-    // },
-    // {
   
     {
       id: 2,
-      title: "Free Computer Literacy Workshop",
-      short: "Cyberurja Batch – Free 2-week workshop starting soon!",
-      date: "22 March 2025",
-      time: "10:00 AM – 1:00 PM",
-      location: "Navratan Gyanpeeth Center, Noida",
-      description: "Basic to intermediate computer training for women and youth from underprivileged backgrounds. Limited seats – register early!",
-      buttonText: "Know More",
-      buttonLink: "/cyberurja-workshop"
+      title: "SHILPI NITE",
+      short: "RUK JANA NAHIN - 43 & NAVRATAN FOUNDATION Presents SHILPI NITE",
+      date: "15th July 2026",
+      time: "5:00 PM",
+      location: "Club-27 Sector-27 Noida(Near Kailash Hospital)",
+      description: "Amusical Tribute to Legendary Bollywood singers for their immortal song",
+      image:"img/Shilpi Nite.jpeg"
+      // buttonText: "Know More",
+      // buttonLink: "/cyberurja-workshop"
     },
-    {
-      id: 3,
-      title: "Women's Day Celebration & Umeed Program Launch",
-      short: "Umeed Phase 2 Launch – Women's Day Special",
-      date: "8 March 2025",
-      time: "4:00 PM",
-      location: "Community Hall, Sector 62, Noida",
-      description: "Celebrating International Women's Day with new batch launch of Umeed program focused on skill development and self-empowerment.",
-      buttonText: "View Details",
-      buttonLink: "/umeed-launch"
-    }
+    // {
+    //   id: 3,
+    //   title: "Women's Day Celebration & Umeed Program Launch",
+    //   short: "Umeed Phase 2 Launch – Women's Day Special",
+    //   date: "8 March 2025",
+    //   time: "4:00 PM",
+    //   location: "Community Hall, Sector 62, Noida",
+    //   description: "Celebrating International Women's Day with new batch launch of Umeed program focused on skill development and self-empowerment.",
+    //   buttonText: "View Details",
+    //   buttonLink: "/umeed-launch"
+    // }
   ];
 
   useEffect(() => {
@@ -189,9 +177,11 @@ export default function UpcomingEvents() {
 
         .modal-content {
           background: white;
+          color: #212121;
+          font-weight: 600px;
           border-radius: 16px;
-          max-width: 550px;
-          width: 92%;
+          max-width: 580px;
+          width: 95%;
           max-height: 90vh;
           overflow-y: auto;
           box-shadow: 0 20px 60px rgba(0,0,0,0.3);

@@ -1,16 +1,34 @@
 "use client";
 
-import { useEffect, useState } from 'react';
+import { useEffect, useState } from "react";
 
 export default function ActivitiesCarousel() {
-  
-  
   const activities = [
-    { id: 1, title: "We have donated Silai Machines", image: "/img/activity-18.jpeg" },
-    { id: 2, title: "We have distributed Rashan Kits to HIV affected persons", image: "/img/activity-19.jpeg" },
-    { id: 3, title: "Accupressure Camp_Samvayi", image: "/img/activity-1.jpeg" },
-    { id: 4, title: "Completion Certificate Silai Centre", image: "/img/activity-2.jpg" },
-    { id: 5, title: "Completion Certificate-Comp. Centre", image: "/img/activity-3.jpeg" },
+    {
+      id: 1,
+      title: "We have donated Silai Machines",
+      image: "/img/activity-18.jpeg",
+    },
+    {
+      id: 2,
+      title: "We have distributed Rashan Kits to HIV affected persons",
+      image: "/img/activity-19.jpeg",
+    },
+    {
+      id: 3,
+      title: "Accupressure Camp_Samvayi",
+      image: "/img/activity-1.jpeg",
+    },
+    {
+      id: 4,
+      title: "Completion Certificate Silai Centre",
+      image: "/img/activity-2.jpg",
+    },
+    {
+      id: 5,
+      title: "Completion Certificate-Comp. Centre",
+      image: "/img/activity-3.jpeg",
+    },
     { id: 6, title: "Computer Center Innaugral", image: "/img/activity-4.jpg" },
     { id: 7, title: "CSR Majestic Auto", image: "/img/activity-5.jpeg" },
     { id: 8, title: "DMS-Voice Of Delhi", image: "/img/activity-6.jpeg" },
@@ -18,13 +36,31 @@ export default function ActivitiesCarousel() {
     { id: 10, title: "Gyanpeeth renovation", image: "/img/activity-8.png" },
     { id: 11, title: "Jashn E Tazurbat", image: "/img/activity-9.jpg" },
     { id: 12, title: "JAWG 3", image: "/img/activity-10.JPG" },
-    { id: 13, title: "Kavi sammelan-Azadi Ke Deewano k Tarane", image: "/img/activity-11.png" },
-    { id: 14, title: "Mohd. Rafi Memorial 32nd Night", image: "/img/activity-12.png" },
+    {
+      id: 13,
+      title: "Kavi sammelan-Azadi Ke Deewano k Tarane",
+      image: "/img/activity-11.png",
+    },
+    {
+      id: 14,
+      title: "Mohd. Rafi Memorial 32nd Night",
+      image: "/img/activity-12.png",
+    },
     { id: 15, title: "Ruk Jana Nahin", image: "/img/activity-13.jpeg" },
     { id: 16, title: "Samarpan 2024", image: "/img/activity-14.jpg" },
-    { id: 17, title: "Shaurya Diwas_25th Shahadat Diwas_Capt. Vijayant Thaper", image: "/img/activity-15.jpg" },
+    {
+      id: 17,
+      title: "Shaurya Diwas_25th Shahadat Diwas_Capt. Vijayant Thaper",
+      image: "/img/activity-15.jpg",
+    },
     { id: 18, title: "Sheet Kawach-Petronet", image: "/img/activity-16.png" },
     { id: 19, title: "Shukriya Mukesh 2024", image: "/img/activity-17.jpg" },
+    {
+      id: 20,
+      title: "JO AAYE WO GAAYE S-4 E-6",
+      image: "/img/JAWG/JAWG S4E6.jpeg",
+    },
+    { id: 21, title: "SHILPI NITE", image: "img/Shilpi Nite.jpeg" },
   ];
 
   // Duplicate first 3 for infinite loop (since 3 visible)
@@ -46,8 +82,8 @@ export default function ActivitiesCarousel() {
     };
 
     updateSlides();
-    window.addEventListener('resize', updateSlides);
-    return () => window.removeEventListener('resize', updateSlides);
+    window.addEventListener("resize", updateSlides);
+    return () => window.removeEventListener("resize", updateSlides);
   }, []);
 
   const nextSlide = () => {
@@ -227,23 +263,35 @@ export default function ActivitiesCarousel() {
         </p>
 
         <div className="carousel-container">
-          <button className="carousel-arrow prev" onClick={prevSlide}>←</button>
+          <button className="carousel-arrow prev" onClick={prevSlide}>
+            ←
+          </button>
           <div className="carousel-wrapper">
             <div
               className="carousel-track"
-              style={{ transform: `translateX(-${currentIndex * (100 / slidesToShow)}%)` }}
+              style={{
+                transform: `translateX(-${currentIndex * (100 / slidesToShow)}%)`,
+              }}
             >
               {extendedActivities.map((activity) => (
                 <div key={activity.id} className="carousel-slide">
-                  <div className="activity-item">  {/* Removed <a> tag, no link */}
-                    <img src={activity.image} alt={activity.title} className="activity-image" />
+                  <div className="activity-item">
+                    {" "}
+                    {/* Removed <a> tag, no link */}
+                    <img
+                      src={activity.image}
+                      alt={activity.title}
+                      className="activity-image"
+                    />
                     <h3 className="activity-title">{activity.title}</h3>
                   </div>
                 </div>
               ))}
             </div>
           </div>
-          <button className="carousel-arrow next" onClick={nextSlide}>→</button>
+          <button className="carousel-arrow next" onClick={nextSlide}>
+            →
+          </button>
         </div>
       </section>
     </>
